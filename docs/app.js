@@ -1,3 +1,4 @@
+import { russianText, localizeDisplay } from './locale.js';
 import { RARITIES, levels, levelStats, directDps, maxDps, isSummoner, fmt, compact, chance, filterUnits } from './model.js';
 
 const paths = {
@@ -57,6 +58,7 @@ function translate(){
  $('saved-count').textContent=bookmarks.length;
  const date=new Date(DATA.exportedAt).toLocaleDateString(lang==='ru'?'ru-RU':'en-GB',{day:'numeric',month:'short',year:'numeric'});
  $('update-date').textContent=date;$('snapshot-label').textContent=`${t('snapshot')} ${date}`;
+ localizeDisplay(document.body,lang);
 }
 function heading(){
  const title={units:lang==='en'?'Find your next <em>favorite.</em>':'Найди нового <em>любимчика.</em>',items:lang==='en'?'A little loot. <em>A lot of possibilities.</em>':'Предметы для <em>больших планов.</em>',crafts:lang==='en'?'Build something <em>stronger.</em>':'Создай кого-то <em>сильнее.</em>',toilets:lang==='en'?'Know your <em>enemy.</em>':'Знай своего <em>врага.</em>',modes:lang==='en'?'Pick your next <em>challenge.</em>':'Выбери новое <em>испытание.</em>'};
@@ -79,21 +81,23 @@ function itemCard(item){return `<article class="unit-card ${selected?.Id===item.
 function empty(){return `<div class="empty-state">${icon('search')}<h3>${t('missing')}</h3><p>${t('trySearch')}</p><button class="reset-button" data-reset>${t('reset')}</button></div>`;}
 function renderCatalog(){
  heading();let html='',count=0;const q=query.trim().toLowerCase();
+ const matches=text=>`${text} ${russianText(text)}`.toLowerCase().includes(q);
  if(page==='units'){
-  const list=filterUnits(DATA.units,{query,rarity,source,savedOnly,bookmarks,sort,orders:DATA.orders});count=list.length;html=list.map(unitCard).join('');
+  const list=filterUnits(DATA.units,{query:'',rarity,source,savedOnly,bookmarks,sort,orders:DATA.orders}).filter(u=>matches(`${u.Id} ${u.DisplayName}`));count=list.length;html=list.map(unitCard).join('');
  }else if(page==='items'){
-  const list=items().filter(x=>(!itemKind||x.Kind===itemKind)&&`${x.Id} ${x.DisplayName}`.toLowerCase().includes(q));count=list.length;html=list.map(itemCard).join('');
+  const list=items().filter(x=>(!itemKind||x.Kind===itemKind)&&matches(`${x.Id} ${x.DisplayName}`));count=list.length;html=list.map(itemCard).join('');
  }else if(page==='crafts'){
-  const list=DATA.crafts.filter(x=>`${x.Output} ${(x.Inputs||[]).map(i=>i.Unit||i.Material).join(' ')}`.toLowerCase().includes(q));count=list.length;html=list.map(recipeCard).join('');
+  const list=DATA.crafts.filter(x=>matches(`${x.Output} ${(x.Inputs||[]).map(i=>i.Unit||i.Material).join(' ')}`));count=list.length;html=list.map(recipeCard).join('');
  }else if(page==='toilets'){
-  const list=Object.entries(DATA.drops).filter(([name,drops])=>`${name} ${drops.map(x=>x.Item).join(' ')}`.toLowerCase().includes(q));count=list.length;
+  const list=Object.entries(DATA.drops).filter(([name,drops])=>matches(`${name} ${drops.map(x=>x.Item).join(' ')}`));count=list.length;
   html=`<div class="info-banner">${esc(t('enemyHint'))} ${esc(t('dropNote'))}</div>`+list.map(([name,drops])=>`<article class="enemy-card"><div class="enemy-icon">${icon('enemy')}</div><h3>${esc(name)}</h3><p>${t('dropChance')}</p>${drops.map(d=>`<div class="drop-item">${image(DATA.materials[d.Item]?.Icon,d.Item)}<span>${esc(d.Item)}</span><b>${chance(d.Chance)}</b></div>`).join('')}</article>`).join('');
  }else{
-  const list=Object.entries(DATA.modes).filter(([name])=>name.toLowerCase().includes(q));count=list.length;
+  const list=Object.entries(DATA.modes).filter(([name])=>matches(name));count=list.length;
   const colors=['#85cf80','#61c8da','#efc169','#e8a570','#da8591','#c29ce5','#8eb8e5'];
   html=`<div class="info-banner">${esc(t('modeHint'))}</div>`+list.map(([name,m],i)=>`<article class="mode-card" style="--mode-color:${colors[i]}"><span class="mode-number">0${i+1}</span><small>${t('baseRewards')}</small><h3>${esc(name)}</h3>${name==='Endless'?`<div class="mode-stat"><span>${lang==='en'?'Coins / cleared wave':'Монеты за волну'}</span><b>${fmt(m.CoinsPerClearedWave)}</b></div><div class="mode-stat"><span>${lang==='en'?'XP / cleared wave':'Опыт за волну'}</span><b>${fmt(m.XpPerClearedWave)}</b></div><p>${lang==='en'?'Additional rewards are rolled at wave milestones.':'На этапах волн разыгрываются дополнительные награды.'}</p>`:[['winCoins',m.WinCoins],['winXp',m.XpEarn],['loseCoins',m.CoinsPerClearedWave],['winPumpkins',m.WinPumpkins]].map(([key,value])=>`<div class="mode-stat"><span>${t(key)}</span><b>${fmt(value||0)}</b></div>`).join('')}</article>`).join('');
  }
  if(!count)html=empty();$('catalog').innerHTML=html;$('result-count').textContent=`${count} ${lang==='ru'?'найдено':'entries'}`;
+ localizeDisplay(document.body,lang);
 }
 function recipeCard(recipe){
  const unit=DATA.units.find(u=>u.Id===recipe.Output);
@@ -134,7 +138,7 @@ function renderDetails(){
   const tags=[];if(stats.AttackType)tags.push(stats.AttackType);if(stats.AttackFlyToilet||stats.AttackFlyToiletHand)tags.push(lang==='en'?'Targets air':'Бьёт воздух');if(isSummoner(unit))tags.push(t('summoner'));
   html+=`<div class="detail-subtitle">${esc(t('base'))}</div><div class="level-tabs" aria-label="Upgrade level">${levelList.map((_,i)=>`<button data-level="${i}" class="${i===selectedLevel?'active':''}" aria-pressed="${i===selectedLevel}">${i===levelList.length-1?t('max'):`LV ${i+1}`}</button>`).join('')}</div><div class="stats-grid">${stat('damage',t('damage'),fmt(stats.Damage||0,1))}${stat('range',t('range'),fmt(stats.Range||0,1))}${stat('clock',t('cooldown'),`${fmt(stats.Cooldown||0,2)}${t('seconds')}`)}</div><div class="dps-box"><small>${t('dps')}</small><strong>${directDps(stats)>0?fmt(directDps(stats),1):'—'}</strong></div><p class="tiny-note">${t('special')}</p><div class="section-label">${t('cost').toUpperCase()}</div>${line(t('cost'),`$ ${fmt(unit.Price)}`)}${stats.UpgradePrice&&selectedLevel<levelList.length-1?line(t('upgrade'),`$ ${fmt(stats.UpgradePrice)}`):''}${line(t('sell'),stats.SellPrice?`$ ${fmt(stats.SellPrice)}`:'—')}${DATA.limits[unit.Id]?line(t('limit'),DATA.limits[unit.Id]):''}<div class="detail-tags" style="margin-top:9px">${tags.map(x=>`<span class="detail-tag">${esc(x)}</span>`).join('')}</div>${DATA.limits[unit.Id]?`<p class="tiny-note">${t('unverifiedLimit')}</p>`:''}<div class="section-label">${t('attacks')}</div>${effectBlocks(unit,stats)}<div class="section-label">${t('obtain')}</div>${sources(unit)}`;
  }else if(unit.Kind==='Boost'){
-  html+=`<div class="section-label">${t('boosts').toUpperCase()}</div>${line(lang==='en'?'Effect':'Эффект',unit.Description)}${line(lang==='en'?'Duration':'Длительность',`${fmt(unit.DurationSeconds/60)} min`)}`;
+  html+=`<div class="section-label">${t('boosts').toUpperCase()}</div>${line(lang==='en'?'Effect':'Эффект',unit.Description)}${line(lang==='en'?'Duration':'Длительность',`${fmt(unit.DurationSeconds/60)} ${lang==='ru'?'мин':'min'}`)}`;
  }else if(unit.Kind==='Material'){
   html+=`<p class="tiny-note">${esc(unit.Description||'')}</p><div class="section-label">${t('materialSources')}</div>`;
   for(const [name,drops]of Object.entries(DATA.drops)){for(const drop of drops){if(drop.Item===unit.Id)html+=line(name,chance(drop.Chance));}}
@@ -145,7 +149,7 @@ function renderDetails(){
   (Array.isArray(unit.Rewards)?unit.Rewards:[]).forEach(r=>{html+=line(r.UnitName||r.Id||r.Type,r.Chance!=null?`${fmt(r.Chance,3)}%`:r.Amount?`×${r.Amount}`:'—');});
   if(!unit.Rewards?.length)html+=`<p class="tiny-note">${t('sourceMissing')}</p>`;
  }
- $('details').innerHTML=html;
+ $('details').innerHTML=html;localizeDisplay($('details'),lang);
 }
 function closeDetails(){$('details').classList.remove('mobile-open');$('details').removeAttribute('role');$('details').removeAttribute('aria-modal');$('detail-backdrop').hidden=true;document.body.classList.remove('modal-open');}
 function openDetails(){if(matchMedia('(max-width:900px)').matches){$('details').classList.add('mobile-open');$('details').setAttribute('role','dialog');$('details').setAttribute('aria-modal','true');$('detail-backdrop').hidden=false;document.body.classList.add('modal-open');$('details').querySelector('[data-close-detail]')?.focus();}else $('details').scrollTop=0;}
@@ -171,7 +175,7 @@ function showComparison(){
  const units=compare.map(id=>DATA.units.find(u=>u.Id===id));
  const metrics=[[t('rarity'),u=>u.Rarity],[t('dps'),u=>fmt(maxDps(u),1)],[t('damage'),u=>fmt(levels(u).at(-1)?.Damage||0)],[t('range'),u=>fmt(levels(u).at(-1)?.Range||0,1)],[t('cooldown'),u=>`${fmt(levels(u).at(-1)?.Cooldown||0,2)}s`],[t('cost'),u=>`$ ${fmt(u.Price)}`],[t('limit'),u=>DATA.limits[u.Id]||'—']];
  $('comparison-content').innerHTML=`<p class="tiny-note">${t('base')} · ${t('max')}</p><table><thead><tr><th></th>${units.map(u=>`<th>${image(u.Icon,u.DisplayName)}<strong>${esc(u.DisplayName)}</strong></th>`).join('')}</tr></thead><tbody>${metrics.map(([title,get])=>`<tr><td>${esc(title)}</td>${units.map(u=>`<td>${esc(get(u))}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
- $('compare-dialog').showModal();
+ localizeDisplay($('compare-dialog'),lang);$('compare-dialog').showModal();
 }
 document.addEventListener('click',event=>{
  const button=event.target.closest('button');if(!button)return;
