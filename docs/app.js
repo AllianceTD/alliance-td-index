@@ -1,5 +1,5 @@
 import { russianText, localizeDisplay } from './locale.js';
-import { createUpdates } from './updates.js';
+import { createUpdates } from './updates.js?v=clock-format-2';
 import { abilitySections } from './abilities.js';
 import { RARITIES, levels, levelStats, directDps, maxDps, isSummoner, fmt, compact, chance, filterUnits } from './model.js?v=unit-sources-2';
 
