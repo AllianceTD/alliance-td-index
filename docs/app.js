@@ -42,7 +42,7 @@ const materialIcons = {
  'Heavy Arm Mechanism':'heavy-arm-mechanism',
  'Toxic Gun Core':'toxic-gun-core',
 };
-function image(raw, name, className=''){const url=Object.hasOwn(materialIcons,name)?`assets/materials/${materialIcons[name]}.png`:asset(raw);return url?`<img class="${className}" src="${url}" alt="${esc(name)}" loading="lazy">`:`<span class="card-visual-fallback ${className}">${icon('units')}</span>`;}
+function image(raw, name, className=''){const url=Object.hasOwn(materialIcons,name)?`assets/materials/${materialIcons[name]}.png?v=2`:asset(raw);return url?`<img class="${className}" src="${url}" alt="${esc(name)}" loading="lazy">`:`<span class="card-visual-fallback ${className}">${icon('units')}</span>`;}
 function color(rarity){return RARITIES[rarity]||'#a9b3c2';}
 function toast(message){$('toast').textContent=message;$('toast').hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').hidden=true,2600);}
 function hydration(root=document){root.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=icon(el.dataset.icon));}
