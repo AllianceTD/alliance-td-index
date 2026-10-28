@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171923">
+  <meta name="description" content="Explore Alliance TD units, upgrade stats, crafting recipes and material drops. A searchable companion to the in-game index.">
+  <title>Alliance TD — The Index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to index</a>
+  <header class="topbar">
+    <a href="#units" class="brand" aria-label="Alliance TD Index home"><span class="brand-icon" data-icon="camera"></span><span>ALLIANCE <b>TD</b><small>THE INDEX</small></span></a>
+    <div class="top-middle"><span class="live-dot"></span><span data-i18n="companion">Your game companion</span><span class="patch">UPDATE 15</span></div>
+    <div class="top-actions"><button id="language" class="language-button" aria-label="Switch language">EN <span>⌄</span></button><button id="saved-button" class="saved-button"><span data-icon="bookmark"></span><span data-i18n="saved">Saved</span><b id="saved-count">0</b></button></div>
+  </header>
+  <div class="app-shell">
+    <nav class="sidebar" aria-label="Index sections">
+      <span class="nav-caption" data-i18n="explore">EXPLORE THE INDEX</span>
+      <a href="#units" data-page="units" class="nav-link active"><span data-icon="units"></span><span data-i18n="units">Units</span><b id="unit-count">—</b></a>
+      <a href="#items" data-page="items" class="nav-link"><span data-icon="backpack"></span><span data-i18n="items">Items & crates</span></a>
+      <a href="#crafts" data-page="crafts" class="nav-link"><span data-icon="craft"></span><span data-i18n="crafts">Crafting</span></a>
+      <a href="#toilets" data-page="toilets" class="nav-link"><span data-icon="enemy"></span><span data-i18n="toilets">Toilets & drops</span></a>
+      <a href="#modes" data-page="modes" class="nav-link"><span data-icon="flag"></span><span data-i18n="modes">Game modes</span></a>
+      <div class="sidebar-note"><span data-icon="sparkles"></span><strong data-i18n="knowUnit">Know your next unit.</strong><p data-i18n="sidebarNote">Check its upgrades, find its recipe, and plan your team.</p></div>
+      <div class="sidebar-bottom"><span class="live-dot"></span><span data-i18n="gameData">From the game index</span><small id="update-date"></small></div>
+    </nav>
+    <main id="content">
+      <section class="page-heading"><div><div class="eyebrow"><span class="mini-star">✦</span><span data-i18n="eyebrow">THE ALLIANCE, AT A GLANCE</span></div><h1 id="page-title">Find your next <em>favorite.</em></h1><p id="page-description">Every unit. Every upgrade. One place to explore.</p></div><div class="heading-stamp"><span data-icon="book"></span><span>ALLIANCE TD<br><b data-i18n="fieldGuide">FIELD GUIDE</b></span></div></section>
+      <section class="index-window" aria-label="Searchable game index">
+        <div class="window-toolbar"><div class="window-title"><span data-icon="units" id="section-icon"></span><h2 id="section-title">Units</h2><span id="result-count" class="count-pill">Loading…</span></div><div class="view-hint"><span data-icon="mouse"></span><span data-i18n="tapCard">Select a card to explore</span></div></div>
+        <div class="filterbar"><label class="search-box"><span data-icon="search"></span><input id="search" type="search" placeholder="Search your alliance…" autocomplete="off" aria-label="Search the index"><kbd>/</kbd></label><select id="rarity" aria-label="Filter rarity"><option value="">All rarities</option></select><select id="sort" aria-label="Sort results"><option value="rarity">Rarity</option><option value="name">Name A–Z</option><option value="dps">Highest DPS</option><option value="price">Lowest cost</option></select></div>
+        <div id="quick-filters" class="quick-filters"></div>
+        <div class="index-body"><div id="catalog" class="catalog" aria-live="polite"><div class="loading-state"><span class="loader"></span>Opening the index…</div></div><aside id="details" class="detail-panel" aria-label="Selected entry details"></aside></div>
+        <div class="window-footer"><span><span class="live-dot"></span><span data-i18n="statsNote">Stats at 1× speed · No external buffs</span></span><span data-i18n="collectionNote">Bookmarks stay in this browser</span></div>
+      </section>
+      <footer class="page-footer"><span>ALLIANCE TD <b>INDEX</b></span><span data-i18n="footerNote">Built for the community. Made to help you plan.</span><span id="snapshot-label"></span></footer>
+    </main>
+  </div>
+  <div id="detail-backdrop" class="detail-backdrop" hidden></div>
+  <div id="compare-bar" class="compare-bar" hidden><span id="compare-count"></span><button id="compare-open" data-i18n="compare">Compare units</button><button id="compare-clear" aria-label="Clear comparison">×</button></div>
+  <dialog id="compare-dialog"><div class="dialog-header"><h2 data-i18n="comparison">Unit comparison</h2><button id="compare-close" aria-label="Close comparison">×</button></div><div id="comparison-content"></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
