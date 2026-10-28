@@ -94,7 +94,9 @@ function renderCatalog(){
   const list=Object.entries(DATA.drops).filter(([name,drops])=>matches(`${name} ${drops.map(x=>x.Item).join(' ')}`));count=list.length;
   html=`<div class="info-banner">${esc(t('enemyHint'))} ${esc(t('dropNote'))}</div>`+list.map(([name,drops])=>`<article class="enemy-card"><div class="enemy-icon">${icon('enemy')}</div><h3>${esc(name)}</h3><p>${t('dropChance')}</p>${drops.map(d=>`<div class="drop-item">${image(DATA.materials[d.Item]?.Icon,d.Item)}<span>${esc(d.Item)}</span><b>${chance(d.Chance)}</b></div>`).join('')}</article>`).join('');
  }else{
-  const list=Object.entries(DATA.modes).filter(([name])=>matches(name));count=list.length;
+  const modeOrder=['Easy','Medium','Hard','Insane','Crazy','Halloween','Endless'];
+  const modeRank=name=>modeOrder.includes(name)?modeOrder.indexOf(name):modeOrder.length;
+  const list=Object.entries(DATA.modes).sort(([a],[b])=>modeRank(a)-modeRank(b)||a.localeCompare(b)).filter(([name])=>matches(name));count=list.length;
   const colors=['#85cf80','#61c8da','#efc169','#e8a570','#da8591','#c29ce5','#8eb8e5'];
   html=`<div class="info-banner">${esc(t('modeHint'))}</div>`+list.map(([name,m],i)=>`<article class="mode-card" style="--mode-color:${colors[i]}"><span class="mode-number">0${i+1}</span><small>${t('baseRewards')}</small><h3>${esc(name)}</h3>${name==='Endless'?`<div class="mode-stat"><span>${lang==='en'?'Coins / cleared wave':'Монеты за волну'}</span><b>${fmt(m.CoinsPerClearedWave)}</b></div><div class="mode-stat"><span>${lang==='en'?'XP / cleared wave':'Опыт за волну'}</span><b>${fmt(m.XpPerClearedWave)}</b></div><p>${lang==='en'?'Additional rewards are rolled at wave milestones.':'На этапах волн разыгрываются дополнительные награды.'}</p>`:[['winCoins',m.WinCoins],['winXp',m.XpEarn],['loseCoins',m.CoinsPerClearedWave],['winPumpkins',m.WinPumpkins]].map(([key,value])=>`<div class="mode-stat"><span>${t(key)}</span><b>${fmt(value||0)}</b></div>`).join('')}</article>`).join('');
  }
