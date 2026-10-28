@@ -31,7 +31,7 @@ export function createUpdates({banner,lang,escape}){
   const at=config.nextUpdate?.releaseAt;
   const valid=at&&Number.isFinite(Date.parse(at));
   const time=valid?new Intl.DateTimeFormat(lang()==='ru'?'ru-RU':'en-US',{hour:lang()==='ru'?'2-digit':'numeric',minute:'2-digit',hour12:lang()!=='ru',timeZone:'Europe/Moscow'}).format(new Date(at)):'';
-  banner.innerHTML=`<div class="update-banner-copy"><span class="update-eyebrow">✦ ${text('COMING NEXT','СКОРО В ИГРЕ')}</span><h2>${l(config.nextUpdate?.title)}</h2><p>${valid?`${escape(date(at))} · ${time} ${text('Moscow time','МСК')}`:text('Stay tuned for the next announcement.','Следи за новостями — дату объявим здесь.')}</p></div><div class="countdown" data-countdown></div><a class="update-log-link" href="#updates">${text('Update log','Журнал обновлений')} <span aria-hidden="true">↗</span></a>`;
+  banner.innerHTML=`<div class="update-banner-copy"><span class="update-eyebrow">✦ ${text('COMING NEXT','СКОРО В ИГРЕ')}</span><h2>${l(config.nextUpdate?.title)}</h2><p>${valid?`${escape(date(at))} · ${time}${text('',' МСК')}`:text('Stay tuned for the next announcement.','Следи за новостями — дату объявим здесь.')}</p></div><div class="countdown" data-countdown></div><a class="update-log-link" href="#updates">${text('Update log','Журнал обновлений')} <span aria-hidden="true">↗</span></a>`;
   tick();
  }
  function cards(query=''){
