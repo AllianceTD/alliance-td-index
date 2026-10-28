@@ -1,0 +1,194 @@
+/* Soft turquoise panels and outlined game-style display text. */
+:root {
+  --paper: #a9c9c6;
+  --ink: #203e49;
+  --line: #7eaaa9;
+  --outline: #203b4a;
+}
+
+.index-window { background: var(--paper); }
+.window-toolbar {
+  background-color: #a2c8c5;
+  background-image: repeating-linear-gradient(125deg, transparent 0 27px, #82b7b12e 28px 40px, transparent 41px 66px);
+  border-color: #80aaa9;
+}
+.window-title h2,
+.detail-name,
+.stat-box strong,
+.dps-box strong,
+.recipe-head h3,
+.mode-card h3,
+.enemy-card h3,
+.dialog-header h2 {
+  color: #f1fffb;
+  -webkit-text-stroke: 2px var(--outline);
+  paint-order: stroke fill;
+  text-shadow: 0 2px 0 #24495285;
+  font-weight: 600;
+}
+.window-title h2 { font-size: 29px; }
+.window-title > span:first-child { color: #37666e; }
+.count-pill { background: #87b8b3; color: #214c56; font-size: 12px; }
+.view-hint { color: #355e68; font-size: 12px; }
+.filterbar, .quick-filters { background: #a9c9c6; }
+.search-box, select {
+  background: #c0d9d2;
+  border-color: #78a5a5;
+  color: #284f59;
+  font-size: 13px;
+}
+.search-box { color: #47717a; }
+.search-box input { color: #284f59; font-size: 14px; }
+.search-box input::placeholder { color: #4a737a; }
+.search-box kbd { color: #456e74; border-color: #8cb4b0; }
+.filter-chip { background: #b7d2cc; color: #365e68; border-color: #83aaa8; font-size: 12px; }
+.filter-chip.active { background: #b8dd9a; color: #34552e; border-color: #719663; }
+.index-body { border-color: #72989b; }
+
+.detail-panel {
+  background: linear-gradient(165deg, #99bfc0, #abcac4);
+  border-color: #739fa1;
+  padding: 0 17px 23px;
+}
+.detail-topline { color: #315863; font-size: 11px; padding: 17px 0 12px; }
+.detail-name { font-size: 26px; line-height: 1.22; margin-top: 13px; }
+.detail-subtitle { color: #345d66; font-size: 12px; line-height: 1.6; }
+.detail-hero::before { opacity: .7; }
+.detail-hero .rarity-badge { font-size: 12px; }
+.detail-close { background: #7ea9ac; color: #203f4b; }
+.level-tabs { gap: 4px; margin-top: 15px; }
+.level-tabs button {
+  background: #bad4cf;
+  border-color: #7eaaa8;
+  color: #345862;
+  font-size: 12px;
+  padding: 9px 0;
+}
+.level-tabs button.active { background: #b4ef70; color: #30472c; border-color: #6c9c4d; }
+.stat-box { background: #b8d4ce; border-color: #7ea8a5; padding: 11px 3px; }
+.stat-box > span:first-child { color: #345b66; font-size: 11px; }
+.stat-box strong { font-size: 23px; margin-top: 6px; }
+.dps-box { background: #619b9c; border-color: #376e79; padding: 12px; }
+.dps-box small { color: #f0fff9; font-size: 12px; }
+.dps-box strong { font-size: 30px; }
+.section-label {
+  color: #f3fffc;
+  font-size: 12px;
+  letter-spacing: .7px;
+  -webkit-text-stroke: 1.2px #294c59;
+  paint-order: stroke fill;
+  text-shadow: 0 1px 0 #24495255;
+  margin-top: 20px;
+}
+.detail-line { color: #365e67; font-size: 12px; border-color: #83aba7; padding: 10px 0; }
+.detail-line strong { color: #233f4b; }
+.detail-tag { background: #91b9b6; color: #294f5b; border-color: #76a2a4; font-size: 11px; }
+.source-entry { background: #bad4cd; border-color: #86adaa; font-size: 12px; padding: 10px; }
+.source-entry svg { color: #3c716f; }
+.source-entry small { color: #436a72; font-size: 11px; line-height: 1.6; }
+.attack-block { background: #b9d4ce; border-color: #80aaa7; padding: 12px; }
+.attack-block b { color: #294c58; font-size: 14px; }
+.attack-block p { color: #3c626c; font-size: 12px; line-height: 1.8; }
+.tiny-note { color: #42666e; font-size: 11px; line-height: 1.7; }
+.window-footer { background: #94bab6; color: #355e67; border-color: #739e9f; font-size: 11px; }
+
+.card-main { min-height: 225px; }
+.card-name {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  min-height: 38px;
+  -webkit-text-stroke: 1.3px #111b2a;
+  paint-order: stroke fill;
+  text-shadow: 0 1px 0 #0d1524;
+}
+.card-meta { font-size: 10px; flex-wrap: wrap; gap: 3px 6px; }
+.card-dps { font-size: 10px; color: #d0d9e5; }
+.card-price { font-size: 10px; }
+.recipe-card, .mode-card, .enemy-card { background: #a5c6c1; }
+.recipe-head { border-color: #7fa5a4; }
+.recipe-head h3, .enemy-card h3 { font-size: 22px; }
+.recipe-head small { font-size: 11px; color: #5a397c; }
+.recipe-input { color: #365e67; font-size: 12px; padding: 7px 0; }
+.recipe-input b { color: #233f4b; }
+.recipe-price { border-color: #7fa5a4; font-size: 12px; }
+.recipe-price span { background: #c8d6af; color: #42512f; border-color: #9fae7d; }
+.mode-card > small { color: #3e666e; font-size: 11px; }
+.mode-number { color: #73a49f; }
+.mode-stat { color: #365c65; border-color: #80a8a4; font-size: 13px; }
+.mode-stat b { color: #213f4a; }
+.mode-card p, .enemy-card p { color: #3d626a; font-size: 12px; }
+.enemy-icon { color: #335e69; background: #86b0ae; }
+.enemy-card .drop-item { color: #315763; border-color: #7fa7a4; font-size: 12px; }
+.drop-item b { color: #294c3c; }
+dialog { background: #a6c8c2; }
+th, td { border-color: #7ba5a2; font-size: 13px; }
+th:first-child, td:first-child { color: #365d66; }
+.dialog-header button { background: #85b0ad; color: #274e59; }
+
+.page-heading p { font-size: 14px; line-height: 1.65; }
+.nav-link { font-size: 14px; }
+.sidebar-note p { font-size: 12px; }
+.page-footer { font-size: 11px; flex-wrap: wrap; row-gap: 14px; }
+.footer-language {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 7px 12px;
+  margin-left: auto;
+  border: 2px solid #142b37;
+  border-radius: 9px;
+  background: linear-gradient(#7bbec0, #4a9199);
+  color: #ecfffb;
+  box-shadow: 0 3px 0 #0a1422;
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 500;
+}
+.footer-lang-option {
+  -webkit-text-stroke: 1.4px #254654;
+  paint-order: stroke fill;
+  opacity: .78;
+}
+.footer-lang-option.active { opacity: 1; color: #d5ffb5; }
+.footer-lang-divider { color: #305d68; }
+.footer-language:hover { background: linear-gradient(#92c9c5, #5ba2a8); }
+.footer-language:active { transform: translateY(2px); box-shadow: 0 1px 0 #0a1422; }
+
+@media (min-width: 1550px) {
+  .detail-name { font-size: 28px; }
+  .card-main { min-height: 237px; }
+}
+@media (max-width: 1150px) {
+  .nav-link { font-size: 12px; }
+  .detail-panel { padding-left: 13px; padding-right: 13px; }
+  .detail-name { font-size: 24px; }
+  .stat-box strong { font-size: 21px; }
+  .stat-box > span:first-child { font-size: 10px; }
+}
+@media (max-width: 900px) {
+  .detail-panel.mobile-open { padding-left: 22px; padding-right: 22px; }
+  .detail-name { font-size: 28px; }
+  .stat-box strong { font-size: 25px; }
+  .stat-box > span:first-child { font-size: 12px; }
+  .card-name { font-size: 15px; }
+}
+@media (max-width: 650px) {
+  .nav-link { font-size: 11px; }
+  .page-heading p { font-size: 12px; }
+  .window-title h2 { font-size: 25px; }
+  .count-pill { font-size: 10px; }
+  .filter-chip { font-size: 11px; }
+  select { font-size: 12px; }
+  .search-box input { font-size: 14px; }
+  .card-main { min-height: 230px; }
+  .card-name { font-size: 15px; min-height: 39px; }
+  .card-meta, .card-dps { font-size: 10px; }
+  .window-footer { font-size: 10px; line-height: 1.6; }
+  .page-footer { font-size: 10px; padding-bottom: 30px; }
+  .page-footer #snapshot-label { margin-left: auto; }
+  .footer-language { width: 100%; margin-left: 0; font-size: 17px; min-height: 46px; }
+  .detail-panel.mobile-open { padding-left: 20px; padding-right: 20px; }
+}

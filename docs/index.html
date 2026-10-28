@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css?v=turquoise-1">
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to index</a>
@@ -38,13 +39,13 @@
         <div class="index-body"><div id="catalog" class="catalog" aria-live="polite"><div class="loading-state"><span class="loader"></span>Opening the index…</div></div><aside id="details" class="detail-panel" aria-label="Selected entry details"></aside></div>
         <div class="window-footer"><span><span class="live-dot"></span><span data-i18n="statsNote">Stats at 1× speed · No external buffs</span></span><span data-i18n="collectionNote">Bookmarks stay in this browser</span></div>
       </section>
-      <footer class="page-footer"><span>ALLIANCE TD <b>INDEX</b></span><span data-i18n="footerNote">Built for the community. Made to help you plan.</span><span id="snapshot-label"></span></footer>
+      <footer class="page-footer"><span>ALLIANCE TD <b>INDEX</b></span><span data-i18n="footerNote">Built for the community. Made to help you plan.</span><span id="snapshot-label"></span><button id="footer-language" class="footer-language" type="button" aria-label="Language: English. Switch to Russian."><span class="footer-lang-option" data-lang="ru" lang="ru">Русский</span><span class="footer-lang-divider" aria-hidden="true">/</span><span class="footer-lang-option active" data-lang="en" lang="en">English</span></button></footer>
     </main>
   </div>
   <div id="detail-backdrop" class="detail-backdrop" hidden></div>
   <div id="compare-bar" class="compare-bar" hidden><span id="compare-count"></span><button id="compare-open" data-i18n="compare">Compare units</button><button id="compare-clear" aria-label="Clear comparison">×</button></div>
   <dialog id="compare-dialog"><div class="dialog-header"><h2 data-i18n="comparison">Unit comparison</h2><button id="compare-close" aria-label="Close comparison">×</button></div><div id="comparison-content"></div></dialog>
   <div id="toast" class="toast" role="status" hidden></div>
-  <script type="module" src="app.js"></script>
+  <script type="module" src="app.js?v=turquoise-1"></script>
 </body>
 </html>
