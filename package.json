@@ -2,5 +2,5 @@
   "name": "alliance-td-index",
   "private": true,
   "type": "module",
-  "scripts": { "test": "node --test tools/model.test.mjs" }
+  "scripts": { "test": "node --test tools/model.test.mjs tools/locale.test.mjs tools/updates.test.mjs" }
 }

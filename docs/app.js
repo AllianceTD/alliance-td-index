@@ -1,4 +1,6 @@
 import { russianText, localizeDisplay } from './locale.js';
+import { createUpdates } from './updates.js';
+import { abilitySections } from './abilities.js';
 import { RARITIES, levels, levelStats, directDps, maxDps, isSummoner, fmt, compact, chance, filterUnits } from './model.js?v=unit-sources-2';
 
 const paths = {
@@ -30,12 +32,14 @@ const translations = {
 translations.en.boosts='Potions'; translations.ru.boosts='Зелья';
 translations.en.exclusive='Exclusive'; translations.ru.exclusive='Эксклюзив';
 translations.en.event='Event'; translations.ru.event='Ивент';
+translations.en.updates='Update log'; translations.ru.updates='Журнал обновлений';
 function readStorage(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
 let lang = readStorage('atd-language','en'); if(!translations[lang])lang='en';
 let bookmarks = readStorage('atd-bookmarks',[]); if(!Array.isArray(bookmarks))bookmarks=[];
 let DATA, ASSETS, page='units', query='', rarity='', sort='rarity', source='', savedOnly=false, selected=null, selectedLevel=0, itemKind='', compare=[];
 const t = key => translations[lang][key] || translations.en[key] || key;
 const saveStorage = (key,value)=>{try{localStorage.setItem(key,JSON.stringify(value));}catch{}};
+const updates=createUpdates({banner:$('update-banner'),lang:()=>lang,escape:esc});
 function asset(raw){const id=String(raw||'').match(/(?:rbxassetid:\/\/)?(\d+)/)?.[1];return id?ASSETS[id]:null;}
 const materialIcons = {
  'Reinforced Titanium Plate':'reinforced-titanium-plate',
@@ -54,17 +58,20 @@ function translate(){
  $('language').innerHTML=`${lang.toUpperCase()} <span>⌄</span>`;
  $('footer-language').setAttribute('aria-label',lang==='ru'?'Язык: русский. Переключить на английский.':'Language: English. Switch to Russian.');
  $('footer-language').querySelectorAll('[data-lang]').forEach(option=>option.classList.toggle('active',option.dataset.lang===lang));
- $('search').placeholder=t('search');
+ $('search').placeholder=page==='updates'?(lang==='ru'?'Найти обновление…':'Search updates…'):t('search');
  $('rarity').options[0].textContent=t('allRarities');
  const sortOptions=['rarity','name','highest','lowest']; [...$('sort').options].forEach((o,i)=>o.textContent=t(sortOptions[i]));
  $('saved-count').textContent=bookmarks.length;
  const date=new Date(DATA.exportedAt).toLocaleDateString(lang==='ru'?'ru-RU':'en-GB',{day:'numeric',month:'short',year:'numeric'});
  $('update-date').textContent=date;$('snapshot-label').textContent=`${t('snapshot')} ${date}`;
  localizeDisplay(document.body,lang);
+ updates.render();
 }
 function heading(){
  const title={units:lang==='en'?'Find your next <em>favorite.</em>':'Найди нового <em>любимчика.</em>',items:lang==='en'?'A little loot. <em>A lot of possibilities.</em>':'Предметы для <em>больших планов.</em>',crafts:lang==='en'?'Build something <em>stronger.</em>':'Создай кого-то <em>сильнее.</em>',toilets:lang==='en'?'Know your <em>enemy.</em>':'Знай своего <em>врага.</em>',modes:lang==='en'?'Pick your next <em>challenge.</em>':'Выбери новое <em>испытание.</em>'};
  const desc={units:lang==='en'?'Every unit. Every upgrade. One place to explore.':'Юниты, улучшения и способы получения — в одном месте.',items:lang==='en'?'Crates, crafting materials, and where to find them.':'Ящики, материалы для крафта и где их найти.',crafts:t('craftHint'),toilets:t('enemyHint'),modes:t('modeHint')};
+ title.updates=lang==='ru'?'Что нового <em>в Alliance TD.</em>':'What’s new <em>in Alliance TD.</em>';
+ desc.updates=lang==='ru'?'Новые юниты, улучшения и изменения — вся история обновлений.':'New units, improvements and changes — the update history.';
  $('page-title').innerHTML=title[page];$('page-description').textContent=desc[page];$('section-title').textContent=t(page);
  $('section-icon').innerHTML=icon({units:'units',items:'backpack',crafts:'craft',toilets:'enemy',modes:'flag'}[page]);
  document.querySelectorAll('.nav-link').forEach(a=>{a.classList.toggle('active',a.dataset.page===page);if(a.dataset.page===page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
@@ -73,6 +80,7 @@ function heading(){
  const quick=unitPage?[['',t('all'),'units'],['summon',t('summon'),'sparkles'],['exclusive',t('exclusive'),'sparkles'],['event',t('event'),'flag'],['craft',t('crafts'),'craft'],['summoner',t('summoner'),'flag']]:page==='items'?[['',t('allItems'),'backpack'],['Material',t('materials'),'craft'],['Crate',t('crates'),'crate'],['Boost',t('boosts'),'sparkles']]:[];
  $('quick-filters').innerHTML=quick.map(([key,title,ico])=>`<button class="filter-chip ${(unitPage?source:itemKind)===key?'active':''}" data-filter="${key}">${icon(ico)}${esc(title)}</button>`).join('');
  const narrow=page==='units'||page==='items';document.querySelector('.index-body').classList.toggle('no-detail',!narrow);$('catalog').classList.toggle('wide',!narrow);
+ document.querySelector('.index-window').classList.toggle('updates-view',page==='updates');
 }
 function unitCard(unit){
  const dps=maxDps(unit);const saved=bookmarks.includes(unit.Id);
@@ -93,6 +101,8 @@ function renderCatalog(){
  }else if(page==='toilets'){
   const list=Object.entries(DATA.drops).filter(([name,drops])=>matches(`${name} ${drops.map(x=>x.Item).join(' ')}`));count=list.length;
   html=`<div class="info-banner">${esc(t('enemyHint'))} ${esc(t('dropNote'))}</div>`+list.map(([name,drops])=>`<article class="enemy-card"><div class="enemy-icon">${icon('enemy')}</div><h3>${esc(name)}</h3><p>${t('dropChance')}</p>${drops.map(d=>`<div class="drop-item">${image(DATA.materials[d.Item]?.Icon,d.Item)}<span>${esc(d.Item)}</span><b>${chance(d.Chance)}</b></div>`).join('')}</article>`).join('');
+ }else if(page==='updates'){
+  html=updates.cards(query);count=(html.match(/class="release-card"/g)||[]).length;
  }else{
   const modeOrder=['Easy','Medium','Hard','Insane','Crazy','Halloween','Endless'];
   const modeRank=name=>modeOrder.includes(name)?modeOrder.indexOf(name):modeOrder.length;
@@ -100,7 +110,7 @@ function renderCatalog(){
   const colors=['#85cf80','#61c8da','#efc169','#e8a570','#da8591','#c29ce5','#8eb8e5'];
   html=`<div class="info-banner">${esc(t('modeHint'))}</div>`+list.map(([name,m],i)=>`<article class="mode-card" style="--mode-color:${colors[i]}"><span class="mode-number">0${i+1}</span><small>${t('baseRewards')}</small><h3>${esc(name)}</h3>${name==='Endless'?`<div class="mode-stat"><span>${lang==='en'?'Coins / cleared wave':'Монеты за волну'}</span><b>${fmt(m.CoinsPerClearedWave)}</b></div><div class="mode-stat"><span>${lang==='en'?'XP / cleared wave':'Опыт за волну'}</span><b>${fmt(m.XpPerClearedWave)}</b></div><p>${lang==='en'?'Additional rewards are rolled at wave milestones.':'На этапах волн разыгрываются дополнительные награды.'}</p>`:[['winCoins',m.WinCoins],['winXp',m.XpEarn],['loseCoins',m.CoinsPerClearedWave],['winPumpkins',m.WinPumpkins]].map(([key,value])=>`<div class="mode-stat"><span>${t(key)}</span><b>${fmt(value||0)}</b></div>`).join('')}</article>`).join('');
  }
- if(!count)html=empty();$('catalog').innerHTML=html;$('result-count').textContent=`${count} ${lang==='ru'?'найдено':'entries'}`;
+ if(!count&&page!=='updates')html=empty();$('catalog').innerHTML=html;$('result-count').textContent=`${count} ${lang==='ru'?'найдено':'entries'}`;
  localizeDisplay(document.body,lang);
 }
 function recipeCard(recipe){
@@ -140,7 +150,7 @@ function renderDetails(){
  let html=`<div class="detail-topline"><span>${isUnit?t('details'):t('items').toUpperCase()}</span><button class="detail-close" data-close-detail aria-label="Close details">×</button></div><div class="detail-hero" style="--rarity:${color(unit.Rarity)}">${image(unit.Icon,unit.DisplayName||unit.Id)}<span class="rarity-badge">${esc(unit.Rarity||t('crates'))}</span></div><h3 class="detail-name">${esc(unit.DisplayName||unit.Id)}</h3>`;
  if(isUnit){
   const tags=[];if(stats.AttackType)tags.push(stats.AttackType);if(stats.AttackFlyToilet||stats.AttackFlyToiletHand)tags.push(lang==='en'?'Targets air':'Бьёт воздух');if(isSummoner(unit))tags.push(t('summoner'));
-  html+=`<div class="detail-subtitle">${esc(t('base'))}</div><div class="level-tabs" aria-label="Upgrade level">${levelList.map((_,i)=>`<button data-level="${i}" class="${i===selectedLevel?'active':''}" aria-pressed="${i===selectedLevel}">${i===levelList.length-1?t('max'):`LV ${i+1}`}</button>`).join('')}</div><div class="stats-grid">${stat('damage',t('damage'),fmt(stats.Damage||0,1))}${stat('range',t('range'),fmt(stats.Range||0,1))}${stat('clock',t('cooldown'),`${fmt(stats.Cooldown||0,2)}${t('seconds')}`)}</div><div class="dps-box"><small>${t('dps')}</small><strong>${directDps(stats)>0?fmt(directDps(stats),1):'—'}</strong></div><p class="tiny-note">${t('special')}</p><div class="section-label">${t('cost').toUpperCase()}</div>${line(t('cost'),`$ ${fmt(unit.Price)}`)}${stats.UpgradePrice&&selectedLevel<levelList.length-1?line(t('upgrade'),`$ ${fmt(stats.UpgradePrice)}`):''}${line(t('sell'),stats.SellPrice?`$ ${fmt(stats.SellPrice)}`:'—')}${DATA.limits[unit.Id]?line(t('limit'),DATA.limits[unit.Id]):''}<div class="detail-tags" style="margin-top:9px">${tags.map(x=>`<span class="detail-tag">${esc(x)}</span>`).join('')}</div>${DATA.limits[unit.Id]?`<p class="tiny-note">${t('unverifiedLimit')}</p>`:''}<div class="section-label">${t('attacks')}</div>${effectBlocks(unit,stats)}<div class="section-label">${t('obtain')}</div>${sources(unit)}`;
+  html+=`<div class="detail-subtitle">${esc(t('base'))}</div><div class="level-tabs" aria-label="Upgrade level">${levelList.map((_,i)=>`<button data-level="${i}" class="${i===selectedLevel?'active':''}" aria-pressed="${i===selectedLevel}">${i===levelList.length-1?t('max'):`LV ${i+1}`}</button>`).join('')}</div><div class="stats-grid">${stat('damage',t('damage'),fmt(stats.Damage||0,1))}${stat('range',t('range'),fmt(stats.Range||0,1))}${stat('clock',t('cooldown'),`${fmt(stats.Cooldown||0,2)}${t('seconds')}`)}</div><div class="dps-box"><small>${t('dps')}</small><strong>${directDps(stats)>0?fmt(directDps(stats),1):'—'}</strong></div><p class="tiny-note">${t('special')}</p><div class="section-label">${t('cost').toUpperCase()}</div>${line(t('cost'),`$ ${fmt(unit.Price)}`)}${stats.UpgradePrice&&selectedLevel<levelList.length-1?line(t('upgrade'),`$ ${fmt(stats.UpgradePrice)}`):''}${line(t('sell'),stats.SellPrice?`$ ${fmt(stats.SellPrice)}`:'—')}${DATA.limits[unit.Id]?line(t('limit'),DATA.limits[unit.Id]):''}<div class="detail-tags" style="margin-top:9px">${tags.map(x=>`<span class="detail-tag">${esc(x)}</span>`).join('')}</div>${DATA.limits[unit.Id]?`<p class="tiny-note">${t('unverifiedLimit')}</p>`:''}${abilitySections(unit.Id,lang,esc)}<div class="section-label">${t('attacks')}</div>${effectBlocks(unit,stats)}<div class="section-label">${t('obtain')}</div>${sources(unit)}`;
  }else if(unit.Kind==='Boost'){
   html+=`<div class="section-label">${t('boosts').toUpperCase()}</div>${line(lang==='en'?'Effect':'Эффект',unit.Description)}${line(lang==='en'?'Duration':'Длительность',`${fmt(unit.DurationSeconds/60)} ${lang==='ru'?'мин':'min'}`)}`;
  }else if(unit.Kind==='Material'){
@@ -158,7 +168,7 @@ function renderDetails(){
 function closeDetails(){$('details').classList.remove('mobile-open');$('details').removeAttribute('role');$('details').removeAttribute('aria-modal');$('detail-backdrop').hidden=true;document.body.classList.remove('modal-open');}
 function openDetails(){if(matchMedia('(max-width:900px)').matches){$('details').classList.add('mobile-open');$('details').setAttribute('role','dialog');$('details').setAttribute('aria-modal','true');$('detail-backdrop').hidden=false;document.body.classList.add('modal-open');$('details').querySelector('[data-close-detail]')?.focus();}else $('details').scrollTop=0;}
 function route(){
- const parts=location.hash.slice(1).split('/');let next=parts[0];if(!['units','items','crafts','toilets','modes'].includes(next))next='units';
+ const parts=location.hash.slice(1).split('/');let next=parts[0];if(!['units','items','crafts','toilets','modes','updates'].includes(next))next='units';
  const changedPage=page!==next;page=next;
  if(changedPage){query='';$('search').value='';rarity='';$('rarity').value='';source='';itemKind='';savedOnly=false;selected=null;closeDetails();}
  if(page==='units'){
@@ -208,6 +218,8 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDetails();if(e.
 window.addEventListener('hashchange',route);
 window.addEventListener('resize',()=>{if(innerWidth>900)closeDetails();});
 hydration();
+updates.load().then(()=>{if(DATA&&page==='updates')renderCatalog();});
+setInterval(()=>{if(!document.hidden)updates.tick();},1000);
 try{
  const responses=await Promise.all([fetch('data.json'),fetch('asset-map.json')]);
  if(responses.some(r=>!r.ok))throw new Error('Index data unavailable');

@@ -1,0 +1,37 @@
+{
+  "currentVersion": "15",
+  "nextUpdate": {
+    "enabled": true,
+    "title": {"en": "The next Alliance TD update", "ru": "Следующее обновление Alliance TD"},
+    "releaseAt": "2026-11-02T19:00:00+03:00"
+  },
+  "releases": [
+    {
+      "version": "15",
+      "date": "2026-10-28",
+      "title": {"en": "Hyper TSM + Changes", "ru": "Гипер ТСМ и улучшения"},
+      "sections": [
+        {
+          "title": {"en": "New content", "ru": "Новый контент"},
+          "items": [
+            {"en": "Hyper Titan Speaker Man", "ru": "Гипер Титан Спикермен"},
+            {"en": "Unit locking", "ru": "Блокировка юнитов"},
+            {"en": "Hyper Pack", "ru": "Гипер-набор"}
+          ]
+        },
+        {
+          "title": {"en": "Improvements", "ru": "Улучшения"},
+          "items": [
+            {"en": "Interface improvements", "ru": "Улучшения интерфейса"},
+            {"en": "Friends-only trading option", "ru": "Настройка обменов только с друзьями"},
+            {"en": "Remove players from your party", "ru": "Исключение игроков из группы"},
+            {"en": "Open 10 crates at once", "ru": "Открытие 10 ящиков за раз"},
+            {"en": "New index", "ru": "Новый индекс"},
+            {"en": "Loadouts", "ru": "Сохранённые наборы юнитов"},
+            {"en": "Five new sounds", "ru": "Пять новых звуков"}
+          ]
+        }
+      ]
+    }
+  ]
+}
