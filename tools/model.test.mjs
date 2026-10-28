@@ -28,6 +28,23 @@ test('DPS sorting is numeric and does not mutate catalog',()=>{
  for(let i=1;i<sorted.length;i++)assert.ok(maxDps(sorted[i-1])>=maxDps(sorted[i]));
  assert.deepEqual(units.map(u=>u.Id),ids);
 });
+
+test('summon uses obtain sources rather than stale summon flags',()=>{
+ const list=filterUnits(units,{source:'summon'});
+ assert.ok(list.some(u=>u.Id==='Camera Man'));
+ assert.ok(list.every(u=>u.Sources.some(s=>s.Kind==='Summon')));
+ for(const id of ['10M Speaker Man','Builder Camera Man','DJ Speaker Man','Titan Camera Man','TV Woman'])assert.ok(!list.some(u=>u.Id===id),id);
+ const flagged={Id:'flagged',Rarity:'Exclusive',Settings:{IsInSummon:true},Sources:[{Kind:'Summon'}]};
+ assert.equal(filterUnits([flagged],{source:'summon'}).length,0);
+});
+test('exclusive and event filters include exactly their catalog rarity',()=>{
+ for(const [source,rarity]of [['exclusive','Exclusive'],['event','Event']]){
+  const list=filterUnits(units,{source});
+  assert.equal(list.length,units.filter(u=>u.Rarity===rarity).length);
+  assert.ok(list.every(u=>u.Rarity===rarity));
+ }
+ assert.equal(filterUnits(units,{source:'event',query:'builder'}).length,1);
+});
 test('fractional probabilities are rendered as percent',()=>{assert.equal(chance(.005),'0.5%');assert.equal(chance(.015),'1.5%');});
 test('craft references point to known entries',()=>{
  for(const recipe of data.crafts){assert.ok(units.some(u=>u.Id===recipe.Output),recipe.Output);

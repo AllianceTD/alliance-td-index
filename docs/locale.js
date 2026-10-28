@@ -1,5 +1,6 @@
 // Display-only localization. Internal IDs, URLs and inventory data stay unchanged.
 const exact = {
+ 'Event':'Ивент',
  'City':'Город','Canyon Bridge':'Мост через каньон','Wild Desert':'Дикая пустыня','Camera Lab':'Лаборатория камер','Toilet Bunker':'Бункер туалетов','Spooky Town':'Жуткий город','Barricade':'Баррикада',
  'Paid items from trades. Open to see each offer and buy it for Tickets.':'Предметы из торговых предложений. Откройте, чтобы посмотреть предложения и купить их за тикеты.',
  'Reinforced Titanium Plate':'Усиленная титановая пластина',

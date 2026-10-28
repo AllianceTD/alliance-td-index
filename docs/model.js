@@ -35,7 +35,9 @@ export function filterUnits(units, { query = '', rarity = '', source = '', saved
     if (text && !`${unit.DisplayName || ''} ${unit.Id} ${unit.Rarity}`.toLocaleLowerCase().includes(text)) return false;
     if (rarity && unit.Rarity !== rarity) return false;
     if (savedOnly && !bookmarks.includes(unit.Id)) return false;
-    if (source === 'summon' && !unit.Settings?.IsInSummon) return false;
+    if (source === 'summon' && (['Exclusive','Event'].includes(unit.Rarity) || !(unit.Sources || []).some(x => x.Kind === 'Summon'))) return false;
+    if (source === 'exclusive' && unit.Rarity !== 'Exclusive') return false;
+    if (source === 'event' && unit.Rarity !== 'Event') return false;
     if (source === 'craft' && !(unit.Sources || []).some(x => x.Kind === 'Craft')) return false;
     if (source === 'summoner' && !isSummoner(unit)) return false;
     return true;

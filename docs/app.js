@@ -1,5 +1,5 @@
 import { russianText, localizeDisplay } from './locale.js';
-import { RARITIES, levels, levelStats, directDps, maxDps, isSummoner, fmt, compact, chance, filterUnits } from './model.js';
+import { RARITIES, levels, levelStats, directDps, maxDps, isSummoner, fmt, compact, chance, filterUnits } from './model.js?v=unit-sources-2';
 
 const paths = {
   camera:'M3 7h12v10H3zM15 10l6-3v10l-6-3M6 4h6',
@@ -28,6 +28,8 @@ const translations = {
  ru:{companion:'Твой справочник по игре',saved:'Избранное',explore:'РАЗДЕЛЫ СПРАВОЧНИКА',units:'Юниты',items:'Предметы и ящики',crafts:'Крафты',toilets:'Туалеты и дроп',modes:'Режимы',knowUnit:'Выбери следующего юнита.',sidebarNote:'Изучи улучшения, найди рецепт и собери свою команду.',gameData:'Из игрового индекса',eyebrow:'ВСЯ ALLIANCE — ПЕРЕД ТОБОЙ',fieldGuide:'СПРАВОЧНИК',tapCard:'Выбери карточку',statsNote:'Характеристики при 1× · Без внешних баффов',collectionNote:'Избранное хранится в этом браузере',footerNote:'Для сообщества. Чтобы проще собрать команду.',compare:'Сравнить юнитов',comparison:'Сравнение юнитов',all:'Все юниты',summon:'Саммон',summoner:'Призыватели',allRarities:'Все редкости',rarity:'Редкость',name:'Название A–Z',highest:'Больше DPS',lowest:'Дешевле',search:'Найти в справочнике…',details:'ИНФОРМАЦИЯ О ЮНИТЕ',damage:'Урон',range:'Дальность',cooldown:'Кулдаун',dps:'Прямой DPS',upgrade:'Следующее улучшение',sell:'Продажа',limit:'Лимит установки',attacks:'АТАКИ И ЭФФЕКТЫ',obtain:'КАК ПОЛУЧИТЬ',level:'Уровень',max:'МАКС',base:'Базовые атаки · без условных пассивок',missing:'Ничего не найдено',trySearch:'Попробуй другой запрос или сбрось фильтры.',reset:'Сбросить фильтры',bookmarked:'Добавлено в избранное',unbookmarked:'Удалено из избранного',chooseTwo:'Выбери минимум двух юнитов.',maxCompare:'Можно сравнить до трёх юнитов.',noDps:'Призыв / поддержка',sourceMissing:'Источник не указан в текущем индексе',allItems:'Все предметы',materials:'Материалы',crates:'Ящики',coin:'Монеты',tickets:'Тикеты',available:'Доступно',soon:'Скоро',dropChance:'Шанс выпадения',baseRewards:'БАЗОВЫЕ НАГРАДЫ',winCoins:'Монеты за победу',winXp:'Опыт за победу',loseCoins:'Монеты за волну при поражении',winPumpkins:'Тыквы за победу',snapshot:'Обновлено',noLimits:'Не указан',craftHint:'Крафт расходует указанных юнитов, материалы и валюту.',enemyHint:'Дроп материалов из текущего индекса. Здоровье и скорость врагов нужно проверить в матч-плейсе.',modeHint:'Награды без множителей карты, пропусков, зелий и бонусов друзей. Снимок данных лобби.',ready:'Исследуй каталог',seconds:'с',special:'Дополнительные атаки включены в прямой DPS, если они указаны.',unverifiedLimit:'Справочник лобби; фактический лимит в матче может отличаться.',cost:'Цена установки',materialSources:'ВЫПАДАЕТ С',recipe:'РЕЦЕПТ КРАФТА',dropNote:'Шансы указаны на подходящую проверку дропа. В бесконечном режиме редкие материалы проверяются один раз на тип босса за волну.'},
 };
 translations.en.boosts='Potions'; translations.ru.boosts='Зелья';
+translations.en.exclusive='Exclusive'; translations.ru.exclusive='Эксклюзив';
+translations.en.event='Event'; translations.ru.event='Ивент';
 function readStorage(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
 let lang = readStorage('atd-language','en'); if(!translations[lang])lang='en';
 let bookmarks = readStorage('atd-bookmarks',[]); if(!Array.isArray(bookmarks))bookmarks=[];
@@ -68,7 +70,7 @@ function heading(){
  document.querySelectorAll('.nav-link').forEach(a=>{a.classList.toggle('active',a.dataset.page===page);if(a.dataset.page===page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  $('saved-button').classList.toggle('active',savedOnly);
  const unitPage=page==='units';$('rarity').hidden=!unitPage;$('sort').hidden=!unitPage;
- const quick=unitPage?[['',t('all'),'units'],['summon',t('summon'),'sparkles'],['craft',t('crafts'),'craft'],['summoner',t('summoner'),'flag']]:page==='items'?[['',t('allItems'),'backpack'],['Material',t('materials'),'craft'],['Crate',t('crates'),'crate'],['Boost',t('boosts'),'sparkles']]:[];
+ const quick=unitPage?[['',t('all'),'units'],['summon',t('summon'),'sparkles'],['exclusive',t('exclusive'),'sparkles'],['event',t('event'),'flag'],['craft',t('crafts'),'craft'],['summoner',t('summoner'),'flag']]:page==='items'?[['',t('allItems'),'backpack'],['Material',t('materials'),'craft'],['Crate',t('crates'),'crate'],['Boost',t('boosts'),'sparkles']]:[];
  $('quick-filters').innerHTML=quick.map(([key,title,ico])=>`<button class="filter-chip ${(unitPage?source:itemKind)===key?'active':''}" data-filter="${key}">${icon(ico)}${esc(title)}</button>`).join('');
  const narrow=page==='units'||page==='items';document.querySelector('.index-body').classList.toggle('no-detail',!narrow);$('catalog').classList.toggle('wide',!narrow);
 }
