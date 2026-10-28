@@ -34,7 +34,14 @@ let DATA, ASSETS, page='units', query='', rarity='', sort='rarity', source='', s
 const t = key => translations[lang][key] || translations.en[key] || key;
 const saveStorage = (key,value)=>{try{localStorage.setItem(key,JSON.stringify(value));}catch{}};
 function asset(raw){const id=String(raw||'').match(/(?:rbxassetid:\/\/)?(\d+)/)?.[1];return id?ASSETS[id]:null;}
-function image(raw, name, className=''){const url=asset(raw);return url?`<img class="${className}" src="${url}" alt="${esc(name)}" loading="lazy">`:`<span class="card-visual-fallback ${className}">${icon('units')}</span>`;}
+const materialIcons = {
+ 'Reinforced Titanium Plate':'reinforced-titanium-plate',
+ 'Titanium Saw Blade':'titanium-saw-blade',
+ 'Toxic Canister':'toxic-canister',
+ 'Heavy Arm Mechanism':'heavy-arm-mechanism',
+ 'Toxic Gun Core':'toxic-gun-core',
+};
+function image(raw, name, className=''){const url=Object.hasOwn(materialIcons,name)?`assets/materials/${materialIcons[name]}.png`:asset(raw);return url?`<img class="${className}" src="${url}" alt="${esc(name)}" loading="lazy">`:`<span class="card-visual-fallback ${className}">${icon('units')}</span>`;}
 function color(rarity){return RARITIES[rarity]||'#a9b3c2';}
 function toast(message){$('toast').textContent=message;$('toast').hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').hidden=true,2600);}
 function hydration(root=document){root.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=icon(el.dataset.icon));}
