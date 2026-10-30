@@ -1,5 +1,6 @@
 // Display-only localization. Internal IDs, URLs and inventory data stay unchanged.
 const exact = {
+ 'Toilet':'Обычный туалет','DJ Toilet':'DJ-туалет','Helicopter Skibidi Toilet':'Туалет-вертолёт','Angel Toilet':'Туалет-ангел','Vacuum Toilet':'Вакуумный туалет',
  'Next update':'Следующее обновление',
  'Event':'Ивент',
  'City':'Город','Canyon Bridge':'Мост через каньон','Wild Desert':'Дикая пустыня','Camera Lab':'Лаборатория камер','Toilet Bunker':'Бункер туалетов','Spooky Town':'Жуткий город','Barricade':'Баррикада',

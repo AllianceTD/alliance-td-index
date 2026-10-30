@@ -1,4 +1,4 @@
-import { russianText, localizeDisplay } from './locale.js';
+import { russianText, localizeDisplay } from './locale.js?v=enemy-icons-1';
 import { createUpdates } from './updates.js?v=clock-format-3';
 import { abilitySections } from './abilities.js';
 import { RARITIES, levels, levelStats, directDps, maxDps, isSummoner, fmt, compact, chance, filterUnits } from './model.js?v=unit-sources-2';
@@ -33,6 +33,8 @@ translations.en.boosts='Potions'; translations.ru.boosts='Зелья';
 translations.en.exclusive='Exclusive'; translations.ru.exclusive='Эксклюзив';
 translations.en.event='Event'; translations.ru.event='Ивент';
 translations.en.updates='Update log'; translations.ru.updates='Журнал обновлений';
+translations.en.noMaterialDrops='No crafting material drops listed';
+translations.ru.noMaterialDrops='Дроп материалов для крафта не указан';
 function readStorage(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
 let lang = readStorage('atd-language','en'); if(!translations[lang])lang='en';
 let bookmarks = readStorage('atd-bookmarks',[]); if(!Array.isArray(bookmarks))bookmarks=[];
@@ -47,6 +49,23 @@ const materialIcons = {
  'Toxic Canister':'toxic-canister',
  'Heavy Arm Mechanism':'heavy-arm-mechanism',
  'Toxic Gun Core':'toxic-gun-core',
+};
+const enemyIcons = {
+ 'Toilet':'toilet',
+ 'Mask Toilet':'mask-toilet',
+ 'Glasses Toilet':'glasses-toilet',
+ 'Spider Toilet':'spider-toilet',
+ 'Rocket Toilet':'rocket-toilet',
+ 'Party Toilet':'party-toilet',
+ 'DJ Toilet':'dj-toilet',
+ 'Helicopter Skibidi Toilet':'helicopter-toilet',
+ 'Angel Toilet':'angel-toilet',
+ 'Vacuum Toilet':'vacuum-toilet',
+ 'Glitch Toilet':'glitch-toilet',
+ 'G-Toilet':'g-toilet',
+ 'G-Toilet 2.0':'g-toilet-2',
+ 'G-Toilet 3.0':'g-toilet-3',
+ 'Scientist Toilet':'scientist-toilet',
 };
 function image(raw, name, className=''){const url=Object.hasOwn(materialIcons,name)?`assets/materials/${materialIcons[name]}.png?v=2`:asset(raw);return url?`<img class="${className}" src="${url}" alt="${esc(name)}" loading="lazy">`:`<span class="card-visual-fallback ${className}">${icon('units')}</span>`;}
 function color(rarity){return RARITIES[rarity]||'#a9b3c2';}
@@ -99,8 +118,8 @@ function renderCatalog(){
  }else if(page==='crafts'){
   const list=DATA.crafts.filter(x=>matches(`${x.Output} ${(x.Inputs||[]).map(i=>i.Unit||i.Material).join(' ')}`));count=list.length;html=list.map(recipeCard).join('');
  }else if(page==='toilets'){
-  const list=Object.entries(DATA.drops).filter(([name,drops])=>matches(`${name} ${drops.map(x=>x.Item).join(' ')}`));count=list.length;
-  html=`<div class="info-banner">${esc(t('enemyHint'))} ${esc(t('dropNote'))}</div>`+list.map(([name,drops])=>`<article class="enemy-card"><div class="enemy-icon">${icon('enemy')}</div><h3>${esc(name)}</h3><p>${t('dropChance')}</p>${drops.map(d=>`<div class="drop-item">${image(DATA.materials[d.Item]?.Icon,d.Item)}<span>${esc(d.Item)}</span><b>${chance(d.Chance)}</b></div>`).join('')}</article>`).join('');
+  const list=[...new Set([...Object.keys(enemyIcons),...Object.keys(DATA.drops)])].map(name=>[name,DATA.drops[name]||[]]).filter(([name,drops])=>matches(`${name} ${drops.map(x=>x.Item).join(' ')}`));count=list.length;
+  html=`<div class="info-banner">${esc(t('enemyHint'))} ${esc(t('dropNote'))}</div>`+list.map(([name,drops])=>`<article class="enemy-card"><div class="enemy-icon">${enemyIcons[name]?`<img src="assets/enemies/${enemyIcons[name]}.png" alt="${esc(name)}" loading="lazy">`:icon('enemy')}</div><h3>${esc(name)}</h3><p>${drops.length?t('dropChance'):t('noMaterialDrops')}</p>${drops.map(d=>`<div class="drop-item">${image(DATA.materials[d.Item]?.Icon,d.Item)}<span>${esc(d.Item)}</span><b>${chance(d.Chance)}</b></div>`).join('')}</article>`).join('');
  }else if(page==='updates'){
   html=updates.cards(query);count=(html.match(/class="release-card"/g)||[]).length;
  }else{
