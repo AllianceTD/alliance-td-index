@@ -4,14 +4,22 @@ import fs from 'node:fs';
 import {countdown,sortedReleases,localized} from '../docs/updates.js';
 import {ABILITIES,abilitySections} from '../docs/abilities.js';
 const config=JSON.parse(fs.readFileSync(new URL('../docs/updates.json',import.meta.url)));
-test('Monday update is 19:00 Moscow and countdown is timezone independent',()=>{
- assert.equal(new Date(config.nextUpdate.releaseAt).toISOString(),'2026-11-02T16:00:00.000Z');
- assert.equal(new Date(config.nextUpdate.releaseAt).getUTCDay(),1);
- assert.deepEqual(countdown(config.nextUpdate.releaseAt,Date.parse('2026-11-01T15:59:59Z')),{status:'scheduled',days:1,hours:0,minutes:0,seconds:1});
+test('Moscow 19:00 countdown is timezone independent',()=>{
+ const at='2026-11-02T19:00:00+03:00';
+ assert.equal(new Date(at).toISOString(),'2026-11-02T16:00:00.000Z');
+ assert.deepEqual(countdown(at,Date.parse('2026-11-01T15:59:59Z')),{status:'scheduled',days:1,hours:0,minutes:0,seconds:1});
 });
 test('missing, invalid and elapsed timer dates have safe distinct states',()=>{
  assert.equal(countdown(null).status,'unknown');assert.equal(countdown('bad').status,'unknown');
- assert.equal(countdown(config.nextUpdate.releaseAt,Date.parse(config.nextUpdate.releaseAt)).status,'due');
+ assert.equal(countdown('2026-11-02T19:00:00+03:00',Date.parse('2026-11-02T19:00:00+03:00')).status,'due');
+});
+
+test('pending patch is a preview without inventing a release date or version',()=>{
+ assert.equal(config.currentVersion,'15');
+ assert.equal(config.nextUpdate.releaseAt,null);
+ const pending=sortedReleases(config.releases)[0];
+ assert.equal(pending.status,'upcoming');
+ assert.equal(config.releases.filter(r=>r.status!=='upcoming')[0].version,'15');
 });
 test('release history sorts newest first without mutating source',()=>{
  const list=[{date:'2026-10-01',version:'1'},{date:'2026-10-28',version:'2'}];

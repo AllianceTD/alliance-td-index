@@ -3,3 +3,13 @@
 @media(max-width:650px){.update-banner{padding:18px;gap:16px}.update-banner h2{font-size:23px}.update-banner-copy{flex-basis:100%}.countdown{min-height:55px}.timer-unit{min-width:47px;padding:8px}.timer-unit b{font-size:25px}.update-log-link{font-size:12px}.timer-message{font-size:20px;max-width:none}.release-card{padding:18px}.release-card h2{font-size:26px}.release-sections{grid-template-columns:1fr;gap:20px}.release-meta{gap:8px}.release-sections li{font-size:13px}}
 .ability-section-label{margin-top:24px}.ability-block{margin:10px 0;padding:15px;background:#bad6cf;border:1px solid #739d9e;border-left:4px solid #366c78;border-radius:10px}.ability-block.is-active{border-left-color:#997729;background:#c3d6b9}.ability-kind{font-size:10px;font-weight:900;letter-spacing:1px;color:#34616a}.ability-block h4{font-family:var(--display);font-size:19px;color:#f3fff9;-webkit-text-stroke:1px #203b4a;paint-order:stroke fill;margin:7px 0 9px}.ability-block p{font-size:13px;line-height:1.7;margin:0;color:#294f58}.ability-facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.ability-facts span{font-size:10px;font-weight:900;color:#2a5054;background:#d5e5da;border-radius:5px;padding:5px 7px}
 .updates-view .window-footer,.updates-view .view-hint{display:none}
+.patch-note{padding:12px 14px;border:1px solid #6d9294;border-left:4px solid #daac58;border-radius:9px;background:#c6d9bd;color:#29494c;font-size:12px;line-height:1.65;margin:15px 0}
+.conditional-stats,.screen-mode,.reinforcement-card{margin:12px 0;padding:14px;border:1px solid #739d9e;border-radius:10px;background:#b7d3cb;min-width:0}
+.conditional-stats h4{margin:0 0 8px;font-size:11px;letter-spacing:1px;color:#28545b}
+.conditional-stats p,.screen-mode p,.reinforcement-card p{margin:10px 0 0;font-size:12px;line-height:1.65;color:#31555d}
+.conditional-stats .detail-line,.screen-mode .detail-line,.reinforcement-card .detail-line{gap:10px;font-size:12px}
+.conditional-stats strong,.screen-mode strong,.reinforcement-card strong{white-space:nowrap}
+.screen-mode{border-left-width:4px}.screen-mode.red{border-left-color:#df555b}.screen-mode.orange{border-left-color:#dca24f}.screen-mode.purple{border-left-color:#a579d1}
+.screen-mode-heading{display:flex;gap:10px;align-items:center;margin-bottom:8px}.screen-mode-heading img{width:54px;height:54px;object-fit:contain}
+.screen-mode h4,.reinforcement-card h4{font-family:var(--display);font-size:18px;line-height:1.3;color:#effff9;-webkit-text-stroke:1px #254754;paint-order:stroke fill;margin:4px 0 10px}
+.screen-mode-heading h4{margin:0}.ability-icon{float:right;width:64px;height:64px;object-fit:contain;margin:0 0 8px 10px}

@@ -1,6 +1,7 @@
-import { russianText, localizeDisplay } from './locale.js?v=enemy-icons-1';
-import { createUpdates } from './updates.js?v=clock-format-3';
-import { abilitySections } from './abilities.js';
+import { russianText, localizeDisplay } from './locale.js?v=balance-20261103';
+import { createUpdates } from './updates.js?v=balance-20261103';
+import { abilitySections } from './abilities.js?v=balance-20261103';
+import { balanceDetails } from './balance.js?v=balance-20261103';
 import { RARITIES, levels, levelStats, directDps, maxDps, isSummoner, fmt, compact, chance, filterUnits } from './model.js?v=unit-sources-2';
 
 const paths = {
@@ -35,6 +36,12 @@ translations.en.event='Event'; translations.ru.event='Ивент';
 translations.en.updates='Update log'; translations.ru.updates='Журнал обновлений';
 translations.en.noMaterialDrops='No crafting material drops listed';
 translations.ru.noMaterialDrops='Дроп материалов для крафта не указан';
+translations.en.patchPreview='Prepared for the next patch. These changes are not confirmed live yet.';
+translations.ru.patchPreview='Подготовлено к следующему патчу. Выход этих изменений ещё не подтверждён.';
+translations.en.overallLimit='Only the overall match placement limit';
+translations.ru.overallLimit='Только общий лимит установки в матче';
+translations.en.unverifiedLimit='Personal unit cap. The overall match placement limit also applies.';
+translations.ru.unverifiedLimit='Личный лимит юнита. Общий лимит установки в матче тоже действует.';
 function readStorage(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
 let lang = readStorage('atd-language','en'); if(!translations[lang])lang='en';
 let bookmarks = readStorage('atd-bookmarks',[]); if(!Array.isArray(bookmarks))bookmarks=[];
@@ -81,7 +88,7 @@ function translate(){
  $('rarity').options[0].textContent=t('allRarities');
  const sortOptions=['rarity','name','highest','lowest']; [...$('sort').options].forEach((o,i)=>o.textContent=t(sortOptions[i]));
  $('saved-count').textContent=bookmarks.length;
- const date=new Date(DATA.exportedAt).toLocaleDateString(lang==='ru'?'ru-RU':'en-GB',{day:'numeric',month:'short',year:'numeric'});
+ const date=new Date(DATA.updatedAt||DATA.exportedAt).toLocaleDateString(lang==='ru'?'ru-RU':'en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'Europe/Moscow'});
  $('update-date').textContent=date;$('snapshot-label').textContent=`${t('snapshot')} ${date}`;
  localizeDisplay(document.body,lang);
  updates.render();
@@ -156,9 +163,9 @@ function effectBlocks(unit,s){
  if(s.SlowPercent)effects.push(`Slow: ${fmt(s.SlowPercent)}%${s.SlowDuration?` / ${fmt(s.SlowDuration,1)}s`:''}`);
  if(s.BleedDamagePerSec)effects.push(`Bleed: ${fmt(s.BleedDamagePerSec)} DPS / ${fmt(s.BleedCd,1)}s`);
  if(s.BurnDamagePerSec)effects.push(`Burn: ${fmt(s.BurnDamagePerSec)} DPS`);
- if(s.SpawnerHp)effects.push(`Summon HP: ${fmt(s.SpawnerHp)}`);
+ if(s.SpawnerHp&&unit.Id!=='Camera Helicopter')effects.push(`Summon HP: ${fmt(s.SpawnerHp)}`);
  if(s.SpawnCooldown)effects.push(`Summon cooldown: ${fmt(s.SpawnCooldown,1)}s`);
- if(s.SpawnMaxUnits)effects.push(`Summon limit: ${fmt(s.SpawnMaxUnits)}`);
+ if(s.SpawnMaxUnits&&unit.Id!=='Camera Helicopter')effects.push(`Summon limit: ${fmt(s.SpawnMaxUnits)}`);
  if(s.SpawnUnit)effects.push(`Summons: ${s.SpawnUnit}`);
  if(effects.length)html+=`<div class="attack-block"><b>${lang==='en'?'Additional effects':'Дополнительные эффекты'}</b><p>${effects.map(esc).join('<br>')}</p></div>`;
  return html;
@@ -169,7 +176,7 @@ function renderDetails(){
  let html=`<div class="detail-topline"><span>${isUnit?t('details'):t('items').toUpperCase()}</span><button class="detail-close" data-close-detail aria-label="Close details">×</button></div><div class="detail-hero" style="--rarity:${color(unit.Rarity)}">${image(unit.Icon,unit.DisplayName||unit.Id)}<span class="rarity-badge">${esc(unit.Rarity||t('crates'))}</span></div><h3 class="detail-name">${esc(unit.DisplayName||unit.Id)}</h3>`;
  if(isUnit){
   const tags=[];if(stats.AttackType)tags.push(stats.AttackType);if(stats.AttackFlyToilet||stats.AttackFlyToiletHand)tags.push(lang==='en'?'Targets air':'Бьёт воздух');if(isSummoner(unit))tags.push(t('summoner'));
-  html+=`<div class="detail-subtitle">${esc(t('base'))}</div><div class="level-tabs" aria-label="Upgrade level">${levelList.map((_,i)=>`<button data-level="${i}" class="${i===selectedLevel?'active':''}" aria-pressed="${i===selectedLevel}">${i===levelList.length-1?t('max'):`LV ${i+1}`}</button>`).join('')}</div><div class="stats-grid">${stat('damage',t('damage'),fmt(stats.Damage||0,1))}${stat('range',t('range'),fmt(stats.Range||0,1))}${stat('clock',t('cooldown'),`${fmt(stats.Cooldown||0,2)}${t('seconds')}`)}</div><div class="dps-box"><small>${t('dps')}</small><strong>${directDps(stats)>0?fmt(directDps(stats),1):'—'}</strong></div><p class="tiny-note">${t('special')}</p><div class="section-label">${t('cost').toUpperCase()}</div>${line(t('cost'),`$ ${fmt(unit.Price)}`)}${stats.UpgradePrice&&selectedLevel<levelList.length-1?line(t('upgrade'),`$ ${fmt(stats.UpgradePrice)}`):''}${line(t('sell'),stats.SellPrice?`$ ${fmt(stats.SellPrice)}`:'—')}${DATA.limits[unit.Id]?line(t('limit'),DATA.limits[unit.Id]):''}<div class="detail-tags" style="margin-top:9px">${tags.map(x=>`<span class="detail-tag">${esc(x)}</span>`).join('')}</div>${DATA.limits[unit.Id]?`<p class="tiny-note">${t('unverifiedLimit')}</p>`:''}${abilitySections(unit.Id,lang,esc)}<div class="section-label">${t('attacks')}</div>${effectBlocks(unit,stats)}<div class="section-label">${t('obtain')}</div>${sources(unit)}`;
+  html+=`${unit.DataStatus==='upcoming'?`<p class="patch-note">${t('patchPreview')}</p>`:''}<div class="detail-subtitle">${esc(t('base'))}</div><div class="level-tabs" aria-label="Upgrade level">${levelList.map((_,i)=>`<button data-level="${i}" class="${i===selectedLevel?'active':''}" aria-pressed="${i===selectedLevel}">${i===levelList.length-1?t('max'):`LV ${i+1}`}</button>`).join('')}</div><div class="stats-grid">${stat('damage',t('damage'),fmt(stats.Damage||0,1))}${stat('range',t('range'),fmt(stats.Range||0,1))}${stat('clock',t('cooldown'),`${fmt(stats.Cooldown||0,2)}${t('seconds')}`)}</div><div class="dps-box"><small>${t('dps')}</small><strong>${directDps(stats)>0?fmt(directDps(stats),1):'—'}</strong></div><p class="tiny-note">${t('special')}</p><div class="section-label">${t('cost').toUpperCase()}</div>${line(t('cost'),`$ ${fmt(unit.Price)}`)}${stats.UpgradePrice&&selectedLevel<levelList.length-1?line(t('upgrade'),`$ ${fmt(stats.UpgradePrice)}`):''}${line(t('sell'),stats.SellPrice?`$ ${fmt(stats.SellPrice)}`:'—')}${DATA.limits[unit.Id]?line(t('limit'),DATA.limits[unit.Id]):unit.PersonalLimitRemoved?line(t('limit'),t('overallLimit')):''}<div class="detail-tags" style="margin-top:9px">${tags.map(x=>`<span class="detail-tag">${esc(x)}</span>`).join('')}</div>${DATA.limits[unit.Id]?`<p class="tiny-note">${t('unverifiedLimit')}</p>`:''}${balanceDetails(unit.Id,stats,selectedLevel+1,lang,esc)}${abilitySections(unit.Id,lang,esc)}<div class="section-label">${t('attacks')}</div>${effectBlocks(unit,stats)}<div class="section-label">${t('obtain')}</div>${sources(unit)}`;
  }else if(unit.Kind==='Boost'){
   html+=`<div class="section-label">${t('boosts').toUpperCase()}</div>${line(lang==='en'?'Effect':'Эффект',unit.Description)}${line(lang==='en'?'Duration':'Длительность',`${fmt(unit.DurationSeconds/60)} ${lang==='ru'?'мин':'min'}`)}`;
  }else if(unit.Kind==='Material'){
@@ -206,7 +213,7 @@ function toggleCompare(id){
 function showComparison(){
  if(compare.length<2){toast(t('chooseTwo'));return;}
  const units=compare.map(id=>DATA.units.find(u=>u.Id===id));
- const metrics=[[t('rarity'),u=>u.Rarity],[t('dps'),u=>fmt(maxDps(u),1)],[t('damage'),u=>fmt(levels(u).at(-1)?.Damage||0)],[t('range'),u=>fmt(levels(u).at(-1)?.Range||0,1)],[t('cooldown'),u=>`${fmt(levels(u).at(-1)?.Cooldown||0,2)}s`],[t('cost'),u=>`$ ${fmt(u.Price)}`],[t('limit'),u=>DATA.limits[u.Id]||'—']];
+ const metrics=[[t('rarity'),u=>u.Rarity],[t('dps'),u=>fmt(maxDps(u),1)],[t('damage'),u=>fmt(levels(u).at(-1)?.Damage||0)],[t('range'),u=>fmt(levels(u).at(-1)?.Range||0,1)],[t('cooldown'),u=>`${fmt(levels(u).at(-1)?.Cooldown||0,2)}s`],[t('cost'),u=>`$ ${fmt(u.Price)}`],[t('limit'),u=>DATA.limits[u.Id]||(u.PersonalLimitRemoved?t('overallLimit'):'—')]];
  $('comparison-content').innerHTML=`<p class="tiny-note">${t('base')} · ${t('max')}</p><table><thead><tr><th></th>${units.map(u=>`<th>${image(u.Icon,u.DisplayName)}<strong>${esc(u.DisplayName)}</strong></th>`).join('')}</tr></thead><tbody>${metrics.map(([title,get])=>`<tr><td>${esc(title)}</td>${units.map(u=>`<td>${esc(get(u))}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
  localizeDisplay($('compare-dialog'),lang);$('compare-dialog').showModal();
 }
@@ -240,7 +247,7 @@ hydration();
 updates.load().then(()=>{if(DATA&&page==='updates')renderCatalog();});
 setInterval(()=>{if(!document.hidden)updates.tick();},1000);
 try{
- const responses=await Promise.all([fetch('data.json'),fetch('asset-map.json')]);
+ const responses=await Promise.all([fetch('data.json?v=balance-20261103',{cache:'no-cache'}),fetch('asset-map.json')]);
  if(responses.some(r=>!r.ok))throw new Error('Index data unavailable');
  [DATA,ASSETS]=await Promise.all(responses.map(r=>r.json()));
  bookmarks=bookmarks.filter(x=>DATA.units.some(u=>u.Id===x));

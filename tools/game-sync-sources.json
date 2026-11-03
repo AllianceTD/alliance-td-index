@@ -1,0 +1,51 @@
+{
+  "verifiedAt": "2026-11-02",
+  "catalogUpdatedAt": "2026-11-03",
+  "method": "Reviewed Edit-mode source snapshots, checked in Game and Lobby before export.",
+  "sources": [
+    {
+      "path": "outputs/classic-unit-passives-2026-11-02/after/lobby/ReplicatedStorage.Modules.Units.Titan TV Man.luau",
+      "sha256": "d8c153689e815cf854379e67baa770a522f919dbf894b26d88145b577c44376e"
+    },
+    {
+      "path": "outputs/classic-unit-passives-2026-11-02/after/lobby/ReplicatedStorage.Modules.Units.Speaker Woman.luau",
+      "sha256": "23190ab66896d0d0f4cee036e7f739544c5aefe246c45ad561ce21b853014641"
+    },
+    {
+      "path": "outputs/classic-unit-passives-2026-11-02/after/lobby/ReplicatedStorage.Modules.Units.Titan Camera Man.luau",
+      "sha256": "f1d4a11da73c8f4414c6c52d2bcaa67f8a2413800827283be3c19674206f37ec"
+    },
+    {
+      "path": "outputs/classic-unit-passives-2026-11-02/after/lobby/ReplicatedStorage.Modules.Units.Upgraded Titan Camera Man.luau",
+      "sha256": "7d2ea71040e8125dd710b73acee55c344ccbc994a09260cebab1038201e352c0"
+    },
+    {
+      "path": "outputs/classic-unit-passives-2026-11-02/after/lobby/ReplicatedStorage.Modules.Units.Jester Speaker Man.luau",
+      "sha256": "fa186b46f757f3dd8933bf124b59a70ab77982372336e7c74b62e437fc7b8dbc"
+    },
+    {
+      "path": "outputs/tv-strider-buff-2026-11-02/lobby-after/ReplicatedStorage.Modules.Units.TV Strider.luau",
+      "sha256": "788bef127cc582a20a7c6eb992b4a270e50d76c10fb087d231ce62ebfdf70663"
+    },
+    {
+      "path": "outputs/camera-helicopter-rework-2026-11-02/new/CameraHelicopterConfig.luau",
+      "sha256": "8194b4c56d69ea6b298e4f5090589195f1f87c1e620f3e9633abf44c09e48355"
+    },
+    {
+      "path": "outputs/camera-helicopter-rework-2026-11-02/after/game/ServerScriptService.Game.Main.TowerSystem.luau",
+      "sha256": "610adc6a5cf238a019c0f6d9806b6b5be96a8e9e4d1f7d7eb0c2e5325cecc704"
+    },
+    {
+      "path": "outputs/classic-unit-passives-2026-11-02/new/ClassicUnitPassivesConfig.luau",
+      "sha256": "9632e45a3ee6bd91b61caa3596397db3cf2abc97fcc813716b86f63bbb1ad9e9"
+    },
+    {
+      "path": "outputs/tv-strider-buff-2026-11-02/SignalResonanceConfig.luau",
+      "sha256": "10039b8ef395c15af3b3a7e4dccd31ff50bedb10611438f137797191bee0da60"
+    },
+    {
+      "path": "outputs/tv-screen-shift-2026-11-02/new/ScreenShiftConfig.luau",
+      "sha256": "677562c473dd1881fc4123e220de28ef8d3b8c6d4c878b07543a133d5b4bd387"
+    }
+  ]
+}

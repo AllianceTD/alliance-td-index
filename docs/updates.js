@@ -7,7 +7,7 @@ export function countdown(releaseAt,now=Date.now()){
  return {status:'scheduled',days:Math.floor(seconds/86400),hours:Math.floor(seconds%86400/3600),minutes:Math.floor(seconds%3600/60),seconds:seconds%60};
 }
 export function localized(value,lang){return typeof value==='string'?value:value?.[lang]||value?.en||value?.ru||'';}
-export function sortedReleases(releases){return [...(releases||[])].sort((a,b)=>String(b.date).localeCompare(String(a.date))||Number(b.version)-Number(a.version));}
+export function sortedReleases(releases){return [...(releases||[])].sort((a,b)=>Number(b.status==='upcoming')-Number(a.status==='upcoming')||String(b.date).localeCompare(String(a.date))||Number(b.version)-Number(a.version));}
 export function createUpdates({banner,lang,escape}){
  let config=null;
  const text=(en,ru)=>lang()==='ru'?ru:en;
@@ -37,7 +37,7 @@ export function createUpdates({banner,lang,escape}){
  function cards(query=''){
   if(!config)return `<p class="info-banner">${text('Update log is temporarily unavailable. Please refresh later.','Журнал обновлений временно недоступен. Попробуй обновить страницу позже.')}</p>`;
   const releases=sortedReleases(config.releases).filter(r=>JSON.stringify(r).toLowerCase().includes(query.trim().toLowerCase()));
-  return releases.map((r,i)=>`<article class="release-card"><div class="release-meta"><span class="release-version">${text('UPDATE','ОБНОВЛЕНИЕ')} ${escape(r.version)}</span><time datetime="${escape(r.date)}">${escape(date(r.date))}</time>${i===0&&!query?`<span class="release-latest">${text('LATEST','ПОСЛЕДНЕЕ')}</span>`:''}</div><h2>${l(r.title)}</h2><div class="release-sections">${(r.sections||[]).map(s=>`<section><h3>${l(s.title)}</h3><ul>${(s.items||[]).map(item=>`<li>${l(item)}</li>`).join('')}</ul></section>`).join('')}</div></article>`).join('')||`<p class="info-banner">${text('No updates found.','Обновления не найдены.')}</p>`;
+  return releases.map((r,i)=>`<article class="release-card"><div class="release-meta"><span class="release-version">${r.status==='upcoming'?text('PATCH PREVIEW','ПРЕДСТОЯЩИЙ ПАТЧ'):`${text('UPDATE','ОБНОВЛЕНИЕ')} ${escape(r.version)}`}</span><time datetime="${escape(r.date)}">${r.status==='upcoming'?text('Notes updated: ','Описание обновлено: '):''}${escape(date(r.date))}</time>${i===0&&!query?`<span class="release-latest">${r.status==='upcoming'?text('UPCOMING','СКОРО'):text('LATEST','ПОСЛЕДНЕЕ')}</span>`:''}</div><h2>${l(r.title)}</h2>${r.status==='upcoming'?`<p class="patch-note">${text('Prepared changes. Release date and live availability are not yet confirmed.','Подготовленные изменения. Дата выхода и доступность на обычных серверах ещё не подтверждены.')}</p>`:''}<div class="release-sections">${(r.sections||[]).map(s=>`<section><h3>${l(s.title)}</h3><ul>${(s.items||[]).map(item=>`<li>${l(item)}</li>`).join('')}</ul></section>`).join('')}</div></article>`).join('')||`<p class="info-banner">${text('No updates found.','Обновления не найдены.')}</p>`;
  }
  return {async load(){try{const response=await fetch('updates.json',{cache:'no-store'});if(!response.ok)throw Error(response.status);const value=await response.json();if(!Array.isArray(value.releases))throw Error('Invalid releases');config=value;}catch(error){console.warn('Update log unavailable',error);}render();},render,cards,tick};
 }
