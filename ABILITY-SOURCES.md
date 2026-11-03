@@ -2,7 +2,7 @@
 
 Read-only verification against Game place 90647947106358 on 2026-10-29. No game sources were changed.
 
-The full Game and Lobby catalog was rechecked read-only on 2026-11-03. Prepared balance changes retain their upcoming labels; no Roblox scripts were edited for this website update.
+The full Game and Lobby catalog was rechecked read-only on 2026-11-03. The owner confirmed the balance changes were released on 2026-11-02, so their upcoming labels have been removed. No Roblox scripts were edited for this website update.
 
 - ClassicUnitPassivesConfig and ClassicUnitPassives: White Flash, Echo, Close Combat, Titan Breaker and Lucky Strike. Base, expected and conditional DPS remain separate.
 - SignalResonanceConfig / SignalResonance: same-Strider cannon bonus and screen mark duration.

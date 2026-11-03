@@ -14,14 +14,15 @@ test('missing, invalid and elapsed timer dates have safe distinct states',()=>{
  assert.equal(countdown('2026-11-02T19:00:00+03:00',Date.parse('2026-11-02T19:00:00+03:00')).status,'due');
 });
 
-test('pending patch is a preview without inventing a release date or version',()=>{
+test('released balance notes belong to 2 November and the next timer remains 6 November',()=>{
  assert.equal(config.currentVersion,'15');
  assert.equal(new Date(config.nextUpdate.releaseAt).toISOString(),'2026-11-06T16:00:00.000Z');
  const ordered=sortedReleases(config.releases);
  assert.equal(ordered[0].id,'Template15');
  assert.equal(ordered[0].date,'2026-11-02');
- const pending=ordered[1];
- assert.equal(pending.status,'upcoming');
+ assert.ok(ordered[0].sections.some(s=>s.sourceKey==='WebsiteBalance1'));
+ assert.ok(!config.releases.some(r=>r.status==='upcoming'));
+ assert.equal(config.releases.length,16);
  assert.equal(config.releases.filter(r=>r.status!=='upcoming')[0].version,'15');
 });
 test('release history sorts newest first without mutating source',()=>{

@@ -203,6 +203,14 @@ for source_id, entry in raw.items():
     releases.append({'id':source_id,'version':str(entry['Number']),'date':entry['ReleaseDate'],
                      'title':localized(entry['Title']),'sections':sections,'source':'in-game changelog'})
 releases.sort(key=lambda r:r['date'],reverse=True)
+supplement_path = repo/'tools/release-supplements.json'
+if supplement_path.exists():
+    supplements = json.loads(supplement_path.read_text(encoding='utf-8'))
+    for release in releases:
+        supplement = supplements.get(release['id'])
+        if supplement:
+            assert release['date'] == supplement['releaseDate']
+            release['sections'].extend(supplement['sections'])
 previews = [r for r in config['releases'] if r.get('status') == 'upcoming']
 config['releases'] = releases + previews
 config['currentVersion'] = releases[0]['version']

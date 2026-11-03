@@ -20,7 +20,7 @@ assert len(units) == len(bundle['lobby']['units'])
 for u in units:
     assert u['Levels'] and all(isinstance(level, dict) for level in u['Levels']), u['Id']
     previous = old.get(u['Id'], {})
-    for key in ('DataStatus', 'PersonalLimitRemoved'):
+    for key in ('DataStatus', 'PersonalLimitRemoved', 'ReleasedAt'):
         if key in previous:
             u[key] = previous[key]
     u['VerifiedAt'] = '2026-11-03'

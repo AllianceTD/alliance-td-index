@@ -1,0 +1,99 @@
+{
+  "Template15": {
+    "releaseDate": "2026-11-02",
+    "sections": [
+      {
+        "title": {
+          "en": "Camera Helicopter rework",
+          "ru": "Переработка Камера-вертолёта"
+        },
+        "items": [
+          {
+            "en": "Five squad stages: Camera Man → 2 Camera Men → Large Camera Man → Large + 2 Camera Men → Titan Camera Man.",
+            "ru": "Пять составов отряда: Камерамен → 2 Камерамена → Большой Камерамен → Большой + 2 Камерамена → Титан Камерамен."
+          },
+          {
+            "en": "Each ally uses one attack: gun, knife or laser. Camera Men and Titans can hit air; Large Camera Men only hit ground. Models are smaller and proportional.",
+            "ru": "У каждого союзника одна атака: пушка, нож или лазер. Камерамены и титаны бьют воздух, большие — только землю. Модели уменьшены с сохранением пропорций."
+          },
+          {
+            "en": "Max-level Titan ally: 45,000 HP, 1,200 damage every 0.5s, 24 range. Spawn interval 10s; up to 2 allies alive per Helicopter.",
+            "ru": "Титан на максимальном уровне: 45 000 HP, 1200 урона каждые 0,5 с, радиус 24. Интервал призыва — 10 с, до 2 живых союзников на вертолёт."
+          },
+          {
+            "en": "Upgrading replaces the old squad. Placement and upgrade prices remain unchanged.",
+            "ru": "Улучшение заменяет старый отряд. Цены установки и улучшений сохранены."
+          }
+        ],
+        "sourceKey": "WebsiteBalance1"
+      },
+      {
+        "title": {
+          "en": "TV Strider",
+          "ru": "ТВ-страйдер"
+        },
+        "items": [
+          {
+            "en": "Max base DPS: 5,400 → 7,500; range: 24 → 26; placement limit: 4 → 6.",
+            "ru": "Максимальный базовый DPS: 5400 → 7500; радиус: 24 → 26; лимит установки: 4 → 6."
+          },
+          {
+            "en": "Signal Resonance: screen hits mark a target for 1s. This Strider’s cannons deal 25% more damage to its marked targets; up to 8,375 DPS at max level.",
+            "ru": "Резонанс сигнала: экран помечает цель на 1 с. Пушки этого страйдера наносят ей на 25% больше урона; до 8375 DPS на максимальном уровне."
+          },
+          {
+            "en": "Screen Shift unlocks at level 3: Red damage, Orange 5-second burn, Purple slow (40% normal / 20% bosses). Free to switch with a 10s cooldown. Strider Blink remains available.",
+            "ru": "С 3-го уровня доступна смена экрана: красный — урон, оранжевый — огонь на 5 секунд, фиолетовый — замедление (40% / 20% боссам). Переключение бесплатно, КД — 10 с. Телепорт страйдера сохранён."
+          }
+        ],
+        "sourceKey": "WebsiteBalance2"
+      },
+      {
+        "title": {
+          "en": "Five unit buffs & new passives",
+          "ru": "Усиление пяти юнитов и новые пассивки"
+        },
+        "items": [
+          {
+            "en": "Titan TV Man: 650 → 1,500 max DPS, range 19 → 22. White Flash periodically stuns enemies; bosses have a shorter stun.",
+            "ru": "Титан ТВ-мен: 650 → 1500 DPS, радиус 19 → 22. Белая вспышка периодически оглушает врагов; боссы оглушаются на меньшее время."
+          },
+          {
+            "en": "Speaker Woman: 330 → 900 base max DPS, 55° cone. Echo adds a delayed 35% hit, for 1,215 DPS including Echo.",
+            "ru": "Спикер-вумен: 330 → 900 базового DPS, конус 55°. Эхо повторяет 35% урона с задержкой — 1215 DPS с учётом эха."
+          },
+          {
+            "en": "Titan Camera Man: 3,200 → 4,500 combined max DPS. Close Combat boosts the gun in melee range, for up to 5,200 combined DPS.",
+            "ru": "Титан Камерамен: 3200 → 4500 суммарного DPS. Ближний бой усиливает пушку в ближнем радиусе — до 5200 суммарного DPS."
+          },
+          {
+            "en": "Upgraded Titan Camera Man: 8,500 → 10,000 combined max DPS. Titan Breaker increases hammer damage against bosses, for up to 12,000 combined DPS.",
+            "ru": "Улучшенный Титан Камерамен: 8500 → 10 000 суммарного DPS. Сокрушитель титанов усиливает молот по боссам — до 12 000 суммарного DPS."
+          },
+          {
+            "en": "Jester Speaker Man: 260 → 500 base max DPS, range 15 → 18. Lucky Strike: 20% chance to double the whole attack; 600 average DPS.",
+            "ru": "Спикермен-шут: 260 → 500 базового DPS, радиус 15 → 18. Удачный удар: 20% шанс удвоить всю атаку; средний DPS — 600."
+          }
+        ],
+        "sourceKey": "WebsiteBalance3"
+      },
+      {
+        "title": {
+          "en": "Limits & fixes",
+          "ru": "Лимиты и исправления"
+        },
+        "items": [
+          {
+            "en": "Zombie Camera Man’s personal placement cap is removed. The overall match cap still applies.",
+            "ru": "Личный лимит установки Зомби Камерамена снят. Общий лимит матча продолжает действовать."
+          },
+          {
+            "en": "Fixed missed material-drop checks when a defeated enemy was removed before its death callback. Normal attacks and summons use the same drop probabilities; the fix does not make drops guaranteed.",
+            "ru": "Исправлен пропуск проверки дропа, когда побеждённый враг удалялся до обработки смерти. У обычных атак и призывов одинаковые шансы: исправление не делает дроп гарантированным."
+          }
+        ],
+        "sourceKey": "WebsiteBalance4"
+      }
+    ]
+  }
+}
