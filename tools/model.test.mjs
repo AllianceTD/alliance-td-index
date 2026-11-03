@@ -51,7 +51,12 @@ test('craft references point to known entries',()=>{
   for(const input of recipe.Inputs){if(input.Material)assert.ok(data.materials[input.Material]);else assert.ok(units.some(u=>u.Id===input.Unit),input.Unit);assert.ok(input.Amount>0);}
  }
 });
-test('base reward snapshot includes Halloween and all seven modes',()=>{assert.equal(Object.keys(data.modes).length,7);assert.equal(data.modes.Halloween.WinCoins,1500);});
+test('base match reward snapshot includes eight modes and updated rewards',()=>{
+ assert.equal(Object.keys(data.modes).length,8);
+ assert.equal(data.modes.Halloween.WinCoins,1500);assert.equal(data.modes.Halloween.XpEarn,300);
+ assert.equal(data.modes.Medium.WinCoins,325);assert.equal(data.modes.Medium.XpEarn,60);
+ assert.equal(data.modes.RNG.WinCoins,500);assert.equal(data.modes.RNG.WinTickets,3);
+});
 test('asset map resolves to packaged files',()=>{
  const assets=JSON.parse(readFileSync(new URL('../docs/asset-map.json',import.meta.url),'utf8'));
  for(const [id,path]of Object.entries(assets))assert.ok(existsSync(fileURLToPath(new URL('../docs/'+path,import.meta.url))),id);

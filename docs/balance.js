@@ -11,6 +11,8 @@ export function passiveOutcomes(id, stats) {
   case 'Titan Camera Man':return [{label:{en:'Gun + melee, inside melee range',ru:'Пушка + удар в ближнем радиусе'},value:base+gun*.2}];
   case 'Upgraded Titan Camera Man':return [{label:{en:'Gun + hammer against a boss',ru:'Пушка + молот против босса'},value:base+hand*.5}];
   case 'TV Strider':return [{label:{en:'Red + Signal Resonance',ru:'Красный + резонанс сигнала'},value:gun+hand*1.25}];
+  case 'Ushanka Camera Man':return [{label:{en:'At full damage ramp',ru:'При полном разгоне урона'},value:base*(stats.RampMax||1)}];
+  case 'Rocket Large Camera Man':return [{label:{en:'Direct damage + active burn',ru:'Прямой урон + действующий огонь'},value:base+(stats.BurnDamagePerSec||0)}];
   default:return [];
  }
 }

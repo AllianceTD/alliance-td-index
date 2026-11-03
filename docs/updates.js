@@ -7,7 +7,12 @@ export function countdown(releaseAt,now=Date.now()){
  return {status:'scheduled',days:Math.floor(seconds/86400),hours:Math.floor(seconds%86400/3600),minutes:Math.floor(seconds%3600/60),seconds:seconds%60};
 }
 export function localized(value,lang){return typeof value==='string'?value:value?.[lang]||value?.en||value?.ru||'';}
-export function sortedReleases(releases){return [...(releases||[])].sort((a,b)=>Number(b.status==='upcoming')-Number(a.status==='upcoming')||String(b.date).localeCompare(String(a.date))||Number(b.version)-Number(a.version));}
+export function sortedReleases(releases){
+ const sort=(a,b)=>String(b.date).localeCompare(String(a.date))||Number(b.version)-Number(a.version);
+ const published=(releases||[]).filter(r=>r.status!=='upcoming').sort(sort);
+ const previews=(releases||[]).filter(r=>r.status==='upcoming').sort(sort);
+ return published.length?[published[0],...previews,...published.slice(1)]:previews;
+}
 export function createUpdates({banner,lang,escape}){
  let config=null;
  const text=(en,ru)=>lang()==='ru'?ru:en;

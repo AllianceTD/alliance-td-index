@@ -1,0 +1,433 @@
+{
+  "Template1": {
+    "Number": 2,
+    "QoL": [
+      "⌨️ Keybinds ⌨️",
+      "🔊 Sounds 🔊",
+      "📺 Updated UI 📺",
+      "⚔️ Next Stats Unit ⚔️",
+      "🔥 Lobby Leaderstats 🔥",
+      "👀 Player Info 👀",
+      "⚙️ Trade Setting ⚙️"
+    ],
+    "Title": "⚔️ UPDATE 1 ⚔️",
+    "Codes": [
+      "Update1"
+    ],
+    "Order": 7,
+    "ReleaseDate": "2026-08-02",
+    "Content": [
+      "⚔️ 2 New Units ⚔️",
+      "⭕ Target ⭕",
+      "📘 Quests 📘"
+    ],
+    "SectionOrder": [
+      "Content",
+      "QoL",
+      "Codes"
+    ]
+  },
+  "Template7": {
+    "Number": 8,
+    "Endless Mode": [
+      "👑 Endless Leaderboard",
+      "🌟 Endless Rewards"
+    ],
+    "QoL": [
+      "🔴 Unit Hitbox",
+      "📱 Unit Manager",
+      "⭐ Friend Boost",
+      "🗺️ Global Events",
+      "📺 New UI",
+      "💫 Loading Screen",
+      "🐞 A Lot Of Bug Fix"
+    ],
+    "Order": 1,
+    "Title": "♾️ Endless + More ⭐",
+    "SectionOrder": [
+      "Endless Mode",
+      "Content",
+      "Rework",
+      "QoL",
+      "Codes"
+    ],
+    "Reworks": [
+      "⚒️ Camera Man Rework"
+    ],
+    "ReleaseDate": "2026-09-11",
+    "Content": [
+      "🟣 New Boost",
+      "📘 Trade History",
+      "🔄️ Multi Sell"
+    ],
+    "Codes": [
+      "10M"
+    ]
+  },
+  "Template3": {
+    "Number": 4,
+    "Exclusive": [
+      "⭐ Golden Bat! ⭐"
+    ],
+    "QoL": [
+      "🔊 Music Lobby 🔊",
+      "🎵 More Sounds 🎵",
+      "🐞 Bug Fix 🐞"
+    ],
+    "Order": 5,
+    "Title": "🪅 Party Event 🎉",
+    "SectionOrder": [
+      "Content",
+      "QoL",
+      "Exclusive",
+      "Codes"
+    ],
+    "ReleaseDate": "2026-08-13",
+    "Content": [
+      "⚔️ 3 New Units ⚔️",
+      "🎉 Piñata Event 🎉",
+      "✨ Party Crate ✨",
+      "📘 Global Quests 📘",
+      "⭕ Splash ⭕"
+    ],
+    "Codes": [
+      "Party"
+    ]
+  },
+  "Template15": {
+    "Number": 15,
+    "Changes": [
+      "🔍 New Player Information",
+      "⭐ UI Changes"
+    ],
+    "Title": "⭐ Trading Plaza + Fun Mode 🎲",
+    "SectionOrder": [
+      "Content",
+      "Changes"
+    ],
+    "Order": -6,
+    "ReleaseDate": "2026-11-02",
+    "Content": [
+      "⭐ Ranks!",
+      "💫 6 New Ranks",
+      "🖌️ Trading Plaza",
+      "🔥 New 2 Units",
+      "🎲 RNG Mode"
+    ],
+    "COMING SOON": [
+      "🔥 Rework Streak",
+      "🖌️ Rework Maps"
+    ]
+  },
+  "Template6": {
+    "Number": 7,
+    "QoL": [
+      "⚡ Game Speed Keybind",
+      "🐞 Bug Fix"
+    ],
+    "Order": 2,
+    "Title": "🎫 Pass + More ✨",
+    "SectionOrder": [
+      "Season Pass",
+      "New Content",
+      "QoL"
+    ],
+    "New Content": [
+      "🚧 2 New Units",
+      "🎟️ Ticket Tradeable",
+      "🎁 Gamepass Gift",
+      "🔎 Index",
+      "♾️ Forever Pack"
+    ],
+    "ReleaseDate": "2026-09-04",
+    "Season Pass": [
+      "🎫 50 Tiers",
+      "✨ Premium Pass",
+      "📘 Pass Quests",
+      "🔥 Skip Tier"
+    ],
+    "Codes": [
+      "8MVISITS",
+      "PASS"
+    ]
+  },
+  "Template5": {
+    "Number": 6,
+    "Exclusive": [
+      "🟢 Packs",
+      "✨ VIP Pass"
+    ],
+    "QoL": [
+      "⭐ Boss Health Bar",
+      "🔍 Search"
+    ],
+    "Order": 3,
+    "Title": "🟠 Big Update ✨",
+    "SectionOrder": [
+      "Content",
+      "QoL",
+      "Exclusive",
+      "Codes"
+    ],
+    "ReleaseDate": "2026-08-27",
+    "Content": [
+      "🟠 Crazy Mode",
+      "🔥 3 New Units",
+      "🚽 5 New Toilets",
+      "🆕 New Global Quests",
+      "🎉 Rework Matchmaking",
+      "⚡ Game Speed",
+      "🎡 Wheel Spin",
+      "🎟️ Tickets",
+      "🔃 Replay"
+    ],
+    "Codes": [
+      "BIG"
+    ]
+  },
+  "Template9": {
+    "Number": 10,
+    "Title": "Content 🌟",
+    "SectionOrder": [
+      "Content"
+    ],
+    "Order": -1,
+    "ReleaseDate": "2026-09-25",
+    "Content": [
+      "⭐ Season Pass 2",
+      "⚔️ 4 New Units",
+      "⚙️ Game Settings",
+      "😴 AFK Rework",
+      "📫 Mailbox",
+      "🔃 Rejoin Game",
+      "🐞 A Lot Of Bug Fix"
+    ]
+  },
+  "Template8": {
+    "Number": 9,
+    "10M Event": [
+      "🎉 New Currency",
+      "📦 10M Crate",
+      "⚔️ 4 New Units",
+      "⌛ Limited Unit Event!",
+      "🌟 Event Shop"
+    ],
+    "Title": "🎉 10M Event + QoL 🌟",
+    "SectionOrder": [
+      "10M Event",
+      "Content"
+    ],
+    "Order": 0,
+    "ReleaseDate": "2026-09-18",
+    "Content": [
+      "🔥 Win-Streaks",
+      "⚔️ 2 New Units",
+      "🎁 Free Gifts",
+      "❓ Lucky Blocks",
+      "🟦 2x XP Boost"
+    ],
+    "QoL": [
+      "🎒 Items"
+    ]
+  },
+  "Template": {
+    "Number": 1,
+    "Title": "Game Release",
+    "SectionOrder": [
+      "Content",
+      "Codes"
+    ],
+    "Order": 8,
+    "ReleaseDate": "2026-07-27",
+    "Content": [
+      "⚔️ 9 Units ⚔️",
+      "⭐ 3 Modes ⭐",
+      "✨ Group Rewards ✨",
+      "🔥 Matchmaking 🔥",
+      "🗺️ Leaderboard 🗺️"
+    ],
+    "Codes": [
+      "Release"
+    ]
+  },
+  "Template10": {
+    "Number": 11,
+    "Title": "🔥 New Rarity + Content ⭐",
+    "SectionOrder": [
+      "Content"
+    ],
+    "Order": -2,
+    "ReleaseDate": "2026-10-03",
+    "Content": [
+      "🔥 New OMEGA Rarity",
+      "⭐ 4 New Units",
+      "🔃 QoL Trading",
+      "🌲 Upgrade Tree",
+      "💥 Gamepass Trading",
+      "🔨 Crafting"
+    ]
+  },
+  "Template2": {
+    "Number": 3,
+    "Changes": [
+      "🆕 Rebalance 🆕",
+      "🎁 Crate Trading 🎁",
+      "⚡ Tutorial ⚡",
+      "🎉 Party Countdown 🎉",
+      "🐞 Bug Fix 🐞"
+    ],
+    "Title": "📦 UPDATE 2 🧪",
+    "Codes": [
+      "Insane"
+    ],
+    "Order": 6,
+    "ReleaseDate": "2026-08-07",
+    "Content": [
+      "🧪 3 New Units 🧪",
+      "📦 Scientist Crate 📦",
+      "⚔️ Insane Mode ⚔️",
+      "✨ AFK AREA ✨"
+    ],
+    "SectionOrder": [
+      "Content",
+      "Changes",
+      "Codes"
+    ]
+  },
+  "Template12": {
+    "Number": 13,
+    "QoL": [
+      "⭐ New UI",
+      "❌ Drag Delete",
+      "✅ +1 VIP Pass Bonus"
+    ],
+    "Order": -4,
+    "Title": "👻 Halloween Part 2 + More 🦇",
+    "SectionOrder": [
+      "Halloween Content",
+      "Content",
+      "Upgrade Tree"
+    ],
+    "Content": [
+      "📘 Rework Quests",
+      "👻 Halloween Pack",
+      "⌛ Spooky Forever Pack",
+      "👍 Likes Rewards",
+      "🧍 Active Boost"
+    ],
+    "ReleaseDate": "2026-10-17",
+    "Upgrade Tree": [
+      "🔃 Auto Ability",
+      "💥 New Units Upgrades"
+    ],
+    "Halloween Content": [
+      "🎁 Spooky Gifts",
+      "🎃 4 New Units"
+    ]
+  },
+  "Template14": {
+    "Number": 15,
+    "Exclusive": [
+      "🔴 Hyper Pack"
+    ],
+    "Title": "💥 New Units + Changes ⭐",
+    "SectionOrder": [
+      "Content",
+      "Changes"
+    ],
+    "Order": -6,
+    "ReleaseDate": "2026-10-28",
+    "Content": [
+      "💥 Hyper Titan Speaker Man",
+      "🔒 Lock Units"
+    ],
+    "Changes": [
+      "📺 Interface Improvement",
+      "⚙️ Only Friends Trade",
+      "❌ Kick Party Player",
+      "📦 x10 Crate Open",
+      "⭐ New Index",
+      "✅ Loadouts",
+      "🔊 5 New Sounds"
+    ]
+  },
+  "Template13": {
+    "Number": 14,
+    "Exclusive": [
+      "🧸 Plushie",
+      "⌛ Limited Pack"
+    ],
+    "Title": "⭐ QoL + Content 👍",
+    "SectionOrder": [
+      "Content",
+      "Exclusive",
+      "QoL"
+    ],
+    "Order": -5,
+    "ReleaseDate": "2026-10-25",
+    "Content": [
+      "🎁 Terminal",
+      "⚔️ Clans",
+      "🥔 Low Mode",
+      "🚁 Flying Toilets",
+      "💥 New Units"
+    ],
+    "QoL": [
+      "⭐ Spawn Animation",
+      "🔃 New Balance",
+      "🔊 More Sounds"
+    ]
+  },
+  "Template4": {
+    "Number": 5,
+    "Title": "⚔️ Update 5 ✨",
+    "SectionOrder": [
+      "Content",
+      "Codes"
+    ],
+    "Order": 4,
+    "ReleaseDate": "2026-08-20",
+    "Content": [
+      "✨ New Rarity",
+      "❓ Insane Endless",
+      "⚔️ 2 New Units",
+      "🗺️ New Lobby",
+      "🧪 Boosts",
+      "⭐ New Summon",
+      "👍 Auto Sell",
+      "💬 Chat Trade"
+    ],
+    "Codes": [
+      "Mythic"
+    ]
+  },
+  "Template11": {
+    "Number": 12,
+    "SectionOrder": [
+      "HALLOWEEN",
+      "Content",
+      "Codes"
+    ],
+    "Title": "🎃 HALLOWEEN + CONTENT ⭐",
+    "Codes": [
+      "Halloween",
+      "20m"
+    ],
+    "Order": -3,
+    "ReleaseDate": "2026-10-12",
+    "Content": [
+      "⭐ New Lobby",
+      "🕷️ Strider Crate",
+      "💥 3 New Units",
+      "👟 Ability Glitch Camera Man"
+    ],
+    "HALLOWEEN": [
+      "🎃 Spooky Crate",
+      "🦇 Halloween Pass",
+      "👻 Halloween Shop",
+      "🔥 Halloween Quests",
+      "💀 5 New Units",
+      "😱 Scary Mode"
+    ]
+  }
+}

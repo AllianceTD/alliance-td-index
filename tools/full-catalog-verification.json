@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-11-03",
+  "readOnly": true,
+  "unitCount": 62,
+  "modeCount": 8,
+  "releaseCount": 16,
+  "releaseLogSha256": "44e12e8e48aeaf2aab0d3a1ecc56a53c5c333dbaf6ccf76b86f01bc0115b8242",
+  "configSha256": {
+    "ReplicatedStorage.Shared.ModeRewardConfig": "fe894ca83473bc279f09f2175b3c73a495068488f877e964f3e3fd1b138c71a8",
+    "ReplicatedStorage.Shared.RNGWaveConfig": "80a5d2a23d35f8c8f6dd96957080ee39c49d4bc0b250bc1b75d1fefd49f1ded0",
+    "ServerScriptService.RNGModeService": "af8d4d2ba2e279d3a678fbda63bb036d5d4b1c56e9db3bcf04d28604550c6064",
+    "ReplicatedStorage.Shared.FunModeSettings": "e8de88b9d1be438358973e59f7b36a6530dd91e52bab21f33edc1e2b06256a21",
+    "ReplicatedStorage.Shared.ModeVoteConfig": "24ee06f11d898c620d51a06be6edd2fa92acd9488c1059bf2eb62520954898d3",
+    "ReplicatedStorage.Shared.RNGUnitsConfig": "1cdaa8444ccc4f69b47e6a873b40f97fb417df80fabb3b586beac845feabcf89",
+    "ReplicatedStorage.Shared.RNGModifierConfig": "44cf086373d150d200c3323f7161bce927179159ffb7d5ebf4cce7a31a1d7980",
+    "ReplicatedStorage.Shared.RNGUpgradeConfig": "273071927715d0f5c84bc8e3ca8fdcb3c3f9ba355ab172a14f30d24b19538f34"
+  },
+  "gameChangelogUnchanged": true
+}

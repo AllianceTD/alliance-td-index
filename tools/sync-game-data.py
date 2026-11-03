@@ -15,6 +15,8 @@ root = args.parse_args().source_root.resolve()
 repo = Path(__file__).resolve().parents[1]
 data_path = repo / 'docs/data.json'
 data = json.loads(data_path.read_text(encoding='utf-8'))
+if data.get('verification',{}).get('fullCatalogVerifiedAt','') > '2026-11-02':
+    raise SystemExit('A newer full catalog is present. Use sync-full-catalog.py instead of the historical patch-only importer.')
 sources = []
 
 def read(relative):

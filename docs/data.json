@@ -16,90 +16,69 @@
   "maps": {
     "Maps": [
       {
-        "CoinReward": 100,
         "Id": "City",
-        "XpReward": 35,
         "DisplayName": "City",
         "CoinMultiplier": 1,
-        "PumpkinReward": 5,
         "Mode": "Easy",
-        "ElevatorIcon": "rbxassetid://121048408445888",
-        "Icon": "rbxassetid://111092025140104",
+        "Icon": "rbxassetid://121048408445888",
         "Waves": 20
       },
       {
-        "CoinReward": 250,
         "Id": "Canyon",
-        "XpReward": 50,
         "DisplayName": "Canyon Bridge",
         "CoinMultiplier": 1.1,
-        "PumpkinReward": 10,
         "Mode": "Medium",
-        "ElevatorIcon": "rbxassetid://95909190279599",
-        "Icon": "rbxassetid://84459316066408",
+        "Icon": "rbxassetid://95909190279599",
         "Waves": 30
       },
       {
-        "CoinReward": 475,
         "Id": "WildDesert",
-        "XpReward": 75,
         "DisplayName": "Wild Desert",
         "CoinMultiplier": 1.2,
-        "PumpkinReward": 20,
         "Mode": "Hard",
-        "ElevatorIcon": "rbxassetid://81140162953587",
-        "Icon": "rbxassetid://116852590921756",
+        "Icon": "rbxassetid://81140162953587",
         "Waves": 40
       },
       {
-        "CoinReward": 725,
         "Id": "Camera Lab",
-        "XpReward": 100,
         "DisplayName": "Camera Lab",
         "CoinMultiplier": 1.25,
-        "PumpkinReward": 35,
         "Mode": "Insane",
-        "ElevatorIcon": "rbxassetid://124748359496186",
-        "Icon": "rbxassetid://122940120566751",
+        "Icon": "rbxassetid://81140162953587",
         "Waves": 50
       },
       {
-        "CoinReward": 850,
         "Id": "ToiletBunker",
-        "XpReward": 125,
         "DisplayName": "Toilet Bunker",
         "CoinMultiplier": 1.3,
-        "PumpkinReward": 50,
         "Mode": "Crazy",
-        "ElevatorIcon": "rbxassetid://124748359496186",
-        "Icon": "rbxassetid://88569611204265",
+        "Icon": "rbxassetid://121048408445888",
         "Waves": 60
       },
       {
-        "CoinReward": 4,
-        "PumpkinsPerClearedWave": 0,
         "Id": "Endless",
-        "XpReward": 2,
         "DisplayName": "Endless",
-        "PumpkinReward": 0,
         "Mode": "Endless",
-        "ElevatorIcon": "rbxassetid://121048408445888",
-        "Icon": "rbxassetid://138601241449711",
+        "Icon": "rbxassetid://121048408445888",
         "Waves": 20
       },
       {
-        "CoinReward": 1500,
-        "PumpkinsPerClearedWave": 4,
         "Id": "Halloween",
-        "XpReward": 150,
         "DisplayName": "Spooky Town",
         "CoinMultiplier": 1,
-        "PumpkinReward": 100,
         "Category": "Halloween",
         "Mode": "Halloween",
-        "ElevatorIcon": "rbxassetid://121369081729098",
-        "Icon": "rbxassetid://118580360625800",
-        "Waves": 20
+        "Icon": "rbxassetid://121369081729098",
+        "Waves": 60
+      },
+      {
+        "Id": "RNG_Mode",
+        "DisplayName": "RNG Mode",
+        "CoinMultiplier": 1,
+        "Category": "Fun",
+        "Mode": "RNG",
+        "Icon": "rbxassetid://121048408445888",
+        "Waves": 60
       }
     ]
   },
@@ -195,7 +174,7 @@
       "Category": "Part",
       "Order": 5,
       "Rarity": "Mythic",
-      "Icon": "rbxassetid://109469636135452",
+      "Icon": "rbxassetid://129522369986373",
       "DisplayName": "Toxic Gun Core"
     },
     "Heavy Arm Mechanism": {
@@ -203,7 +182,7 @@
       "Category": "Part",
       "Order": 4,
       "Rarity": "Mythic",
-      "Icon": "rbxassetid://109469636135452",
+      "Icon": "rbxassetid://102974803848436",
       "DisplayName": "Heavy Arm Mechanism"
     },
     "Toxic Canister": {
@@ -211,7 +190,7 @@
       "Category": "Material",
       "Order": 3,
       "Rarity": "Legendary",
-      "Icon": "rbxassetid://109469636135452",
+      "Icon": "rbxassetid://115120492284735",
       "DisplayName": "Toxic Canister"
     },
     "Reinforced Titanium Plate": {
@@ -219,7 +198,7 @@
       "Category": "Material",
       "Order": 1,
       "Rarity": "Epic",
-      "Icon": "rbxassetid://109469636135452",
+      "Icon": "rbxassetid://129444718730757",
       "DisplayName": "Reinforced Titanium Plate"
     },
     "Titanium Saw Blade": {
@@ -227,14 +206,14 @@
       "Category": "Material",
       "Order": 2,
       "Rarity": "Legendary",
-      "Icon": "rbxassetid://109469636135452",
+      "Icon": "rbxassetid://132615940622725",
       "DisplayName": "Titanium Saw Blade"
     }
   },
   "boosts": {
     "Luck": {
-      "Description": "x2 Luck",
-      "Multiplier": 2,
+      "Description": "x1.5 Luck",
+      "Multiplier": 1.5,
       "DisplayName": "Luck Potion",
       "DurationSeconds": 900,
       "LegacyEndsAtField": "LuckEndsAt",
@@ -578,11 +557,11 @@
         "Rewards": [
           {
             "UnitName": "Scientist Camera Man",
-            "Chance": 90
+            "Chance": 70
           },
           {
             "UnitName": "Large Scientist Camera Man",
-            "Chance": 9
+            "Chance": 29
           },
           {
             "UnitName": "Engineer Camera Man",
@@ -797,7 +776,7 @@
     },
     "Materials": []
   },
-  "exportedAt": "2026-10-28T20:42:05Z",
+  "exportedAt": "2026-11-03",
   "sourcePlaceId": 121982847335554,
   "limits": {
     "Hyper Titan Speaker Man": 2,
@@ -822,9 +801,11 @@
     "TV Woman": 3,
     "10M TV Woman": 4,
     "Camera Prototype": 4,
+    "Ushanka Camera Man": 3,
     "Large Camera Prototype": 3,
     "Golden Camera Man": 5,
     "Golden Large Camera Man": 4,
+    "Rocket Large Camera Man": 3,
     "Glitch Plunger Man": 2,
     "Speaker Woman 2.0": 4,
     "Camera Woman 2.0": 2,
@@ -1018,16 +999,27 @@
       "WinPumpkins": 20
     },
     "Halloween": {
-      "CoinsPerClearedWave": 3,
-      "XpEarn": 150,
-      "PumpkinsPerClearedWave": 4,
+      "PumpkinsPerClearedWave": 0,
       "WinCoins": 1500,
+      "WaveCrateId": "Spooky Crate",
+      "PumpkinWaveInterval": 10,
+      "PumpkinsPerMilestone": 35,
+      "XpEarn": 300,
+      "WaveCrateChance": 0.05,
+      "CoinsPerClearedWave": 3,
       "WinPumpkins": 100
+    },
+    "RNG": {
+      "CoinsPerClearedWave": 4,
+      "XpEarn": 35,
+      "WinCoins": 500,
+      "WinPumpkins": 0,
+      "WinTickets": 3
     },
     "Medium": {
       "CoinsPerClearedWave": 5,
-      "WinCoins": 250,
-      "XpEarn": 50,
+      "WinCoins": 325,
+      "XpEarn": 60,
       "WinPumpkins": 10
     },
     "Crazy": {
@@ -1043,11 +1035,13 @@
       "WinPumpkins": 35
     },
     "Endless": {
-      "XpPerClearedWave": 2,
+      "ClanXpPerStep": 5,
       "XpEarn": 0,
       "PumpkinsPerClearedWave": 0,
-      "WinCoins": 0,
+      "XpPerClearedWave": 2,
       "CoinsPerClearedWave": 4,
+      "WinCoins": 0,
+      "ClanXpEveryWaves": 5,
       "WinPumpkins": 0
     },
     "Easy": {
@@ -1152,7 +1146,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://101986091591878",
-      "Name": "Speaker Man"
+      "Name": "Speaker Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -1242,7 +1237,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://96381539551073",
-      "Name": "Camera Man"
+      "Name": "Camera Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -1328,7 +1324,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://137124308101968",
-      "Name": "Pumpkin Camera Man"
+      "Name": "Pumpkin Camera Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -1418,7 +1415,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://98990845428595",
-      "Name": "Camera Woman"
+      "Name": "Camera Woman",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -1504,7 +1502,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://87876322478269",
-      "Name": "Large Speaker Man"
+      "Name": "Large Speaker Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -1597,7 +1596,8 @@
       "Icon": "rbxassetid://140644970749961",
       "AttackTargetRules": {
         "Main": "ScreenGround"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -1685,7 +1685,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://103974247512120",
-      "Name": "10M Camera Man"
+      "Name": "10M Camera Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -1771,7 +1772,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://127349972293516",
-      "Name": "Large Camera Man"
+      "Name": "Large Camera Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -1864,7 +1866,8 @@
       "Icon": "rbxassetid://93237737828003",
       "AttackTargetRules": {
         "Main": "ScreenGround"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -1950,7 +1953,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://114399458554574",
-      "Name": "Plunger Camera Man"
+      "Name": "Plunger Camera Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -2054,7 +2058,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://92148897297948",
-      "Name": "10M TV Woman"
+      "Name": "10M TV Woman",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "IsSlowing": true,
@@ -2153,7 +2158,8 @@
       "Icon": "rbxassetid://81958944688997",
       "AttackTargetRules": {
         "Main": "Melee"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -2169,7 +2175,6 @@
       },
       "Rarity": "Legendary",
       "Price": 300,
-      "DisplayName": "Pumpkin Man",
       "Levels": [
         {
           "AttackType": "Single",
@@ -2181,7 +2186,10 @@
           "AttackAngle": 0,
           "UpgradePrice": 800,
           "Cooldown": 0.5,
-          "Damage": 150
+          "Damage": 150,
+          "BurnDamagePerSec": 30.0,
+          "BurnDuration": 3,
+          "BurnTickInterval": 0.5
         },
         {
           "AttackType": "Single",
@@ -2193,7 +2201,10 @@
           "AttackAngle": 0,
           "UpgradePrice": 1700,
           "Cooldown": 0.5,
-          "Damage": 260
+          "Damage": 260,
+          "BurnDamagePerSec": 60.0,
+          "BurnDuration": 3.5,
+          "BurnTickInterval": 0.4
         },
         {
           "AttackType": "Single",
@@ -2205,7 +2216,10 @@
           "AttackAngle": 0,
           "UpgradePrice": 3000,
           "Cooldown": 0.4,
-          "Damage": 400
+          "Damage": 400,
+          "BurnDamagePerSec": 120.00000000000001,
+          "BurnDuration": 4,
+          "BurnTickInterval": 0.35
         },
         {
           "AttackType": "Single",
@@ -2217,9 +2231,13 @@
           "AttackAngle": 0,
           "UpgradePrice": 3000,
           "Cooldown": 0.4,
-          "Damage": 560
+          "Damage": 560,
+          "BurnDamagePerSec": 200.0,
+          "BurnDuration": 4.5,
+          "BurnTickInterval": 0.3
         }
       ],
+      "DisplayName": "Pumpkin Man",
       "Sources": [
         {
           "Title": "Season Pass",
@@ -2228,9 +2246,13 @@
           "Detail": "Free tier 50"
         }
       ],
-      "AttackTargetRules": {
-        "Main": "Ranged"
-      },
+      "TableStats": [
+        {
+          "Name": "🔥 Burn 🔥",
+          "Color": "#ffaa00"
+        }
+      ],
+      "Name": "Pumpkin Man",
       "Id": "Pumpkin Man",
       "HasDPS": true,
       "Settings": {
@@ -2239,7 +2261,10 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://140536207597531",
-      "Name": "Pumpkin Man"
+      "AttackTargetRules": {
+        "Main": "Ranged"
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -2366,7 +2391,8 @@
       "Icon": "rbxassetid://125326687651653",
       "AttackTargetRules": {
         "Main": "ScreenGround"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -2376,8 +2402,8 @@
         "MaxRadius": 31,
         "MaxCooldown": 0.6,
         "AttackAngle": 55,
-        "DPS": 120.0,
-        "MaxDPS": 900.0,
+        "DPS": 120,
+        "MaxDPS": 900,
         "Radius": 22,
         "Cooldown": 1,
         "Damage": 120
@@ -2386,55 +2412,54 @@
       "Price": 1000,
       "Levels": [
         {
+          "AttackType": "Cone",
+          "Rarity": "Legendary",
           "Price": 1000,
-          "UpgradePrice": 1600,
-          "SellPrice": 750,
-          "Damage": 120,
           "Range": 22,
+          "SellPrice": 750,
+          "Icon": "rbxassetid://105526732651289",
+          "AttackAngle": 55,
+          "UpgradePrice": 1600,
           "Cooldown": 1,
-          "AttackType": "Cone",
-          "AttackAngle": 55,
-          "Rarity": "Legendary",
-          "Icon": "rbxassetid://105526732651289"
+          "Damage": 120
         },
         {
+          "AttackType": "Cone",
+          "Rarity": "Legendary",
           "Price": 1000,
-          "UpgradePrice": 2800,
-          "SellPrice": 1950,
-          "Damage": 240,
           "Range": 25,
+          "SellPrice": 1950,
+          "Icon": "rbxassetid://105526732651289",
+          "AttackAngle": 55,
+          "UpgradePrice": 2800,
           "Cooldown": 0.8,
-          "AttackType": "Cone",
-          "AttackAngle": 55,
-          "Rarity": "Legendary",
-          "Icon": "rbxassetid://105526732651289"
+          "Damage": 240
         },
         {
+          "AttackType": "Cone",
+          "Rarity": "Legendary",
           "Price": 1000,
-          "UpgradePrice": 5000,
-          "SellPrice": 4050,
-          "Damage": 385,
           "Range": 28,
-          "Cooldown": 0.7,
-          "AttackType": "Cone",
+          "SellPrice": 4050,
+          "Icon": "rbxassetid://105526732651289",
           "AttackAngle": 55,
-          "Rarity": "Legendary",
-          "Icon": "rbxassetid://105526732651289"
+          "UpgradePrice": 5000,
+          "Cooldown": 0.7,
+          "Damage": 385
         },
         {
-          "Price": 1000,
-          "UpgradePrice": 5000,
-          "SellPrice": 7800,
-          "Damage": 540,
-          "Range": 31,
-          "Cooldown": 0.6,
           "AttackType": "Cone",
-          "AttackAngle": 55,
           "Rarity": "Legendary",
-          "Icon": "rbxassetid://105526732651289"
+          "Price": 1000,
+          "Range": 31,
+          "SellPrice": 7800,
+          "Icon": "rbxassetid://105526732651289",
+          "AttackAngle": 55,
+          "UpgradePrice": 5000,
+          "Cooldown": 0.6,
+          "Damage": 540
         }
       ],
-      "DisplayName": "Speaker Woman",
       "Sources": [
         {
           "Title": "Summon",
@@ -2443,21 +2468,28 @@
           "Detail": "Legendary 1%"
         }
       ],
+      "DisplayName": "Speaker Woman",
+      "Id": "Speaker Woman",
       "IsAoe": true,
       "Name": "Speaker Woman",
-      "Id": "Speaker Woman",
-      "HasDPS": true,
       "Settings": {
         "SellAble": true,
         "IsInSummon": true,
         "TradeAble": true
       },
-      "Icon": "rbxassetid://105526732651289",
+      "HasDPS": true,
       "AttackTargetRules": {
         "Main": "GroundRanged"
       },
+      "Icon": "rbxassetid://105526732651289",
+      "TableStats": [
+        {
+          "Name": "Echo (Passive)",
+          "Color": "#ff7dc8"
+        }
+      ],
       "DataStatus": "upcoming",
-      "VerifiedAt": "2026-11-02"
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -2547,7 +2579,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://136941360608846",
-      "Name": "Titan Speaker Man"
+      "Name": "Titan Speaker Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -2557,8 +2590,8 @@
         "MaxRadius": 22,
         "MaxCooldown": 0.1,
         "AttackAngle": 115,
-        "DPS": 200.0,
-        "MaxDPS": 1500.0,
+        "DPS": 200,
+        "MaxDPS": 1500,
         "Radius": 16,
         "Cooldown": 0.3,
         "Damage": 60
@@ -2567,63 +2600,62 @@
       "Price": 2000,
       "Levels": [
         {
-          "Price": 2000,
-          "UpgradePrice": 1400,
-          "SellPrice": 1500,
-          "Damage": 60,
-          "Range": 16,
-          "AttackFlyToilet": true,
-          "Cooldown": 0.3,
           "AttackType": "Cone",
+          "Rarity": "Legendary",
+          "Price": 2000,
+          "Range": 16,
+          "SellPrice": 1500,
+          "AttackFlyToilet": true,
+          "Icon": "rbxassetid://122105783054314",
           "CantAttackGlasesToilet": true,
           "AttackAngle": 115,
-          "Rarity": "Legendary",
-          "Icon": "rbxassetid://122105783054314"
+          "UpgradePrice": 1400,
+          "Cooldown": 0.3,
+          "Damage": 60
         },
         {
-          "Price": 2000,
-          "UpgradePrice": 1900,
-          "SellPrice": 2550,
-          "Damage": 88,
-          "Range": 18,
-          "AttackFlyToilet": true,
-          "Cooldown": 0.2,
           "AttackType": "Cone",
+          "Rarity": "Legendary",
+          "Price": 2000,
+          "Range": 18,
+          "SellPrice": 2550,
+          "AttackFlyToilet": true,
+          "Icon": "rbxassetid://122105783054314",
           "CantAttackGlasesToilet": true,
           "AttackAngle": 125,
-          "Rarity": "Legendary",
-          "Icon": "rbxassetid://122105783054314"
+          "UpgradePrice": 1900,
+          "Cooldown": 0.2,
+          "Damage": 88
         },
         {
-          "Price": 2000,
-          "UpgradePrice": 2500,
-          "SellPrice": 3975,
-          "Damage": 120,
-          "Range": 20,
-          "AttackFlyToilet": true,
-          "Cooldown": 0.15,
           "AttackType": "Cone",
+          "Rarity": "Legendary",
+          "Price": 2000,
+          "Range": 20,
+          "SellPrice": 3975,
+          "AttackFlyToilet": true,
+          "Icon": "rbxassetid://122105783054314",
           "CantAttackGlasesToilet": true,
           "AttackAngle": 135,
-          "Rarity": "Legendary",
-          "Icon": "rbxassetid://122105783054314"
+          "UpgradePrice": 2500,
+          "Cooldown": 0.15,
+          "Damage": 120
         },
         {
-          "Price": 2000,
-          "UpgradePrice": 2500,
-          "SellPrice": 5850,
-          "Damage": 150,
-          "Range": 22,
-          "AttackFlyToilet": true,
-          "Cooldown": 0.1,
           "AttackType": "Cone",
+          "Rarity": "Legendary",
+          "Price": 2000,
+          "Range": 22,
+          "SellPrice": 5850,
+          "AttackFlyToilet": true,
+          "Icon": "rbxassetid://122105783054314",
           "CantAttackGlasesToilet": true,
           "AttackAngle": 145,
-          "Rarity": "Legendary",
-          "Icon": "rbxassetid://122105783054314"
+          "UpgradePrice": 2500,
+          "Cooldown": 0.1,
+          "Damage": 150
         }
       ],
-      "DisplayName": "Titan TV Man",
       "Sources": [
         {
           "Title": "Summon",
@@ -2632,21 +2664,28 @@
           "Detail": "Legendary 1%"
         }
       ],
+      "DisplayName": "Titan TV Man",
+      "Id": "Titan TV Man",
       "IsAoe": true,
       "Name": "Titan TV Man",
-      "Id": "Titan TV Man",
-      "HasDPS": true,
       "Settings": {
         "SellAble": true,
         "IsInSummon": true,
         "TradeAble": true
       },
-      "Icon": "rbxassetid://122105783054314",
+      "HasDPS": true,
       "AttackTargetRules": {
         "Main": "ScreenAir"
       },
+      "Icon": "rbxassetid://122105783054314",
+      "TableStats": [
+        {
+          "Name": "White Flash (Passive)",
+          "Color": "#cdebff"
+        }
+      ],
       "DataStatus": "upcoming",
-      "VerifiedAt": "2026-11-02"
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -2772,7 +2811,8 @@
       "AttackTargetRules": {
         "Main": "Ranged",
         "Hand": "Ranged"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -2905,7 +2945,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://125762644579964",
-      "Name": "Camera Woman 2.0"
+      "Name": "Camera Woman 2.0",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "IsSlowing": true,
@@ -3018,7 +3059,8 @@
       "Icon": "rbxassetid://99962870651429",
       "AttackTargetRules": {
         "Main": "Melee"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -3104,7 +3146,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://79920882713492",
-      "Name": "Injured Upgraded Titan Camera Man"
+      "Name": "Injured Upgraded Titan Camera Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -3239,7 +3282,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://87902719462437",
-      "Name": "Injured Upgraded Titan Speaker Man"
+      "Name": "Injured Upgraded Titan Speaker Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -3353,12 +3397,6 @@
           "Kind": "Crate",
           "Icon": "rbxassetid://124954503356508",
           "Detail": "1%"
-        },
-        {
-          "Title": "Halloween Limited",
-          "Kind": "Event",
-          "Icon": "",
-          "Detail": "12500 Pumpkins"
         }
       ],
       "Name": "Large Grim Reaper",
@@ -3372,7 +3410,8 @@
       "Icon": "rbxassetid://101307683204359",
       "AttackTargetRules": {
         "Main": "Melee"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -3484,7 +3523,8 @@
       "AttackTargetRules": {
         "Main": "GroundRanged",
         "Hand": "Melee"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -3604,7 +3644,8 @@
       "AttackTargetRules": {
         "Main": "ScreenAir",
         "Hand": "Melee"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -3765,7 +3806,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://71400309819865",
-      "Name": "Titan Jack'o Man"
+      "Name": "Titan Jack'o Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -3855,7 +3897,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://104213958021417",
-      "Name": "Titan Speaker Man 2.0"
+      "Name": "Titan Speaker Man 2.0",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -3873,93 +3916,93 @@
         "MaxCooldown": 0.1,
         "HandRange": 6,
         "Radius": 13,
-        "DPS": 1900.0,
-        "MaxDPS": 10000.0,
+        "DPS": 1200,
+        "MaxDPS": 6000,
         "HandCooldown": 2.5,
         "Cooldown": 0.25,
         "MaxHandDamage": 10000
       },
       "Rarity": "Mythic",
       "Price": 3000,
-      "DisplayName": "Upgraded Titan Camera Man",
       "Levels": [
         {
-          "AttackFlyToilet": true,
-          "HandRange": 6,
+          "AttackType": "Single",
+          "Price": 3000,
           "HandDamage": 1750,
-          "HandCooldown": 2.5,
-          "SplashRadius": 10,
-          "InWhatRangeSplashWillBeWork": "HandRange",
-          "Price": 3000,
-          "TwoRangeName": "Hammer",
-          "UpgradePrice": 6000,
-          "SellPrice": 2250,
-          "Damage": 300,
           "Range": 13,
+          "InWhatRangeSplashWillBeWork": "HandRange",
+          "AttackAngle": 100,
+          "SplashRadius": 10,
+          "Icon": "rbxassetid://120049088096507",
+          "Damage": 300,
+          "Rarity": "Mythic",
+          "TwoRangeName": "Hammer",
+          "HandRange": 6,
+          "SellPrice": 2250,
+          "HandCooldown": 2.5,
+          "UpgradePrice": 6000,
           "Cooldown": 0.25,
-          "AttackType": "Single",
-          "AttackAngle": 100,
-          "Rarity": "Mythic",
-          "Icon": "rbxassetid://120049088096507"
+          "AttackFlyToilet": true
         },
         {
-          "AttackFlyToilet": true,
-          "HandRange": 7,
+          "AttackType": "Single",
+          "Price": 3000,
           "HandDamage": 3500,
-          "HandCooldown": 2.5,
-          "SplashRadius": 11,
-          "InWhatRangeSplashWillBeWork": "HandRange",
-          "Price": 3000,
-          "TwoRangeName": "Hammer",
-          "UpgradePrice": 8500,
-          "SellPrice": 6750,
-          "Damage": 500,
           "Range": 15,
+          "InWhatRangeSplashWillBeWork": "HandRange",
+          "AttackAngle": 100,
+          "SplashRadius": 11,
+          "Icon": "rbxassetid://120049088096507",
+          "Damage": 500,
+          "Rarity": "Mythic",
+          "TwoRangeName": "Hammer",
+          "HandRange": 7,
+          "SellPrice": 6750,
+          "HandCooldown": 2.5,
+          "UpgradePrice": 8500,
           "Cooldown": 0.2,
-          "AttackType": "Single",
-          "AttackAngle": 100,
-          "Rarity": "Mythic",
-          "Icon": "rbxassetid://120049088096507"
+          "AttackFlyToilet": true
         },
         {
-          "AttackFlyToilet": true,
-          "HandRange": 9,
+          "AttackType": "Single",
+          "Price": 3000,
           "HandDamage": 6500,
-          "HandCooldown": 2.5,
-          "SplashRadius": 12,
-          "InWhatRangeSplashWillBeWork": "HandRange",
-          "Price": 3000,
-          "TwoRangeName": "Hammer",
-          "UpgradePrice": 12500,
-          "SellPrice": 13125,
-          "Damage": 540,
           "Range": 22,
-          "Cooldown": 0.12,
-          "AttackType": "Single",
+          "InWhatRangeSplashWillBeWork": "HandRange",
           "AttackAngle": 100,
+          "SplashRadius": 12,
+          "Icon": "rbxassetid://120049088096507",
+          "Damage": 540,
           "Rarity": "Mythic",
-          "Icon": "rbxassetid://120049088096507"
+          "TwoRangeName": "Hammer",
+          "HandRange": 9,
+          "SellPrice": 13125,
+          "HandCooldown": 2.5,
+          "UpgradePrice": 12500,
+          "Cooldown": 0.12,
+          "AttackFlyToilet": true
         },
         {
-          "AttackFlyToilet": true,
-          "HandRange": 12,
-          "HandDamage": 10000,
-          "HandCooldown": 2.5,
-          "SplashRadius": 13,
-          "InWhatRangeSplashWillBeWork": "HandRange",
-          "Price": 3000,
-          "TwoRangeName": "Hammer",
-          "UpgradePrice": 12500,
-          "SellPrice": 22500,
-          "Damage": 600,
-          "Range": 25,
-          "Cooldown": 0.1,
           "AttackType": "Single",
+          "Price": 3000,
+          "HandDamage": 10000,
+          "Range": 25,
+          "InWhatRangeSplashWillBeWork": "HandRange",
           "AttackAngle": 100,
+          "SplashRadius": 13,
+          "Icon": "rbxassetid://120049088096507",
+          "Damage": 600,
           "Rarity": "Mythic",
-          "Icon": "rbxassetid://120049088096507"
+          "TwoRangeName": "Hammer",
+          "HandRange": 12,
+          "SellPrice": 22500,
+          "HandCooldown": 2.5,
+          "UpgradePrice": 12500,
+          "Cooldown": 0.1,
+          "AttackFlyToilet": true
         }
       ],
+      "DisplayName": "Upgraded Titan Camera Man",
       "Sources": [
         {
           "Title": "Summon",
@@ -3968,10 +4011,13 @@
           "Detail": "Mythic 0.1%"
         }
       ],
-      "AttackTargetRules": {
-        "Main": "Ranged",
-        "Hand": "Melee"
-      },
+      "TableStats": [
+        {
+          "Name": "Titan Breaker (Passive)",
+          "Color": "#55e1ff"
+        }
+      ],
+      "Name": "Upgraded Titan Camera Man",
       "Id": "Upgraded Titan Camera Man",
       "HasDPS": true,
       "Settings": {
@@ -3980,9 +4026,12 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://120049088096507",
-      "Name": "Upgraded Titan Camera Man",
+      "AttackTargetRules": {
+        "Main": "Ranged",
+        "Hand": "Melee"
+      },
       "DataStatus": "upcoming",
-      "VerifiedAt": "2026-11-02"
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -4105,7 +4154,139 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://98408586564367",
-      "Name": "Upgraded Titan Saw Arm Camera Man"
+      "Name": "Upgraded Titan Saw Arm Camera Man",
+      "VerifiedAt": "2026-11-03"
+    },
+    {
+      "Stats": {
+        "Type": [],
+        "MaxDamage": 900,
+        "MaxRadius": 24,
+        "MaxCooldown": 0.32,
+        "DPS": 428.5714285714286,
+        "MaxDPS": 2812.5,
+        "Radius": 16,
+        "Cooldown": 0.7,
+        "Damage": 300
+      },
+      "Rarity": "Mythic",
+      "Price": 2200,
+      "DisplayName": "Ushanka Camera Man",
+      "Sources": [
+        {
+          "Title": "Summon",
+          "Kind": "Summon",
+          "Icon": "",
+          "Detail": "Mythic 0.1%"
+        }
+      ],
+      "Name": "Ushanka Camera Man",
+      "Levels": [
+        {
+          "AttackType": "Single",
+          "Price": 2200,
+          "Range": 16,
+          "RampStep": 0.1,
+          "AttackAngle": 0,
+          "Icon": "rbxassetid://77306906810377",
+          "Damage": 300,
+          "Rarity": "Mythic",
+          "RampAttack": "Attack",
+          "SlowingPercente": 0,
+          "AttackFlyToilet": true,
+          "RampResetOnTargetChange": false,
+          "RampMax": 2,
+          "RampResetAfter": 2,
+          "UpgradePrice": 1800,
+          "Cooldown": 0.7,
+          "SellPrice": 1650
+        },
+        {
+          "AttackType": "Single",
+          "Price": 2200,
+          "Range": 17,
+          "RampStep": 0.1,
+          "AttackAngle": 0,
+          "Icon": "rbxassetid://77306906810377",
+          "Damage": 420,
+          "Rarity": "Mythic",
+          "RampAttack": "Attack",
+          "SlowingPercente": 0,
+          "AttackFlyToilet": true,
+          "RampResetOnTargetChange": false,
+          "RampMax": 2,
+          "RampResetAfter": 2,
+          "UpgradePrice": 2800,
+          "Cooldown": 0.6,
+          "SellPrice": 3000
+        },
+        {
+          "AttackType": "Single",
+          "Price": 2200,
+          "Range": 19,
+          "RampStep": 0.1,
+          "AttackAngle": 0,
+          "Icon": "rbxassetid://77306906810377",
+          "Damage": 560,
+          "Rarity": "Mythic",
+          "RampAttack": "Attack",
+          "SlowingPercente": 0,
+          "AttackFlyToilet": true,
+          "RampResetOnTargetChange": false,
+          "RampMax": 2,
+          "RampResetAfter": 2,
+          "UpgradePrice": 4000,
+          "Cooldown": 0.5,
+          "SellPrice": 5100
+        },
+        {
+          "AttackType": "Single",
+          "Price": 2200,
+          "Range": 21,
+          "RampStep": 0.1,
+          "AttackAngle": 0,
+          "Icon": "rbxassetid://77306906810377",
+          "Damage": 720,
+          "Rarity": "Mythic",
+          "RampAttack": "Attack",
+          "SlowingPercente": 0,
+          "AttackFlyToilet": true,
+          "RampResetOnTargetChange": false,
+          "RampMax": 2,
+          "RampResetAfter": 2,
+          "UpgradePrice": 5500,
+          "Cooldown": 0.4,
+          "SellPrice": 8100
+        },
+        {
+          "AttackType": "Single",
+          "Price": 2200,
+          "Range": 24,
+          "RampStep": 0.1,
+          "AttackAngle": 0,
+          "Icon": "rbxassetid://77306906810377",
+          "Damage": 900,
+          "Rarity": "Mythic",
+          "RampAttack": "Attack",
+          "SlowingPercente": 0,
+          "AttackFlyToilet": true,
+          "RampResetOnTargetChange": false,
+          "RampMax": 2,
+          "RampResetAfter": 2,
+          "UpgradePrice": 5500,
+          "Cooldown": 0.32,
+          "SellPrice": 12225
+        }
+      ],
+      "HasDPS": true,
+      "Id": "Ushanka Camera Man",
+      "Icon": "rbxassetid://77306906810377",
+      "Settings": {
+        "SellAble": true,
+        "IsInSummon": true,
+        "TradeAble": true
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -4199,7 +4380,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://113112645029630",
-      "Name": "Witch TV Woman"
+      "Name": "Witch TV Woman",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -4217,199 +4399,221 @@
         "Type": [],
         "MaxSpawnCooldown": 10,
         "SpawnerHp": 1000,
-        "DPS": 0.0,
-        "MaxDPS": 0.0,
+        "DPS": 0,
+        "MaxDPS": 0,
         "SpawnMaxUnits": 2,
         "Cooldown": 14,
-        "MaxSpawnMoveSpeed": 10,
-        "AttackAngle": 0,
-        "MaxAttackAngle": 0
+        "MaxSpawnMoveSpeed": 10
       },
       "Rarity": "Exclusive",
       "Price": 750,
       "Levels": [
         {
           "Price": 750,
-          "UpgradePrice": 1000,
+          "AttackType": "Single",
+          "Rarity": "Exclusive",
+          "NoAttack": true,
+          "SpawnMaxUnits": 2,
+          "Icon": "rbxassetid://139400525845987",
           "SellPrice": 563,
-          "Damage": 0,
-          "Range": 0,
-          "Cooldown": 14,
-          "NoAttack": true,
-          "AttackType": "Single",
-          "AttackAngle": 0,
+          "SpawnUnits": [
+            {
+              "WalkAnimation": "rbxassetid://103208319917869",
+              "AttackAnimation": "rbxassetid://99534367979799",
+              "Range": 18,
+              "Unit": "Camera Man",
+              "AttackFlyToilet": true,
+              "Name": "Camera Man",
+              "HeightOffset": -0.4,
+              "SpawnerHp": 1000,
+              "AttackCooldown": 1,
+              "Cooldown": 14,
+              "Damage": 18,
+              "AttackName": "Gun"
+            }
+          ],
+          "SpawnLifetime": 200,
+          "SpawnMoveSpeed": 10,
           "SpawnerHp": 1000,
-          "SpawnLifetime": 200,
-          "SpawnMoveSpeed": 10,
-          "SpawnMaxUnits": 2,
-          "Rarity": "Exclusive",
-          "Icon": "rbxassetid://139400525845987",
-          "SpawnUnits": [
-            {
-              "Unit": "Camera Man",
-              "Name": "Camera Man",
-              "SpawnerHp": 1000.0,
-              "Damage": 18.0,
-              "Range": 18.0,
-              "AttackCooldown": 1.0,
-              "Cooldown": 14.0,
-              "AttackFlyToilet": true,
-              "AttackName": "Gun"
-            }
-          ]
+          "Range": 0,
+          "AttackAngle": 0,
+          "UpgradePrice": 1000,
+          "Cooldown": 14,
+          "Damage": 0
         },
         {
           "Price": 750,
-          "UpgradePrice": 1750,
-          "SellPrice": 1313,
-          "Damage": 0,
-          "Range": 0,
-          "Cooldown": 13,
-          "NoAttack": true,
           "AttackType": "Single",
-          "AttackAngle": 0,
-          "SpawnerHp": 1800,
-          "SpawnLifetime": 200,
-          "SpawnMoveSpeed": 10,
+          "Rarity": "Exclusive",
+          "NoAttack": true,
           "SpawnMaxUnits": 4,
-          "Rarity": "Exclusive",
           "Icon": "rbxassetid://139400525845987",
+          "SellPrice": 1313,
           "SpawnUnits": [
             {
+              "WalkAnimation": "rbxassetid://103208319917869",
+              "AttackAnimation": "rbxassetid://99534367979799",
+              "Range": 19,
               "Unit": "Camera Man",
-              "Name": "Camera Man",
-              "SpawnerHp": 1800.0,
-              "Damage": 28.0,
-              "Range": 19.0,
-              "AttackCooldown": 0.95,
-              "Cooldown": 13.0,
               "AttackFlyToilet": true,
+              "Name": "Camera Man",
+              "HeightOffset": -0.4,
+              "SpawnerHp": 1800,
+              "AttackCooldown": 0.95,
+              "Cooldown": 13,
+              "Damage": 28,
               "AttackName": "Gun"
             },
             {
+              "WalkAnimation": "rbxassetid://103208319917869",
+              "AttackAnimation": "rbxassetid://99534367979799",
+              "Range": 19,
               "Unit": "Camera Man",
-              "Name": "Camera Man",
-              "SpawnerHp": 1800.0,
-              "Damage": 28.0,
-              "Range": 19.0,
-              "AttackCooldown": 0.95,
-              "Cooldown": 13.0,
               "AttackFlyToilet": true,
+              "Name": "Camera Man",
+              "HeightOffset": -0.4,
+              "SpawnerHp": 1800,
+              "AttackCooldown": 0.95,
+              "Cooldown": 13,
+              "Damage": 28,
               "AttackName": "Gun"
             }
-          ]
+          ],
+          "SpawnLifetime": 200,
+          "SpawnMoveSpeed": 10,
+          "SpawnerHp": 1800,
+          "Range": 0,
+          "AttackAngle": 0,
+          "UpgradePrice": 1750,
+          "Cooldown": 13,
+          "Damage": 0
         },
         {
           "Price": 750,
-          "UpgradePrice": 2750,
+          "AttackType": "Single",
+          "Rarity": "Exclusive",
+          "NoAttack": true,
+          "SpawnMaxUnits": 2,
+          "Icon": "rbxassetid://139400525845987",
           "SellPrice": 2625,
-          "Damage": 0,
-          "Range": 0,
-          "Cooldown": 12,
-          "NoAttack": true,
-          "AttackType": "Single",
-          "AttackAngle": 0,
+          "SpawnUnits": [
+            {
+              "WalkAnimation": "rbxassetid://103208319917869",
+              "AttackAnimation": "rbxassetid://101520920007469",
+              "Range": 6,
+              "Unit": "Large Camera Man",
+              "AttackFlyToilet": false,
+              "Name": "Large Camera Man",
+              "HeightOffset": -0.4,
+              "SpawnerHp": 7000,
+              "AttackCooldown": 1.1,
+              "Cooldown": 12,
+              "Damage": 220,
+              "AttackName": "Knife"
+            }
+          ],
+          "SpawnLifetime": 200,
+          "SpawnMoveSpeed": 10,
           "SpawnerHp": 7000,
-          "SpawnLifetime": 200,
-          "SpawnMoveSpeed": 10,
-          "SpawnMaxUnits": 2,
-          "Rarity": "Exclusive",
-          "Icon": "rbxassetid://139400525845987",
-          "SpawnUnits": [
-            {
-              "Unit": "Large Camera Man",
-              "Name": "Large Camera Man",
-              "SpawnerHp": 7000.0,
-              "Damage": 220.0,
-              "Range": 6.0,
-              "AttackCooldown": 1.1,
-              "Cooldown": 12.0,
-              "AttackFlyToilet": false,
-              "AttackName": "Knife"
-            }
-          ]
+          "Range": 0,
+          "AttackAngle": 0,
+          "UpgradePrice": 2750,
+          "Cooldown": 12,
+          "Damage": 0
         },
         {
           "Price": 750,
-          "UpgradePrice": 4000,
-          "SellPrice": 4688,
-          "Damage": 0,
-          "Range": 0,
-          "Cooldown": 11,
-          "NoAttack": true,
           "AttackType": "Single",
-          "AttackAngle": 0,
-          "SpawnerHp": 16000,
-          "SpawnLifetime": 200,
-          "SpawnMoveSpeed": 10,
+          "Rarity": "Exclusive",
+          "NoAttack": true,
           "SpawnMaxUnits": 6,
-          "Rarity": "Exclusive",
           "Icon": "rbxassetid://139400525845987",
+          "SellPrice": 4688,
           "SpawnUnits": [
             {
+              "WalkAnimation": "rbxassetid://103208319917869",
+              "AttackAnimation": "rbxassetid://101520920007469",
+              "Range": 7,
               "Unit": "Large Camera Man",
-              "Name": "Large Camera Man",
-              "SpawnerHp": 16000.0,
-              "Damage": 550.0,
-              "Range": 7.0,
-              "AttackCooldown": 1.1,
-              "Cooldown": 11.0,
               "AttackFlyToilet": false,
+              "Name": "Large Camera Man",
+              "HeightOffset": -0.4,
+              "SpawnerHp": 16000,
+              "AttackCooldown": 1.1,
+              "Cooldown": 11,
+              "Damage": 550,
               "AttackName": "Knife"
             },
             {
+              "WalkAnimation": "rbxassetid://103208319917869",
+              "AttackAnimation": "rbxassetid://99534367979799",
+              "Range": 21,
               "Unit": "Camera Man",
-              "Name": "Camera Man",
-              "SpawnerHp": 5000.0,
-              "Damage": 90.0,
-              "Range": 21.0,
-              "AttackCooldown": 0.8,
-              "Cooldown": 11.0,
               "AttackFlyToilet": true,
+              "Name": "Camera Man",
+              "HeightOffset": -0.4,
+              "SpawnerHp": 5000,
+              "AttackCooldown": 0.8,
+              "Cooldown": 11,
+              "Damage": 90,
               "AttackName": "Gun"
             },
             {
+              "WalkAnimation": "rbxassetid://103208319917869",
+              "AttackAnimation": "rbxassetid://99534367979799",
+              "Range": 21,
               "Unit": "Camera Man",
-              "Name": "Camera Man",
-              "SpawnerHp": 5000.0,
-              "Damage": 90.0,
-              "Range": 21.0,
-              "AttackCooldown": 0.8,
-              "Cooldown": 11.0,
               "AttackFlyToilet": true,
+              "Name": "Camera Man",
+              "HeightOffset": -0.4,
+              "SpawnerHp": 5000,
+              "AttackCooldown": 0.8,
+              "Cooldown": 11,
+              "Damage": 90,
               "AttackName": "Gun"
             }
-          ]
+          ],
+          "SpawnLifetime": 200,
+          "SpawnMoveSpeed": 10,
+          "SpawnerHp": 16000,
+          "Range": 0,
+          "AttackAngle": 0,
+          "UpgradePrice": 4000,
+          "Cooldown": 11,
+          "Damage": 0
         },
         {
           "Price": 750,
-          "UpgradePrice": 4000,
-          "SellPrice": 7688,
-          "Damage": 0,
-          "Range": 0,
-          "Cooldown": 10,
-          "NoAttack": true,
           "AttackType": "Single",
-          "AttackAngle": 0,
-          "SpawnerHp": 45000,
-          "SpawnLifetime": 200,
-          "SpawnMoveSpeed": 10,
-          "SpawnMaxUnits": 2,
           "Rarity": "Exclusive",
+          "NoAttack": true,
+          "SpawnMaxUnits": 2,
           "Icon": "rbxassetid://139400525845987",
+          "SellPrice": 7688,
           "SpawnUnits": [
             {
+              "WalkAnimation": "rbxassetid://103208319917869",
+              "AttackAnimation": "rbxassetid://93766984278481",
+              "Range": 24,
               "Unit": "Titan Camera Man",
-              "Name": "Titan Camera Man",
-              "SpawnerHp": 45000.0,
-              "Damage": 1200.0,
-              "Range": 24.0,
-              "AttackCooldown": 0.5,
-              "Cooldown": 10.0,
               "AttackFlyToilet": true,
+              "Name": "Titan Camera Man",
+              "HeightOffset": -0.4,
+              "SpawnerHp": 45000,
+              "AttackCooldown": 0.5,
+              "Cooldown": 10,
+              "Damage": 1200,
               "AttackName": "Laser"
             }
-          ]
+          ],
+          "SpawnLifetime": 200,
+          "SpawnMoveSpeed": 10,
+          "SpawnerHp": 45000,
+          "Range": 0,
+          "AttackAngle": 0,
+          "UpgradePrice": 4000,
+          "Cooldown": 10,
+          "Damage": 0
         }
       ],
       "DisplayName": "Camera Helicopter",
@@ -4435,7 +4639,7 @@
         "Main": "Support"
       },
       "DataStatus": "upcoming",
-      "VerifiedAt": "2026-11-02"
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -4525,7 +4729,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://114527046535066",
-      "Name": "Camera Strider"
+      "Name": "Camera Strider",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -4603,14 +4808,7 @@
           "Damage": 0
         }
       ],
-      "Sources": [
-        {
-          "Title": "Spin Wheel",
-          "Kind": "Event",
-          "Icon": "",
-          "Detail": "0.5%"
-        }
-      ],
+      "Sources": [],
       "Name": "DJ Speaker Man",
       "Id": "DJ Speaker Man",
       "HasDPS": false,
@@ -4622,7 +4820,8 @@
       "Icon": "rbxassetid://91266318307652",
       "AttackTargetRules": {
         "Main": "Support"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -4787,7 +4986,8 @@
       "Icon": "rbxassetid://134338568907080",
       "AttackTargetRules": {
         "Main": "Support"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -4912,7 +5112,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://78145688288133",
-      "Name": "Fat Upgraded Titan Camera Man"
+      "Name": "Fat Upgraded Titan Camera Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -5044,7 +5245,14 @@
       ],
       "DisplayName": "Ghost Speaker Man",
       "Id": "Ghost Speaker Man",
-      "Sources": [],
+      "Sources": [
+        {
+          "Title": "Halloween Limited",
+          "Kind": "Event",
+          "Icon": "",
+          "Detail": "12500 Pumpkins"
+        }
+      ],
       "Name": "Ghost Speaker Man",
       "Settings": {
         "SellAble": true,
@@ -5056,7 +5264,8 @@
       "Icon": "rbxassetid://106621775119978",
       "AttackTargetRules": {
         "Main": "Support"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -5313,7 +5522,8 @@
       "HasDPS": true,
       "IsSpawner": true,
       "Icon": "rbxassetid://120983299265437",
-      "Name": "Golden Camera Man"
+      "Name": "Golden Camera Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -5440,7 +5650,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://102183835511800",
-      "Name": "Golden Large Camera Man"
+      "Name": "Golden Large Camera Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "IsSlowing": true,
@@ -5542,7 +5753,7 @@
           "Title": "Scientist Crate",
           "Kind": "Crate",
           "Icon": "rbxassetid://115975950061415",
-          "Detail": "9%"
+          "Detail": "29%"
         }
       ],
       "Name": "Large Scientist Camera Man",
@@ -5556,7 +5767,8 @@
       "Icon": "rbxassetid://103385877459009",
       "AttackTargetRules": {
         "Main": "Ranged"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -5632,7 +5844,121 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://135258816549317",
-      "Name": "Present Camera Man"
+      "Name": "Present Camera Man",
+      "VerifiedAt": "2026-11-03"
+    },
+    {
+      "Stats": {
+        "Radius": 18,
+        "MaxDamage": 1900,
+        "MaxRadius": 25,
+        "MaxCooldown": 0.95,
+        "MaxSplashRadius": 8.5,
+        "Type": [],
+        "DPS": 250.00000000000003,
+        "MaxDPS": 2000,
+        "SplashRadius": 6,
+        "Cooldown": 1.4,
+        "Damage": 350
+      },
+      "Rarity": "Exclusive",
+      "Price": 2000,
+      "Levels": [
+        {
+          "AttackType": "Splash",
+          "Rarity": "Exclusive",
+          "Price": 2000,
+          "Range": 18,
+          "SellPrice": 1500,
+          "AttackFlyToilet": true,
+          "Icon": "rbxassetid://121629127784613",
+          "SplashRadius": 6,
+          "AttackAngle": 0,
+          "UpgradePrice": 3000,
+          "Cooldown": 1.4,
+          "Damage": 350,
+          "BurnDamagePerSec": 40.0,
+          "BurnDuration": 3,
+          "BurnTickInterval": 0.5
+        },
+        {
+          "AttackType": "Splash",
+          "Rarity": "Exclusive",
+          "Price": 2000,
+          "Range": 20,
+          "SellPrice": 3750,
+          "AttackFlyToilet": true,
+          "Icon": "rbxassetid://121629127784613",
+          "SplashRadius": 6.5,
+          "AttackAngle": 0,
+          "UpgradePrice": 6000,
+          "Cooldown": 1.25,
+          "Damage": 650,
+          "BurnDamagePerSec": 71.11111111111111,
+          "BurnDuration": 3.5,
+          "BurnTickInterval": 0.45
+        },
+        {
+          "AttackType": "Splash",
+          "Rarity": "Exclusive",
+          "Price": 2000,
+          "Range": 22,
+          "SellPrice": 8250,
+          "AttackFlyToilet": true,
+          "Icon": "rbxassetid://121629127784613",
+          "SplashRadius": 7.5,
+          "AttackAngle": 0,
+          "UpgradePrice": 10000,
+          "Cooldown": 1.1,
+          "Damage": 1100,
+          "BurnDamagePerSec": 137.5,
+          "BurnDuration": 4,
+          "BurnTickInterval": 0.4
+        },
+        {
+          "AttackType": "Splash",
+          "Rarity": "Exclusive",
+          "Price": 2000,
+          "Range": 25,
+          "SellPrice": 15750,
+          "AttackFlyToilet": true,
+          "Icon": "rbxassetid://121629127784613",
+          "SplashRadius": 8.5,
+          "AttackAngle": 0,
+          "UpgradePrice": 10000,
+          "Cooldown": 0.95,
+          "Damage": 1900,
+          "BurnDamagePerSec": 257.14285714285717,
+          "BurnDuration": 4.5,
+          "BurnTickInterval": 0.35
+        }
+      ],
+      "DisplayName": "Rocket Large Camera Man",
+      "Sources": [
+        {
+          "Title": "Spin Wheel",
+          "Kind": "Event",
+          "Icon": "",
+          "Detail": "0.1%"
+        }
+      ],
+      "TableStats": [
+        {
+          "Name": "🔥 Burn 🔥",
+          "Color": "#ffaa00"
+        }
+      ],
+      "Name": "Rocket Large Camera Man",
+      "Id": "Rocket Large Camera Man",
+      "HasDPS": true,
+      "IsSplash": true,
+      "Icon": "rbxassetid://121629127784613",
+      "Settings": {
+        "SellAble": true,
+        "IsInSummon": false,
+        "TradeAble": true
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -5716,7 +6042,7 @@
           "Title": "Scientist Crate",
           "Kind": "Crate",
           "Icon": "rbxassetid://115975950061415",
-          "Detail": "90%"
+          "Detail": "70%"
         }
       ],
       "Name": "Scientist Camera Man",
@@ -5730,7 +6056,8 @@
       "Icon": "rbxassetid://94742421864994",
       "AttackTargetRules": {
         "Main": "Support"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -5827,7 +6154,8 @@
       "Icon": "rbxassetid://86872560047290",
       "AttackTargetRules": {
         "Main": "Ranged"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -5843,8 +6171,8 @@
         "MaxCooldown": 0.1,
         "HandRange": 16,
         "HandDamage": 175,
-        "DPS": 837.5,
-        "MaxDPS": 7500.0,
+        "DPS": 400,
+        "MaxDPS": 4000,
         "Radius": 18,
         "Cooldown": 0.3,
         "MaxHandDamage": 1400
@@ -5853,98 +6181,98 @@
       "Price": 1500,
       "Levels": [
         {
-          "Price": 1500,
-          "UpgradePrice": 1250,
-          "SellPrice": 750,
-          "Damage": 120,
-          "Range": 18,
-          "Cooldown": 0.3,
           "AttackType": "Cone",
-          "AttackAngle": 70,
-          "TwoRangeName": "Cannons",
-          "HandRange": 16,
+          "Price": 1500,
           "HandDamage": 175,
-          "AttackFlyToiletHand": true,
-          "CantAttackGlasesToiletAoe": true,
-          "HandCooldown": 0.4,
           "HandAttackType": "Single",
+          "AttackAngle": 70,
+          "AttackFlyToiletHand": true,
+          "Damage": 120,
           "Rarity": "Exclusive",
-          "Icon": "rbxassetid://76780786175734"
-        },
-        {
-          "Price": 1500,
+          "TwoRangeName": "Cannons",
+          "SellPrice": 750,
+          "HandRange": 16,
+          "HandCooldown": 0.4,
+          "CantAttackGlasesToiletAoe": true,
+          "Range": 18,
           "UpgradePrice": 1250,
-          "SellPrice": 1375,
-          "Damage": 160,
-          "Range": 20,
-          "Cooldown": 0.2,
+          "Cooldown": 0.3,
+          "Icon": "rbxassetid://76780786175734"
+        },
+        {
           "AttackType": "Cone",
-          "AttackAngle": 85,
-          "TwoRangeName": "Cannons",
-          "HandRange": 18,
+          "Price": 1500,
           "HandDamage": 350,
-          "AttackFlyToiletHand": true,
-          "CantAttackGlasesToiletAoe": true,
-          "HandCooldown": 0.4,
           "HandAttackType": "Single",
+          "AttackAngle": 85,
+          "AttackFlyToiletHand": true,
+          "Damage": 160,
           "Rarity": "Exclusive",
+          "TwoRangeName": "Cannons",
+          "SellPrice": 1375,
+          "HandRange": 18,
+          "HandCooldown": 0.4,
+          "CantAttackGlasesToiletAoe": true,
+          "Range": 20,
+          "UpgradePrice": 1250,
+          "Cooldown": 0.2,
           "Icon": "rbxassetid://76780786175734"
         },
         {
-          "Price": 1500,
-          "UpgradePrice": 2000,
-          "SellPrice": 2375,
-          "Damage": 240,
-          "Range": 22,
-          "Cooldown": 0.15,
           "AttackType": "Cone",
-          "AttackAngle": 100,
-          "TwoRangeName": "Cannons",
-          "HandRange": 20,
+          "Price": 1500,
           "HandDamage": 700,
-          "AttackFlyToiletHand": true,
-          "CantAttackGlasesToiletAoe": true,
-          "HandCooldown": 0.4,
           "HandAttackType": "Single",
+          "AttackAngle": 100,
+          "AttackFlyToiletHand": true,
+          "Damage": 240,
           "Rarity": "Exclusive",
+          "TwoRangeName": "Cannons",
+          "SellPrice": 2375,
+          "HandRange": 20,
+          "HandCooldown": 0.4,
+          "CantAttackGlasesToiletAoe": true,
+          "Range": 22,
+          "UpgradePrice": 2000,
+          "Cooldown": 0.15,
           "Icon": "rbxassetid://76780786175734"
         },
         {
-          "Price": 1500,
-          "UpgradePrice": 3000,
-          "SellPrice": 3875,
-          "Damage": 336,
-          "Range": 24,
-          "Cooldown": 0.12,
           "AttackType": "Cone",
-          "AttackAngle": 115,
-          "TwoRangeName": "Cannons",
-          "HandRange": 23,
+          "Price": 1500,
           "HandDamage": 1050,
-          "AttackFlyToiletHand": true,
-          "CantAttackGlasesToiletAoe": true,
-          "HandCooldown": 0.4,
           "HandAttackType": "Single",
+          "AttackAngle": 115,
+          "AttackFlyToiletHand": true,
+          "Damage": 336,
           "Rarity": "Exclusive",
+          "TwoRangeName": "Cannons",
+          "SellPrice": 3875,
+          "HandRange": 23,
+          "HandCooldown": 0.4,
+          "CantAttackGlasesToiletAoe": true,
+          "Range": 24,
+          "UpgradePrice": 3000,
+          "Cooldown": 0.12,
           "Icon": "rbxassetid://76780786175734"
         },
         {
-          "Price": 1500,
-          "UpgradePrice": 3000,
-          "SellPrice": 5875,
-          "Damage": 400,
-          "Range": 26,
-          "Cooldown": 0.1,
           "AttackType": "Cone",
-          "AttackAngle": 125,
-          "TwoRangeName": "Cannons",
-          "HandRange": 26,
+          "Price": 1500,
           "HandDamage": 1400,
-          "AttackFlyToiletHand": true,
-          "CantAttackGlasesToiletAoe": true,
-          "HandCooldown": 0.4,
           "HandAttackType": "Single",
+          "AttackAngle": 125,
+          "AttackFlyToiletHand": true,
+          "Damage": 400,
           "Rarity": "Exclusive",
+          "TwoRangeName": "Cannons",
+          "SellPrice": 5875,
+          "HandRange": 26,
+          "HandCooldown": 0.4,
+          "CantAttackGlasesToiletAoe": true,
+          "Range": 26,
+          "UpgradePrice": 3000,
+          "Cooldown": 0.1,
           "Icon": "rbxassetid://76780786175734"
         }
       ],
@@ -5972,7 +6300,7 @@
         "Hand": "Ranged"
       },
       "DataStatus": "upcoming",
-      "VerifiedAt": "2026-11-02"
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -6008,7 +6336,10 @@
           "AttackAngle": 95,
           "UpgradePrice": 800,
           "Cooldown": 1.5,
-          "Damage": 80
+          "Damage": 80,
+          "BurnDamagePerSec": 24.0,
+          "BurnDuration": 3,
+          "BurnTickInterval": 0.5
         },
         {
           "AttackType": "Cone",
@@ -6023,7 +6354,10 @@
           "AttackAngle": 105,
           "UpgradePrice": 2000,
           "Cooldown": 1,
-          "Damage": 140
+          "Damage": 140,
+          "BurnDamagePerSec": 40.0,
+          "BurnDuration": 3.5,
+          "BurnTickInterval": 0.45
         },
         {
           "AttackType": "Cone",
@@ -6038,7 +6372,10 @@
           "AttackAngle": 115,
           "UpgradePrice": 3200,
           "Cooldown": 0.75,
-          "Damage": 250
+          "Damage": 250,
+          "BurnDamagePerSec": 67.5,
+          "BurnDuration": 4,
+          "BurnTickInterval": 0.4
         },
         {
           "AttackType": "Cone",
@@ -6053,7 +6390,10 @@
           "AttackAngle": 125,
           "UpgradePrice": 3200,
           "Cooldown": 0.5,
-          "Damage": 500
+          "Damage": 500,
+          "BurnDamagePerSec": 114.28571428571429,
+          "BurnDuration": 4.5,
+          "BurnTickInterval": 0.35
         }
       ],
       "DisplayName": "TV Woman",
@@ -6077,7 +6417,8 @@
       "Icon": "rbxassetid://94559091004757",
       "AttackTargetRules": {
         "Main": "ScreenGround"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -6091,83 +6432,81 @@
         "Radius": 20,
         "MaxHandCooldown": 0.5,
         "MaxHandDamage": 500,
-        "DPS": 1350.0,
-        "MaxDPS": 4500.0,
+        "DPS": 1000,
+        "MaxDPS": 3500,
         "HandCooldown": 0.5,
         "MaxHandRange": 10,
-        "Damage": 500,
-        "AttackAngle": 0,
-        "MaxAttackAngle": 0
+        "Damage": 500
       },
       "Rarity": "Exclusive",
       "Price": 1250,
-      "DisplayName": "Titan Camera Man",
       "Levels": [
         {
+          "AttackType": "Single",
+          "Rarity": "Exclusive",
           "Price": 1250,
-          "UpgradePrice": 1250,
-          "SellPrice": 938,
-          "Damage": 500,
-          "Range": 20,
-          "Cooldown": 0.5,
-          "HandRange": 10,
           "HandDamage": 175,
-          "HandCooldown": 0.5,
-          "AttackType": "Single",
-          "AttackAngle": 0,
+          "SellPrice": 938,
           "AttackFlyToilet": true,
-          "Rarity": "Exclusive",
-          "Icon": "rbxassetid://121397856317625"
+          "Icon": "rbxassetid://121397856317625",
+          "HandRange": 10,
+          "Range": 20,
+          "HandCooldown": 0.5,
+          "AttackAngle": 0,
+          "UpgradePrice": 1250,
+          "Cooldown": 0.5,
+          "Damage": 500
         },
         {
+          "AttackType": "Single",
+          "Rarity": "Exclusive",
           "Price": 1250,
-          "UpgradePrice": 2200,
-          "SellPrice": 1875,
-          "Damage": 850,
-          "Range": 22,
-          "Cooldown": 0.5,
-          "HandRange": 10,
           "HandDamage": 275,
-          "HandCooldown": 0.5,
-          "AttackType": "Single",
-          "AttackAngle": 0,
+          "SellPrice": 1875,
           "AttackFlyToilet": true,
-          "Rarity": "Exclusive",
-          "Icon": "rbxassetid://121397856317625"
+          "Icon": "rbxassetid://121397856317625",
+          "HandRange": 10,
+          "Range": 22,
+          "HandCooldown": 0.5,
+          "AttackAngle": 0,
+          "UpgradePrice": 2200,
+          "Cooldown": 0.5,
+          "Damage": 850
         },
         {
+          "AttackType": "Single",
+          "Rarity": "Exclusive",
           "Price": 1250,
-          "UpgradePrice": 2800,
-          "SellPrice": 3525,
-          "Damage": 1250,
-          "Range": 25,
-          "Cooldown": 0.5,
-          "HandRange": 10,
           "HandDamage": 375,
-          "HandCooldown": 0.5,
-          "AttackType": "Single",
-          "AttackAngle": 0,
+          "SellPrice": 3525,
           "AttackFlyToilet": true,
-          "Rarity": "Exclusive",
-          "Icon": "rbxassetid://121397856317625"
+          "Icon": "rbxassetid://121397856317625",
+          "HandRange": 10,
+          "Range": 25,
+          "HandCooldown": 0.5,
+          "AttackAngle": 0,
+          "UpgradePrice": 2800,
+          "Cooldown": 0.5,
+          "Damage": 1250
         },
         {
-          "Price": 1250,
-          "UpgradePrice": 2800,
-          "SellPrice": 5625,
-          "Damage": 1750,
-          "Range": 28,
-          "Cooldown": 0.5,
-          "HandRange": 10,
-          "HandDamage": 500,
-          "HandCooldown": 0.5,
           "AttackType": "Single",
-          "AttackAngle": 0,
-          "AttackFlyToilet": true,
           "Rarity": "Exclusive",
-          "Icon": "rbxassetid://121397856317625"
+          "Price": 1250,
+          "HandDamage": 500,
+          "SellPrice": 5625,
+          "AttackFlyToilet": true,
+          "Icon": "rbxassetid://121397856317625",
+          "HandRange": 10,
+          "Range": 28,
+          "HandCooldown": 0.5,
+          "AttackAngle": 0,
+          "UpgradePrice": 2800,
+          "Cooldown": 0.5,
+          "Damage": 1750
         }
       ],
+      "DisplayName": "Titan Camera Man",
       "Sources": [
         {
           "Title": "Shop",
@@ -6176,10 +6515,13 @@
           "Detail": "Robux exclusive"
         }
       ],
-      "AttackTargetRules": {
-        "Main": "Ranged",
-        "Hand": "Melee"
-      },
+      "TableStats": [
+        {
+          "Name": "Close Combat (Passive)",
+          "Color": "#64cdff"
+        }
+      ],
+      "Name": "Titan Camera Man",
       "Id": "Titan Camera Man",
       "HasDPS": true,
       "Settings": {
@@ -6188,9 +6530,12 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://121397856317625",
-      "Name": "Titan Camera Man",
+      "AttackTargetRules": {
+        "Main": "Ranged",
+        "Hand": "Melee"
+      },
       "DataStatus": "upcoming",
-      "VerifiedAt": "2026-11-02"
+      "VerifiedAt": "2026-11-03"
     },
     {
       "IsSlowing": true,
@@ -6293,14 +6638,7 @@
       ],
       "DisplayName": "Zombie Camera Man",
       "Id": "Zombie Camera Man",
-      "Sources": [
-        {
-          "Title": "Spooky Gifts",
-          "Kind": "Event",
-          "Icon": "",
-          "Detail": "Day 14"
-        }
-      ],
+      "Sources": [],
       "Name": "Zombie Camera Man",
       "Settings": {
         "SellAble": true,
@@ -6314,8 +6652,8 @@
         "Main": "Melee"
       },
       "DataStatus": "upcoming",
-      "VerifiedAt": "2026-11-02",
-      "PersonalLimitRemoved": true
+      "PersonalLimitRemoved": true,
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -6480,7 +6818,8 @@
       "Icon": "rbxassetid://72134910652720",
       "AttackTargetRules": {
         "Main": "Support"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -6663,7 +7002,8 @@
       "Icon": "rbxassetid://87325234755652",
       "AttackTargetRules": {
         "Main": "Support"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -6789,7 +7129,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://94948701689089",
-      "Name": "Camera Prototype"
+      "Name": "Camera Prototype",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -7171,7 +7512,8 @@
       "Icon": "rbxassetid://116245922321495",
       "AttackTargetRules": {
         "Main": "Support"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -7181,7 +7523,7 @@
         "MaxRadius": 18,
         "MaxCooldown": 0.7,
         "AttackAngle": 90,
-        "DPS": 100.0,
+        "DPS": 100,
         "MaxDPS": 500.00000000000006,
         "Radius": 12,
         "Cooldown": 1,
@@ -7191,55 +7533,54 @@
       "Price": 250,
       "Levels": [
         {
+          "AttackType": "Cone",
+          "Rarity": "Event",
           "Price": 250,
-          "UpgradePrice": 350,
-          "SellPrice": 188,
-          "Damage": 100,
           "Range": 12,
-          "Cooldown": 1,
-          "AttackType": "Cone",
+          "SellPrice": 188,
+          "Icon": "rbxassetid://99828580701098",
           "AttackAngle": 90,
-          "Rarity": "Event",
-          "Icon": "rbxassetid://99828580701098"
+          "UpgradePrice": 350,
+          "Cooldown": 1,
+          "Damage": 100
         },
         {
+          "AttackType": "Cone",
+          "Rarity": "Event",
           "Price": 250,
-          "UpgradePrice": 500,
-          "SellPrice": 450,
-          "Damage": 170,
           "Range": 14,
-          "Cooldown": 0.85,
-          "AttackType": "Cone",
+          "SellPrice": 450,
+          "Icon": "rbxassetid://99828580701098",
           "AttackAngle": 95,
-          "Rarity": "Event",
-          "Icon": "rbxassetid://99828580701098"
+          "UpgradePrice": 500,
+          "Cooldown": 0.85,
+          "Damage": 170
         },
         {
+          "AttackType": "Cone",
+          "Rarity": "Event",
           "Price": 250,
-          "UpgradePrice": 700,
-          "SellPrice": 825,
-          "Damage": 255,
           "Range": 16,
-          "Cooldown": 0.75,
-          "AttackType": "Cone",
+          "SellPrice": 825,
+          "Icon": "rbxassetid://99828580701098",
           "AttackAngle": 100,
-          "Rarity": "Event",
-          "Icon": "rbxassetid://99828580701098"
+          "UpgradePrice": 700,
+          "Cooldown": 0.75,
+          "Damage": 255
         },
         {
-          "Price": 250,
-          "UpgradePrice": 700,
-          "SellPrice": 1350,
-          "Damage": 350,
-          "Range": 18,
-          "Cooldown": 0.7,
           "AttackType": "Cone",
-          "AttackAngle": 105,
           "Rarity": "Event",
-          "Icon": "rbxassetid://99828580701098"
+          "Price": 250,
+          "Range": 18,
+          "SellPrice": 1350,
+          "Icon": "rbxassetid://99828580701098",
+          "AttackAngle": 105,
+          "UpgradePrice": 700,
+          "Cooldown": 0.7,
+          "Damage": 350
         }
       ],
-      "DisplayName": "Jester Speaker Man",
       "Sources": [
         {
           "Title": "Party Crate",
@@ -7248,21 +7589,28 @@
           "Detail": "39.8%"
         }
       ],
+      "DisplayName": "Jester Speaker Man",
+      "Id": "Jester Speaker Man",
       "IsAoe": true,
       "Name": "Jester Speaker Man",
-      "Id": "Jester Speaker Man",
-      "HasDPS": true,
       "Settings": {
         "SellAble": true,
         "IsInSummon": false,
         "TradeAble": true
       },
-      "Icon": "rbxassetid://99828580701098",
+      "HasDPS": true,
       "AttackTargetRules": {
         "Main": "GroundRanged"
       },
+      "Icon": "rbxassetid://99828580701098",
+      "TableStats": [
+        {
+          "Name": "Lucky Strike (Passive)",
+          "Color": "#ffcd5f"
+        }
+      ],
       "DataStatus": "upcoming",
-      "VerifiedAt": "2026-11-02"
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -7403,7 +7751,8 @@
       "AttackTargetRules": {
         "Main": "Ranged",
         "Hand": "Ranged"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -7500,7 +7849,8 @@
       "Icon": "rbxassetid://121454848252009",
       "AttackTargetRules": {
         "Main": "Ranged"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -7597,7 +7947,8 @@
       "Icon": "rbxassetid://123981686282973",
       "AttackTargetRules": {
         "Main": "ScreenAir"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -7752,7 +8103,8 @@
       "AttackTargetRules": {
         "Main": "ScreenGround",
         "Hand": "Melee"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -7864,7 +8216,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://122008001530090",
-      "Name": "Poseidon Camera Man"
+      "Name": "Poseidon Camera Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -8134,7 +8487,8 @@
       "AttackTargetRules": {
         "Main": "Ranged",
         "Hand": "Ranged"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "IsSlowing": true,
@@ -8386,7 +8740,8 @@
       "AttackTargetRules": {
         "Main": "ScreenAir",
         "Hand": "Melee"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -8547,7 +8902,8 @@
         "TradeAble": true
       },
       "Icon": "rbxassetid://79826426191997",
-      "Name": "Upgraded Titan Jack'o Man"
+      "Name": "Upgraded Titan Jack'o Man",
+      "VerifiedAt": "2026-11-03"
     },
     {
       "Stats": {
@@ -8721,12 +9077,13 @@
       "AttackTargetRules": {
         "Main": "Ranged",
         "Hand": "Ranged"
-      }
+      },
+      "VerifiedAt": "2026-11-03"
     }
   ],
   "updatedAt": "2026-11-03",
   "verification": {
-    "lastFullExportAt": "2026-10-28T20:42:05Z",
+    "lastFullExportAt": "2026-11-03",
     "patchVerifiedAt": "2026-11-02",
     "patchStatus": "upcoming",
     "patchedUnits": [
@@ -8738,6 +9095,561 @@
       "TV Strider",
       "Camera Helicopter",
       "Zombie Camera Man"
-    ]
+    ],
+    "fullCatalogVerifiedAt": "2026-11-03",
+    "sourcePlaces": [
+      121982847335554,
+      90647947106358
+    ],
+    "readOnly": true
+  },
+  "rewardSource": {
+    "placeId": 90647947106358,
+    "module": "ReplicatedStorage.Shared.ModeRewardConfig",
+    "verifiedAt": "2026-11-03"
+  },
+  "rng": {
+    "MapId": "RNG_Mode",
+    "Waves": 60,
+    "SlotCount": 5,
+    "Bosses": [
+      {
+        "Wave": 10,
+        "Unit": "G-Toilet"
+      },
+      {
+        "Wave": 20,
+        "Unit": "G-Toilet"
+      },
+      {
+        "Wave": 30,
+        "Unit": "G-Toilet"
+      },
+      {
+        "Wave": 40,
+        "Unit": "G-Toilet 2.0"
+      },
+      {
+        "Wave": 50,
+        "Unit": "G-Toilet 2.0"
+      },
+      {
+        "Wave": 60,
+        "Unit": "Scientist Toilet"
+      }
+    ],
+    "FinalBossHp": 5000000,
+    "ModifierWaves": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "Upgrades": {
+      "FasterRoll": {
+        "Levels": [
+          {
+            "Value": 0.9,
+            "Cost": 500
+          },
+          {
+            "Value": 0.8,
+            "Cost": 1000
+          },
+          {
+            "Value": 0.7,
+            "Cost": 1750
+          },
+          {
+            "Value": 0.6,
+            "Cost": 2750
+          },
+          {
+            "Value": 0.5,
+            "Cost": 4000
+          }
+        ],
+        "Name": "Faster Roll",
+        "Icon": "rbxassetid://108963752803415"
+      },
+      "DoubleRoll": {
+        "Levels": [
+          {
+            "Value": 1,
+            "Cost": 10000
+          }
+        ],
+        "Name": "Double Roll",
+        "Icon": ""
+      },
+      "MoreLuck": {
+        "Levels": [
+          {
+            "Value": 1.15,
+            "Cost": 750
+          },
+          {
+            "Value": 1.3,
+            "Cost": 1500
+          },
+          {
+            "Value": 1.5,
+            "Cost": 2500
+          },
+          {
+            "Value": 1.75,
+            "Cost": 4000
+          },
+          {
+            "Value": 2,
+            "Cost": 6000
+          }
+        ],
+        "Name": "More Luck",
+        "Icon": "rbxassetid://78824015618357"
+      },
+      "MoreCash": {
+        "Levels": [
+          {
+            "Value": 1.05,
+            "Cost": 500
+          },
+          {
+            "Value": 1.1,
+            "Cost": 1000
+          },
+          {
+            "Value": 1.15,
+            "Cost": 1750
+          },
+          {
+            "Value": 1.2,
+            "Cost": 2750
+          },
+          {
+            "Value": 1.25,
+            "Cost": 4000
+          }
+        ],
+        "Name": "More Cash",
+        "Icon": "rbxassetid://80491572658052"
+      }
+    },
+    "UpgradeOrder": [
+      "MoreLuck",
+      "FasterRoll",
+      "DoubleRoll",
+      "MoreCash"
+    ],
+    "Modifiers": {
+      "Discount": {
+        "Description": "Unit Upgrades Cost <font color=\"#ffff2f\">25% Less</font> For The Next <font color=\"#ffff2f\">10 Waves</font>!",
+        "Name": "🏷️ Discount 🏷️",
+        "Weight": 20
+      },
+      "CashZone": {
+        "Description": "Stand Inside The Circle To Earn <font color=\"#ffff2f\">50 Cash Every Second</font> For <font color=\"#ffff2f\">60 Seconds</font>!",
+        "Name": "💸 Cash Zone 💸",
+        "Weight": 30
+      },
+      "DoubleProblems": {
+        "Description": "<font color=\"#ffff2f\">2x More Toilets</font> Spawn For The Rest Of The Match!",
+        "Name": "💥 Double Problems 💥",
+        "Weight": 50
+      },
+      "RapidWaves": {
+        "Description": "The Next 4 Waves Auto Skip After <font color=\"#ffff2f\">1 Second</font>",
+        "Name": "⚡ Rapid Waves ⚡",
+        "Weight": 20
+      }
+    },
+    "ModifierOrder": [
+      "RapidWaves",
+      "DoubleProblems",
+      "CashZone",
+      "Discount"
+    ],
+    "UnitPool": [
+      {
+        "Id": "10M Camera Man",
+        "Weight": 0.607476635514
+      },
+      {
+        "Id": "10M Speaker Man",
+        "Weight": 0.444444444444
+      },
+      {
+        "Id": "10M TV Woman",
+        "Weight": 0.666666666667
+      },
+      {
+        "Id": "Builder Camera Man",
+        "Weight": 1
+      },
+      {
+        "Id": "Camera Helicopter",
+        "Weight": 0.559440559441
+      },
+      {
+        "Id": "Camera Man",
+        "Weight": 0.869565217391
+      },
+      {
+        "Id": "Camera Prototype",
+        "Weight": 0.121951219512
+      },
+      {
+        "Id": "Camera Strider",
+        "Weight": 0.47619047619
+      },
+      {
+        "Id": "Camera Woman",
+        "Weight": 0.793650793651
+      },
+      {
+        "Id": "Camera Woman 2.0",
+        "Weight": 0.104216011369
+      },
+      {
+        "Id": "DJ Speaker Man",
+        "Weight": 1
+      },
+      {
+        "Id": "Dark Speaker Man",
+        "Weight": 0.590909090909
+      },
+      {
+        "Id": "Engineer Camera Man",
+        "Weight": 0.0909090909091
+      },
+      {
+        "Id": "Fat Upgraded Titan Camera Man",
+        "Weight": 0.0666666666667
+      },
+      {
+        "Id": "Fisher Camera Man",
+        "Weight": 1
+      },
+      {
+        "Id": "Ghost Speaker Man",
+        "Weight": 0.117647058824
+      },
+      {
+        "Id": "Glitch Plunger Man",
+        "Weight": 0.181818181818
+      },
+      {
+        "Id": "Golden Camera Man",
+        "Weight": 0.25641025641
+      },
+      {
+        "Id": "Golden Large Camera Man",
+        "Weight": 0.161290322581
+      },
+      {
+        "Id": "Hyper Titan Speaker Man",
+        "Weight": 0.0380228136882
+      },
+      {
+        "Id": "Injured Upgraded Titan Camera Man",
+        "Weight": 0.142857142857
+      },
+      {
+        "Id": "Injured Upgraded Titan Speaker Man",
+        "Weight": 0.133333333333
+      },
+      {
+        "Id": "Jester Speaker Man",
+        "Weight": 0.793650793651
+      },
+      {
+        "Id": "Large Camera Man",
+        "Weight": 0.625
+      },
+      {
+        "Id": "Large Camera Prototype",
+        "Weight": 0.105263157895
+      },
+      {
+        "Id": "Large Grim Reaper",
+        "Weight": 0.111111111111
+      },
+      {
+        "Id": "Large Scientist Camera Man",
+        "Weight": 0.553571428571
+      },
+      {
+        "Id": "Large Speaker Man",
+        "Weight": 0.767441860465
+      },
+      {
+        "Id": "Large TV Man",
+        "Weight": 0.757575757576
+      },
+      {
+        "Id": "Party Camera Man",
+        "Weight": 0.923076923077
+      },
+      {
+        "Id": "Party Titan TV Man",
+        "Weight": 0.222222222222
+      },
+      {
+        "Id": "Pirate Large TV Man",
+        "Weight": 0.411522633745
+      },
+      {
+        "Id": "Plunger Camera Man",
+        "Weight": 0.645161290323
+      },
+      {
+        "Id": "Poseidon Camera Man",
+        "Weight": 0.142857142857
+      },
+      {
+        "Id": "Present Camera Man",
+        "Weight": 1
+      },
+      {
+        "Id": "Pumpkin Camera Man",
+        "Weight": 0.769230769231
+      },
+      {
+        "Id": "Pumpkin Man",
+        "Weight": 0.416666666667
+      },
+      {
+        "Id": "Rocket Large Camera Man",
+        "Weight": 0.307031009518
+      },
+      {
+        "Id": "Scientist Camera Man",
+        "Weight": 1
+      },
+      {
+        "Id": "Skeleton Large TV Man",
+        "Weight": 0.357142857143
+      },
+      {
+        "Id": "Speaker Man",
+        "Weight": 0.915492957746
+      },
+      {
+        "Id": "Speaker Strider",
+        "Weight": 0.47619047619
+      },
+      {
+        "Id": "Speaker Woman",
+        "Weight": 0.751879699248
+      },
+      {
+        "Id": "Speaker Woman 2.0",
+        "Weight": 0.166666666667
+      },
+      {
+        "Id": "TV Man",
+        "Weight": 0.854214123007
+      },
+      {
+        "Id": "TV Strider",
+        "Weight": 0.15625
+      },
+      {
+        "Id": "TV Woman",
+        "Weight": 0.5
+      },
+      {
+        "Id": "Titan Camera Man",
+        "Weight": 0.238095238095
+      },
+      {
+        "Id": "Titan Cinema Man",
+        "Weight": 0.2
+      },
+      {
+        "Id": "Titan Jack'o Man",
+        "Weight": 0.0909090909091
+      },
+      {
+        "Id": "Titan Speaker Man",
+        "Weight": 0.454545454545
+      },
+      {
+        "Id": "Titan Speaker Man 2.0",
+        "Weight": 0.210526315789
+      },
+      {
+        "Id": "Titan TV Man",
+        "Weight": 0.606060606061
+      },
+      {
+        "Id": "Upgraded Titan Camera Man",
+        "Weight": 0.105263157895
+      },
+      {
+        "Id": "Upgraded Titan Cinema Man",
+        "Weight": 0.0483909992741
+      },
+      {
+        "Id": "Upgraded Titan Jack'o Man",
+        "Weight": 0.0434782608696
+      },
+      {
+        "Id": "Upgraded Titan Saw Arm Camera Man",
+        "Weight": 0.0909090909091
+      },
+      {
+        "Id": "Upgraded Titan Toxic Gun Camera Man",
+        "Weight": 0.0416666666667
+      },
+      {
+        "Id": "Ushanka Camera Man",
+        "Weight": 0.150943396226
+      },
+      {
+        "Id": "Witch TV Woman",
+        "Weight": 1
+      },
+      {
+        "Id": "Zombie Camera Man",
+        "Weight": 0.121951219512
+      }
+    ],
+    "VerifiedAt": "2026-11-03"
+  },
+  "ranks": {
+    "Ranks": [
+      {
+        "Name": "Beginner",
+        "Wins": 0
+      },
+      {
+        "Name": "Rookie",
+        "Wins": 5
+      },
+      {
+        "Name": "Cool",
+        "Wins": 20
+      },
+      {
+        "Name": "Expert",
+        "Wins": 75
+      },
+      {
+        "Name": "Master",
+        "Wins": 125
+      },
+      {
+        "Name": "Legend",
+        "Wins": 500
+      }
+    ],
+    "Rewards": {
+      "Master": [
+        {
+          "Type": "Coins",
+          "Amount": 2500
+        },
+        {
+          "Type": "Tickets",
+          "Amount": 6
+        },
+        {
+          "Id": "Money",
+          "Type": "Boost",
+          "Amount": 1
+        },
+        {
+          "Id": "SummonDiscount",
+          "Type": "Boost",
+          "Amount": 1
+        }
+      ],
+      "Beginner": [],
+      "Legend": [
+        {
+          "Type": "Coins",
+          "Amount": 2500
+        },
+        {
+          "Type": "Tickets",
+          "Amount": 10
+        },
+        {
+          "Id": "Luck",
+          "Type": "Boost",
+          "Amount": 1
+        },
+        {
+          "Id": "Money",
+          "Type": "Boost",
+          "Amount": 1
+        },
+        {
+          "Id": "XP",
+          "Type": "Boost",
+          "Amount": 1
+        }
+      ],
+      "Expert": [
+        {
+          "Type": "Coins",
+          "Amount": 1200
+        },
+        {
+          "Type": "Tickets",
+          "Amount": 4
+        },
+        {
+          "Id": "Luck",
+          "Type": "Boost",
+          "Amount": 1
+        },
+        {
+          "Id": "XP",
+          "Type": "Boost",
+          "Amount": 1
+        }
+      ],
+      "Rookie": [
+        {
+          "Type": "Coins",
+          "Amount": 250
+        },
+        {
+          "Type": "Tickets",
+          "Amount": 1
+        },
+        {
+          "Id": "XP",
+          "Type": "Boost",
+          "Amount": 1
+        }
+      ],
+      "Cool": [
+        {
+          "Type": "Coins",
+          "Amount": 600
+        },
+        {
+          "Type": "Tickets",
+          "Amount": 2
+        },
+        {
+          "Id": "Money",
+          "Type": "Boost",
+          "Amount": 1
+        }
+      ]
+    },
+    "Cooldowns": {
+      "Master": "3h 30m 0s",
+      "Beginner": "0h 0m 0s",
+      "Legend": "5h 0m 0s",
+      "Expert": "3h 0m 0s",
+      "Rookie": "2h 0m 0s",
+      "Cool": "2h 30m 0s"
+    }
   }
 }

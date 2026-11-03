@@ -16,8 +16,11 @@ test('missing, invalid and elapsed timer dates have safe distinct states',()=>{
 
 test('pending patch is a preview without inventing a release date or version',()=>{
  assert.equal(config.currentVersion,'15');
- assert.equal(config.nextUpdate.releaseAt,null);
- const pending=sortedReleases(config.releases)[0];
+ assert.equal(new Date(config.nextUpdate.releaseAt).toISOString(),'2026-11-06T16:00:00.000Z');
+ const ordered=sortedReleases(config.releases);
+ assert.equal(ordered[0].id,'Template15');
+ assert.equal(ordered[0].date,'2026-11-02');
+ const pending=ordered[1];
  assert.equal(pending.status,'upcoming');
  assert.equal(config.releases.filter(r=>r.status!=='upcoming')[0].version,'15');
 });

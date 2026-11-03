@@ -3,12 +3,1302 @@
   "nextUpdate": {
     "enabled": true,
     "title": {
-      "en": "Balance & reinforcements",
-      "ru": "Баланс и подкрепления"
+      "en": "The next Alliance TD update",
+      "ru": "Следующее обновление Alliance TD"
     },
-    "releaseAt": null
+    "releaseAt": "2026-11-06T19:00:00+03:00"
   },
   "releases": [
+    {
+      "id": "Template15",
+      "version": "15",
+      "date": "2026-11-02",
+      "title": {
+        "en": "⭐ Trading Plaza + Fun Mode 🎲",
+        "ru": "Торговая площадь и развлекательный режим"
+      },
+      "sections": [
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "⭐ Ranks!",
+              "ru": "Ранги"
+            },
+            {
+              "en": "💫 6 New Ranks",
+              "ru": "6 новых рангов"
+            },
+            {
+              "en": "🖌️ Trading Plaza",
+              "ru": "Торговая площадь"
+            },
+            {
+              "en": "🔥 New 2 Units",
+              "ru": "2 новых юнита"
+            },
+            {
+              "en": "🎲 RNG Mode",
+              "ru": "RNG-режим"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Changes",
+          "title": {
+            "en": "Changes",
+            "ru": "Изменения"
+          },
+          "items": [
+            {
+              "en": "🔍 New Player Information",
+              "ru": "Новая информация об игроках"
+            },
+            {
+              "en": "⭐ UI Changes",
+              "ru": "Изменения интерфейса"
+            }
+          ]
+        },
+        {
+          "sourceKey": "COMING SOON",
+          "title": {
+            "en": "COMING SOON",
+            "ru": "В разработке"
+          },
+          "items": [
+            {
+              "en": "🔥 Rework Streak",
+              "ru": "Переработка серий побед"
+            },
+            {
+              "en": "🖌️ Rework Maps",
+              "ru": "Переработка карт"
+            }
+          ],
+          "kind": "planned"
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template14",
+      "version": "15",
+      "date": "2026-10-28",
+      "title": {
+        "en": "💥 New Units + Changes ⭐",
+        "ru": "Новые юниты и изменения"
+      },
+      "sections": [
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "💥 Hyper Titan Speaker Man",
+              "ru": "Гипер Титан Спикермен"
+            },
+            {
+              "en": "🔒 Lock Units",
+              "ru": "Блокировка юнитов"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Changes",
+          "title": {
+            "en": "Changes",
+            "ru": "Изменения"
+          },
+          "items": [
+            {
+              "en": "📺 Interface Improvement",
+              "ru": "Улучшения интерфейса"
+            },
+            {
+              "en": "⚙️ Only Friends Trade",
+              "ru": "Обмены только с друзьями"
+            },
+            {
+              "en": "❌ Kick Party Player",
+              "ru": "Исключение игрока из группы"
+            },
+            {
+              "en": "📦 x10 Crate Open",
+              "ru": "Открытие 10 ящиков за раз"
+            },
+            {
+              "en": "⭐ New Index",
+              "ru": "Новый индекс"
+            },
+            {
+              "en": "✅ Loadouts",
+              "ru": "Сохранённые наборы юнитов"
+            },
+            {
+              "en": "🔊 5 New Sounds",
+              "ru": "5 новых звуков"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Exclusive",
+          "title": {
+            "en": "Exclusive",
+            "ru": "Эксклюзивы"
+          },
+          "items": [
+            {
+              "en": "🔴 Hyper Pack",
+              "ru": "Гипер-набор"
+            }
+          ]
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template13",
+      "version": "14",
+      "date": "2026-10-25",
+      "title": {
+        "en": "⭐ QoL + Content 👍",
+        "ru": "Удобство игры и контент"
+      },
+      "sections": [
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "🎁 Terminal",
+              "ru": "Терминал"
+            },
+            {
+              "en": "⚔️ Clans",
+              "ru": "Кланы"
+            },
+            {
+              "en": "🥔 Low Mode",
+              "ru": "Режим низкой графики"
+            },
+            {
+              "en": "🚁 Flying Toilets",
+              "ru": "Летающие туалеты"
+            },
+            {
+              "en": "💥 New Units",
+              "ru": "Новые юниты"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Exclusive",
+          "title": {
+            "en": "Exclusive",
+            "ru": "Эксклюзивы"
+          },
+          "items": [
+            {
+              "en": "🧸 Plushie",
+              "ru": "Плюшевые аксессуары"
+            },
+            {
+              "en": "⌛ Limited Pack",
+              "ru": "Лимитный набор"
+            }
+          ]
+        },
+        {
+          "sourceKey": "QoL",
+          "title": {
+            "en": "QoL",
+            "ru": "Удобство игры"
+          },
+          "items": [
+            {
+              "en": "⭐ Spawn Animation",
+              "ru": "Анимация появления"
+            },
+            {
+              "en": "🔃 New Balance",
+              "ru": "Новый баланс"
+            },
+            {
+              "en": "🔊 More Sounds",
+              "ru": "Больше звуков"
+            }
+          ]
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template12",
+      "version": "13",
+      "date": "2026-10-17",
+      "title": {
+        "en": "👻 Halloween Part 2 + More 🦇",
+        "ru": "Вторая часть Хэллоуина и другое"
+      },
+      "sections": [
+        {
+          "sourceKey": "Halloween Content",
+          "title": {
+            "en": "Halloween Content",
+            "ru": "Контент Хэллоуина"
+          },
+          "items": [
+            {
+              "en": "🎁 Spooky Gifts",
+              "ru": "Хэллоуинские подарки"
+            },
+            {
+              "en": "🎃 4 New Units",
+              "ru": "4 новых юнита"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "📘 Rework Quests",
+              "ru": "Переработанные задания"
+            },
+            {
+              "en": "👻 Halloween Pack",
+              "ru": "Хэллоуинский набор"
+            },
+            {
+              "en": "⌛ Spooky Forever Pack",
+              "ru": "Хэллоуинский бесконечный набор"
+            },
+            {
+              "en": "👍 Likes Rewards",
+              "ru": "Награды за лайки"
+            },
+            {
+              "en": "🧍 Active Boost",
+              "ru": "Бонусы за активность"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Upgrade Tree",
+          "title": {
+            "en": "Upgrade Tree",
+            "ru": "Дерево улучшений"
+          },
+          "items": [
+            {
+              "en": "🔃 Auto Ability",
+              "ru": "Автоматическое применение способностей"
+            },
+            {
+              "en": "💥 New Units Upgrades",
+              "ru": "Новые улучшения юнитов"
+            }
+          ]
+        },
+        {
+          "sourceKey": "QoL",
+          "title": {
+            "en": "QoL",
+            "ru": "Удобство игры"
+          },
+          "items": [
+            {
+              "en": "⭐ New UI",
+              "ru": "Новый интерфейс"
+            },
+            {
+              "en": "❌ Drag Delete",
+              "ru": "Удаление перетаскиванием"
+            },
+            {
+              "en": "✅ +1 VIP Pass Bonus",
+              "ru": "Дополнительный бонус VIP-пропуска"
+            }
+          ]
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template11",
+      "version": "12",
+      "date": "2026-10-12",
+      "title": {
+        "en": "🎃 HALLOWEEN + CONTENT ⭐",
+        "ru": "Хэллоуин и контент"
+      },
+      "sections": [
+        {
+          "sourceKey": "HALLOWEEN",
+          "title": {
+            "en": "HALLOWEEN",
+            "ru": "Хэллоуин"
+          },
+          "items": [
+            {
+              "en": "🎃 Spooky Crate",
+              "ru": "Хэллоуинский ящик"
+            },
+            {
+              "en": "🦇 Halloween Pass",
+              "ru": "Хэллоуинский пропуск"
+            },
+            {
+              "en": "👻 Halloween Shop",
+              "ru": "Хэллоуинский магазин"
+            },
+            {
+              "en": "🔥 Halloween Quests",
+              "ru": "Хэллоуинские задания"
+            },
+            {
+              "en": "💀 5 New Units",
+              "ru": "5 новых юнитов"
+            },
+            {
+              "en": "😱 Scary Mode",
+              "ru": "Хэллоуинский режим"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "⭐ New Lobby",
+              "ru": "Новое лобби"
+            },
+            {
+              "en": "🕷️ Strider Crate",
+              "ru": "Ящик страйдеров"
+            },
+            {
+              "en": "💥 3 New Units",
+              "ru": "3 новых юнита"
+            },
+            {
+              "en": "👟 Ability Glitch Camera Man",
+              "ru": "Способность Глитч Камерамена"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Codes",
+          "title": {
+            "en": "Codes",
+            "ru": "Коды из этого обновления"
+          },
+          "items": [
+            {
+              "en": "Halloween",
+              "ru": "Halloween"
+            },
+            {
+              "en": "20m",
+              "ru": "20m"
+            }
+          ],
+          "kind": "historic-codes"
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template10",
+      "version": "11",
+      "date": "2026-10-03",
+      "title": {
+        "en": "🔥 New Rarity + Content ⭐",
+        "ru": "Новая редкость и контент"
+      },
+      "sections": [
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "🔥 New OMEGA Rarity",
+              "ru": "Новая редкость Омега"
+            },
+            {
+              "en": "⭐ 4 New Units",
+              "ru": "4 новых юнита"
+            },
+            {
+              "en": "🔃 QoL Trading",
+              "ru": "Улучшения обменов"
+            },
+            {
+              "en": "🌲 Upgrade Tree",
+              "ru": "Дерево улучшений"
+            },
+            {
+              "en": "💥 Gamepass Trading",
+              "ru": "Обмен пропусками"
+            },
+            {
+              "en": "🔨 Crafting",
+              "ru": "Крафт"
+            }
+          ]
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template9",
+      "version": "10",
+      "date": "2026-09-25",
+      "title": {
+        "en": "Content 🌟",
+        "ru": "Контент"
+      },
+      "sections": [
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "⭐ Season Pass 2",
+              "ru": "Второй сезонный пропуск"
+            },
+            {
+              "en": "⚔️ 4 New Units",
+              "ru": "4 новых юнита"
+            },
+            {
+              "en": "⚙️ Game Settings",
+              "ru": "Настройки игры"
+            },
+            {
+              "en": "😴 AFK Rework",
+              "ru": "Переработанная АФК-зона"
+            },
+            {
+              "en": "📫 Mailbox",
+              "ru": "Почта"
+            },
+            {
+              "en": "🔃 Rejoin Game",
+              "ru": "Возвращение в матч"
+            },
+            {
+              "en": "🐞 A Lot Of Bug Fix",
+              "ru": "Множество исправлений ошибок"
+            }
+          ]
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template8",
+      "version": "9",
+      "date": "2026-09-18",
+      "title": {
+        "en": "🎉 10M Event + QoL 🌟",
+        "ru": "Событие 10 миллионов и улучшения"
+      },
+      "sections": [
+        {
+          "sourceKey": "10M Event",
+          "title": {
+            "en": "10M Event",
+            "ru": "Событие 10 миллионов"
+          },
+          "items": [
+            {
+              "en": "🎉 New Currency",
+              "ru": "Новая валюта"
+            },
+            {
+              "en": "📦 10M Crate",
+              "ru": "Ящик 10 миллионов"
+            },
+            {
+              "en": "⚔️ 4 New Units",
+              "ru": "4 новых юнита"
+            },
+            {
+              "en": "⌛ Limited Unit Event!",
+              "ru": "Событие с лимитным юнитом"
+            },
+            {
+              "en": "🌟 Event Shop",
+              "ru": "Магазин события"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "🔥 Win-Streaks",
+              "ru": "Серии побед"
+            },
+            {
+              "en": "⚔️ 2 New Units",
+              "ru": "2 новых юнита"
+            },
+            {
+              "en": "🎁 Free Gifts",
+              "ru": "Бесплатные подарки"
+            },
+            {
+              "en": "❓ Lucky Blocks",
+              "ru": "Лаки-блоки"
+            },
+            {
+              "en": "🟦 2x XP Boost",
+              "ru": "Усиление опыта x2"
+            }
+          ]
+        },
+        {
+          "sourceKey": "QoL",
+          "title": {
+            "en": "QoL",
+            "ru": "Удобство игры"
+          },
+          "items": [
+            {
+              "en": "🎒 Items",
+              "ru": "Предметы"
+            }
+          ]
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template7",
+      "version": "8",
+      "date": "2026-09-11",
+      "title": {
+        "en": "♾️ Endless + More ⭐",
+        "ru": "Бесконечный режим и другое"
+      },
+      "sections": [
+        {
+          "sourceKey": "Endless Mode",
+          "title": {
+            "en": "Endless Mode",
+            "ru": "Бесконечный режим"
+          },
+          "items": [
+            {
+              "en": "👑 Endless Leaderboard",
+              "ru": "Таблица лидеров бесконечного режима"
+            },
+            {
+              "en": "🌟 Endless Rewards",
+              "ru": "Награды бесконечного режима"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "🟣 New Boost",
+              "ru": "Новое усиление"
+            },
+            {
+              "en": "📘 Trade History",
+              "ru": "История обменов"
+            },
+            {
+              "en": "🔄️ Multi Sell",
+              "ru": "Массовая продажа"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Reworks",
+          "title": {
+            "en": "Reworks",
+            "ru": "Переработки"
+          },
+          "items": [
+            {
+              "en": "⚒️ Camera Man Rework",
+              "ru": "Переработка Камерамена"
+            }
+          ]
+        },
+        {
+          "sourceKey": "QoL",
+          "title": {
+            "en": "QoL",
+            "ru": "Удобство игры"
+          },
+          "items": [
+            {
+              "en": "🔴 Unit Hitbox",
+              "ru": "Область размещения юнита"
+            },
+            {
+              "en": "📱 Unit Manager",
+              "ru": "Управление юнитами"
+            },
+            {
+              "en": "⭐ Friend Boost",
+              "ru": "Бонус за друзей"
+            },
+            {
+              "en": "🗺️ Global Events",
+              "ru": "Глобальные события"
+            },
+            {
+              "en": "📺 New UI",
+              "ru": "Новый интерфейс"
+            },
+            {
+              "en": "💫 Loading Screen",
+              "ru": "Экран загрузки"
+            },
+            {
+              "en": "🐞 A Lot Of Bug Fix",
+              "ru": "Множество исправлений ошибок"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Codes",
+          "title": {
+            "en": "Codes",
+            "ru": "Коды из этого обновления"
+          },
+          "items": [
+            {
+              "en": "10M",
+              "ru": "10M"
+            }
+          ],
+          "kind": "historic-codes"
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template6",
+      "version": "7",
+      "date": "2026-09-04",
+      "title": {
+        "en": "🎫 Pass + More ✨",
+        "ru": "Сезонный пропуск и другое"
+      },
+      "sections": [
+        {
+          "sourceKey": "Season Pass",
+          "title": {
+            "en": "Season Pass",
+            "ru": "Сезонный пропуск"
+          },
+          "items": [
+            {
+              "en": "🎫 50 Tiers",
+              "ru": "50 уровней"
+            },
+            {
+              "en": "✨ Premium Pass",
+              "ru": "Платный пропуск"
+            },
+            {
+              "en": "📘 Pass Quests",
+              "ru": "Задания пропуска"
+            },
+            {
+              "en": "🔥 Skip Tier",
+              "ru": "Пропуск уровня"
+            }
+          ]
+        },
+        {
+          "sourceKey": "New Content",
+          "title": {
+            "en": "New Content",
+            "ru": "Новый контент"
+          },
+          "items": [
+            {
+              "en": "🚧 2 New Units",
+              "ru": "2 новых юнита"
+            },
+            {
+              "en": "🎟️ Ticket Tradeable",
+              "ru": "Обмен тикетами"
+            },
+            {
+              "en": "🎁 Gamepass Gift",
+              "ru": "Подарки пропусков"
+            },
+            {
+              "en": "🔎 Index",
+              "ru": "Индекс"
+            },
+            {
+              "en": "♾️ Forever Pack",
+              "ru": "Бесконечный набор"
+            }
+          ]
+        },
+        {
+          "sourceKey": "QoL",
+          "title": {
+            "en": "QoL",
+            "ru": "Удобство игры"
+          },
+          "items": [
+            {
+              "en": "⚡ Game Speed Keybind",
+              "ru": "Горячая клавиша скорости игры"
+            },
+            {
+              "en": "🐞 Bug Fix",
+              "ru": "Исправления ошибок"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Codes",
+          "title": {
+            "en": "Codes",
+            "ru": "Коды из этого обновления"
+          },
+          "items": [
+            {
+              "en": "8MVISITS",
+              "ru": "8MVISITS"
+            },
+            {
+              "en": "PASS",
+              "ru": "PASS"
+            }
+          ],
+          "kind": "historic-codes"
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template5",
+      "version": "6",
+      "date": "2026-08-27",
+      "title": {
+        "en": "🟠 Big Update ✨",
+        "ru": "Большое обновление"
+      },
+      "sections": [
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "🟠 Crazy Mode",
+              "ru": "Сумасшедший режим"
+            },
+            {
+              "en": "🔥 3 New Units",
+              "ru": "3 новых юнита"
+            },
+            {
+              "en": "🚽 5 New Toilets",
+              "ru": "5 новых туалетов"
+            },
+            {
+              "en": "🆕 New Global Quests",
+              "ru": "Новые глобальные задания"
+            },
+            {
+              "en": "🎉 Rework Matchmaking",
+              "ru": "Переработанный подбор матчей"
+            },
+            {
+              "en": "⚡ Game Speed",
+              "ru": "Скорость игры"
+            },
+            {
+              "en": "🎡 Wheel Spin",
+              "ru": "Колесо удачи"
+            },
+            {
+              "en": "🎟️ Tickets",
+              "ru": "Тикеты"
+            },
+            {
+              "en": "🔃 Replay",
+              "ru": "Повтор матча"
+            }
+          ]
+        },
+        {
+          "sourceKey": "QoL",
+          "title": {
+            "en": "QoL",
+            "ru": "Удобство игры"
+          },
+          "items": [
+            {
+              "en": "⭐ Boss Health Bar",
+              "ru": "Полоса здоровья босса"
+            },
+            {
+              "en": "🔍 Search",
+              "ru": "Поиск"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Exclusive",
+          "title": {
+            "en": "Exclusive",
+            "ru": "Эксклюзивы"
+          },
+          "items": [
+            {
+              "en": "🟢 Packs",
+              "ru": "Наборы"
+            },
+            {
+              "en": "✨ VIP Pass",
+              "ru": "VIP-пропуск"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Codes",
+          "title": {
+            "en": "Codes",
+            "ru": "Коды из этого обновления"
+          },
+          "items": [
+            {
+              "en": "BIG",
+              "ru": "BIG"
+            }
+          ],
+          "kind": "historic-codes"
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template4",
+      "version": "5",
+      "date": "2026-08-20",
+      "title": {
+        "en": "⚔️ Update 5 ✨",
+        "ru": "Обновление 5"
+      },
+      "sections": [
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "✨ New Rarity",
+              "ru": "Новая редкость"
+            },
+            {
+              "en": "❓ Insane Endless",
+              "ru": "Безумный бесконечный режим"
+            },
+            {
+              "en": "⚔️ 2 New Units",
+              "ru": "2 новых юнита"
+            },
+            {
+              "en": "🗺️ New Lobby",
+              "ru": "Новое лобби"
+            },
+            {
+              "en": "🧪 Boosts",
+              "ru": "Усиления"
+            },
+            {
+              "en": "⭐ New Summon",
+              "ru": "Обновлённый призыв"
+            },
+            {
+              "en": "👍 Auto Sell",
+              "ru": "Автопродажа"
+            },
+            {
+              "en": "💬 Chat Trade",
+              "ru": "Торговый чат"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Codes",
+          "title": {
+            "en": "Codes",
+            "ru": "Коды из этого обновления"
+          },
+          "items": [
+            {
+              "en": "Mythic",
+              "ru": "Mythic"
+            }
+          ],
+          "kind": "historic-codes"
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template3",
+      "version": "4",
+      "date": "2026-08-13",
+      "title": {
+        "en": "🪅 Party Event 🎉",
+        "ru": "Праздничное событие"
+      },
+      "sections": [
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "⚔️ 3 New Units ⚔️",
+              "ru": "3 новых юнита"
+            },
+            {
+              "en": "🎉 Piñata Event 🎉",
+              "ru": "Событие с пиньятой"
+            },
+            {
+              "en": "✨ Party Crate ✨",
+              "ru": "Праздничный ящик"
+            },
+            {
+              "en": "📘 Global Quests 📘",
+              "ru": "Глобальные задания"
+            },
+            {
+              "en": "⭕ Splash ⭕",
+              "ru": "Сплеш-атаки"
+            }
+          ]
+        },
+        {
+          "sourceKey": "QoL",
+          "title": {
+            "en": "QoL",
+            "ru": "Удобство игры"
+          },
+          "items": [
+            {
+              "en": "🔊 Music Lobby 🔊",
+              "ru": "Музыка в лобби"
+            },
+            {
+              "en": "🎵 More Sounds 🎵",
+              "ru": "Больше звуков"
+            },
+            {
+              "en": "🐞 Bug Fix 🐞",
+              "ru": "Исправления ошибок"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Exclusive",
+          "title": {
+            "en": "Exclusive",
+            "ru": "Эксклюзивы"
+          },
+          "items": [
+            {
+              "en": "⭐ Golden Bat! ⭐",
+              "ru": "Золотая бита"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Codes",
+          "title": {
+            "en": "Codes",
+            "ru": "Коды из этого обновления"
+          },
+          "items": [
+            {
+              "en": "Party",
+              "ru": "Party"
+            }
+          ],
+          "kind": "historic-codes"
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template2",
+      "version": "3",
+      "date": "2026-08-07",
+      "title": {
+        "en": "📦 UPDATE 2 🧪",
+        "ru": "Обновление 2"
+      },
+      "sections": [
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "🧪 3 New Units 🧪",
+              "ru": "3 новых юнита"
+            },
+            {
+              "en": "📦 Scientist Crate 📦",
+              "ru": "Ящик учёных"
+            },
+            {
+              "en": "⚔️ Insane Mode ⚔️",
+              "ru": "Безумный режим"
+            },
+            {
+              "en": "✨ AFK AREA ✨",
+              "ru": "АФК-зона"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Changes",
+          "title": {
+            "en": "Changes",
+            "ru": "Изменения"
+          },
+          "items": [
+            {
+              "en": "🆕 Rebalance 🆕",
+              "ru": "Перебалансировка"
+            },
+            {
+              "en": "🎁 Crate Trading 🎁",
+              "ru": "Обмен ящиками"
+            },
+            {
+              "en": "⚡ Tutorial ⚡",
+              "ru": "Обучение"
+            },
+            {
+              "en": "🎉 Party Countdown 🎉",
+              "ru": "Отсчёт для группы"
+            },
+            {
+              "en": "🐞 Bug Fix 🐞",
+              "ru": "Исправления ошибок"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Codes",
+          "title": {
+            "en": "Codes",
+            "ru": "Коды из этого обновления"
+          },
+          "items": [
+            {
+              "en": "Insane",
+              "ru": "Insane"
+            }
+          ],
+          "kind": "historic-codes"
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template1",
+      "version": "2",
+      "date": "2026-08-02",
+      "title": {
+        "en": "⚔️ UPDATE 1 ⚔️",
+        "ru": "Обновление 1"
+      },
+      "sections": [
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "⚔️ 2 New Units ⚔️",
+              "ru": "2 новых юнита"
+            },
+            {
+              "en": "⭕ Target ⭕",
+              "ru": "Выбор приоритета атаки"
+            },
+            {
+              "en": "📘 Quests 📘",
+              "ru": "Задания"
+            }
+          ]
+        },
+        {
+          "sourceKey": "QoL",
+          "title": {
+            "en": "QoL",
+            "ru": "Удобство игры"
+          },
+          "items": [
+            {
+              "en": "⌨️ Keybinds ⌨️",
+              "ru": "Горячие клавиши"
+            },
+            {
+              "en": "🔊 Sounds 🔊",
+              "ru": "Звуки"
+            },
+            {
+              "en": "📺 Updated UI 📺",
+              "ru": "Обновлённый интерфейс"
+            },
+            {
+              "en": "⚔️ Next Stats Unit ⚔️",
+              "ru": "Просмотр характеристик следующего улучшения"
+            },
+            {
+              "en": "🔥 Lobby Leaderstats 🔥",
+              "ru": "Статистика игроков в лобби"
+            },
+            {
+              "en": "👀 Player Info 👀",
+              "ru": "Информация об игроке"
+            },
+            {
+              "en": "⚙️ Trade Setting ⚙️",
+              "ru": "Настройки обменов"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Codes",
+          "title": {
+            "en": "Codes",
+            "ru": "Коды из этого обновления"
+          },
+          "items": [
+            {
+              "en": "Update1",
+              "ru": "Update1"
+            }
+          ],
+          "kind": "historic-codes"
+        }
+      ],
+      "source": "in-game changelog"
+    },
+    {
+      "id": "Template",
+      "version": "1",
+      "date": "2026-07-27",
+      "title": {
+        "en": "Game Release",
+        "ru": "Выход игры"
+      },
+      "sections": [
+        {
+          "sourceKey": "Content",
+          "title": {
+            "en": "Content",
+            "ru": "Контент"
+          },
+          "items": [
+            {
+              "en": "⚔️ 9 Units ⚔️",
+              "ru": "9 юнитов"
+            },
+            {
+              "en": "⭐ 3 Modes ⭐",
+              "ru": "3 режима"
+            },
+            {
+              "en": "✨ Group Rewards ✨",
+              "ru": "Награды за группу"
+            },
+            {
+              "en": "🔥 Matchmaking 🔥",
+              "ru": "Подбор матчей"
+            },
+            {
+              "en": "🗺️ Leaderboard 🗺️",
+              "ru": "Таблица лидеров"
+            }
+          ]
+        },
+        {
+          "sourceKey": "Codes",
+          "title": {
+            "en": "Codes",
+            "ru": "Коды из этого обновления"
+          },
+          "items": [
+            {
+              "en": "Release",
+              "ru": "Release"
+            }
+          ],
+          "kind": "historic-codes"
+        }
+      ],
+      "source": "in-game changelog"
+    },
     {
       "version": "preview-2026-11",
       "date": "2026-11-03",
@@ -107,72 +1397,10 @@
           ]
         }
       ]
-    },
-    {
-      "version": "15",
-      "date": "2026-10-28",
-      "title": {
-        "en": "Hyper TSM + Changes",
-        "ru": "Гипер ТСМ и улучшения"
-      },
-      "sections": [
-        {
-          "title": {
-            "en": "New content",
-            "ru": "Новый контент"
-          },
-          "items": [
-            {
-              "en": "Hyper Titan Speaker Man",
-              "ru": "Гипер Титан Спикермен"
-            },
-            {
-              "en": "Unit locking",
-              "ru": "Блокировка юнитов"
-            },
-            {
-              "en": "Hyper Pack",
-              "ru": "Гипер-набор"
-            }
-          ]
-        },
-        {
-          "title": {
-            "en": "Improvements",
-            "ru": "Улучшения"
-          },
-          "items": [
-            {
-              "en": "Interface improvements",
-              "ru": "Улучшения интерфейса"
-            },
-            {
-              "en": "Friends-only trading option",
-              "ru": "Настройка обменов только с друзьями"
-            },
-            {
-              "en": "Remove players from your party",
-              "ru": "Исключение игроков из группы"
-            },
-            {
-              "en": "Open 10 crates at once",
-              "ru": "Открытие 10 ящиков за раз"
-            },
-            {
-              "en": "New index",
-              "ru": "Новый индекс"
-            },
-            {
-              "en": "Loadouts",
-              "ru": "Сохранённые наборы юнитов"
-            },
-            {
-              "en": "Five new sounds",
-              "ru": "Пять новых звуков"
-            }
-          ]
-        }
-      ]
     }
-  ]
+  ],
+  "currentTitle": {
+    "en": "⭐ Trading Plaza + Fun Mode 🎲",
+    "ru": "Торговая площадь и развлекательный режим"
+  }
 }

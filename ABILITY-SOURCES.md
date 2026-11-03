@@ -2,7 +2,7 @@
 
 Read-only verification against Game place 90647947106358 on 2026-10-29. No game sources were changed.
 
-November additions were checked against the saved Game and Lobby sources verified on 2026-11-02. Studio was closed during the website sync on 2026-11-03; this is not a fresh live-server audit. These records are labeled as prepared for the upcoming patch.
+The full Game and Lobby catalog was rechecked read-only on 2026-11-03. Prepared balance changes retain their upcoming labels; no Roblox scripts were edited for this website update.
 
 - ClassicUnitPassivesConfig and ClassicUnitPassives: White Flash, Echo, Close Combat, Titan Breaker and Lucky Strike. Base, expected and conditional DPS remain separate.
 - SignalResonanceConfig / SignalResonance: same-Strider cannon bonus and screen mark duration.
@@ -10,6 +10,8 @@ November additions were checked against the saved Game and Lobby sources verifie
 - CameraHelicopterConfig / HelicopterReinforcements: five squad compositions, per-ally health and attack stats, air targeting, per-Helicopter alive limits, compact models and squad replacement on upgrade. Summon DPS excludes collision damage and direct tower DPS.
 
 Source snapshot hashes for unit levels, config and placement limits are recorded in `tools/game-sync-sources.json`.
+
+The two new units were verified against their current level modules and runtime data: Ushanka's RampStep/RampMax/RampResetAfter and Main.Towers.TowerRampDamage; Rocket Large Camera Man's TowerBurnConfig. The site keeps direct damage separate from full-ramp or active-burn DPS. RNG mode information comes from RNGUnitsConfig, RNGUpgradeConfig, RNGModifierConfig, RNGWaveConfig, RNGModeService and Main.RNG.RNGModifiers. Game's actual reward calculation and RNG ticket grant were also read to resolve the older map/lobby preview discrepancy.
 
 Website descriptions live in `docs/abilities.js`. Base DPS still excludes conditional passives and active abilities.
 

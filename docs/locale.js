@@ -1,5 +1,6 @@
 // Display-only localization. Internal IDs, URLs and inventory data stay unchanged.
 const exact = {
+ 'Ushanka Camera Man':'Камерамен в ушанке','Rocket Large Camera Man':'Ракетный Большой Камерамен','RNG Mode':'RNG-режим',
  'Toilet':'Обычный туалет','DJ Toilet':'DJ-туалет','Helicopter Skibidi Toilet':'Туалет-вертолёт','Angel Toilet':'Туалет-ангел','Vacuum Toilet':'Вакуумный туалет',
  'Next update':'Следующее обновление',
  'Event':'Ивент',

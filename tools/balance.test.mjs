@@ -59,7 +59,7 @@ test('verified placement limits use the current unit ID and distinguish removed 
 });
 
 test('patch records and rendered panels are bilingual, escaped, and marked as forthcoming',()=>{
- for(const id of data.verification.patchedUnits){assert.equal(unit(id).DataStatus,'upcoming');assert.equal(unit(id).VerifiedAt,'2026-11-02');}
+ for(const id of data.verification.patchedUnits){assert.equal(unit(id).DataStatus,'upcoming');assert.equal(unit(id).VerifiedAt,'2026-11-03');}
  for(const id of ['Titan TV Man','Speaker Woman','Titan Camera Man','Upgraded Titan Camera Man','Jester Speaker Man','TV Strider','Camera Helicopter']){
   for(const a of ABILITIES[id])assert.ok(a.name.en&&a.name.ru&&a.description.en&&a.description.ru);
  }

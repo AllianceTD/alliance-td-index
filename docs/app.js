@@ -1,7 +1,8 @@
-import { russianText, localizeDisplay } from './locale.js?v=balance-20261103';
-import { createUpdates } from './updates.js?v=balance-20261103';
-import { abilitySections } from './abilities.js?v=balance-20261103';
-import { balanceDetails } from './balance.js?v=balance-20261103';
+import { russianText, localizeDisplay } from './locale.js?v=full-index-20261103';
+import { createUpdates } from './updates.js?v=full-index-20261103';
+import { abilitySections } from './abilities.js?v=full-index-20261103';
+import { balanceDetails } from './balance.js?v=full-index-20261103';
+import { modeCards } from './modes.js?v=full-index-20261103';
 import { RARITIES, levels, levelStats, directDps, maxDps, isSummoner, fmt, compact, chance, filterUnits } from './model.js?v=unit-sources-2';
 
 const paths = {
@@ -36,6 +37,8 @@ translations.en.event='Event'; translations.ru.event='Ивент';
 translations.en.updates='Update log'; translations.ru.updates='Журнал обновлений';
 translations.en.noMaterialDrops='No crafting material drops listed';
 translations.ru.noMaterialDrops='Дроп материалов для крафта не указан';
+translations.en.modeHint='Base match rewards before map modifiers, passes, potions and friend bonuses. Verified against the Game place on 3 November 2026.';
+translations.ru.modeHint='Базовые награды матча без множителей карты, пропусков, зелий и бонусов друзей. Сверено с матч-плейсом 3 ноября 2026 года.';
 translations.en.patchPreview='Prepared for the next patch. These changes are not confirmed live yet.';
 translations.ru.patchPreview='Подготовлено к следующему патчу. Выход этих изменений ещё не подтверждён.';
 translations.en.overallLimit='Only the overall match placement limit';
@@ -45,6 +48,7 @@ translations.ru.unverifiedLimit='Личный лимит юнита. Общий 
 function readStorage(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
 let lang = readStorage('atd-language','en'); if(!translations[lang])lang='en';
 let bookmarks = readStorage('atd-bookmarks',[]); if(!Array.isArray(bookmarks))bookmarks=[];
+let rngLuck=1;
 let DATA, ASSETS, page='units', query='', rarity='', sort='rarity', source='', savedOnly=false, selected=null, selectedLevel=0, itemKind='', compare=[];
 const t = key => translations[lang][key] || translations.en[key] || key;
 const saveStorage = (key,value)=>{try{localStorage.setItem(key,JSON.stringify(value));}catch{}};
@@ -130,11 +134,8 @@ function renderCatalog(){
  }else if(page==='updates'){
   html=updates.cards(query);count=(html.match(/class="release-card"/g)||[]).length;
  }else{
-  const modeOrder=['Easy','Medium','Hard','Insane','Crazy','Halloween','Endless'];
-  const modeRank=name=>modeOrder.includes(name)?modeOrder.indexOf(name):modeOrder.length;
-  const list=Object.entries(DATA.modes).sort(([a],[b])=>modeRank(a)-modeRank(b)||a.localeCompare(b)).filter(([name])=>matches(name));count=list.length;
-  const colors=['#85cf80','#61c8da','#efc169','#e8a570','#da8591','#c29ce5','#8eb8e5'];
-  html=`<div class="info-banner">${esc(t('modeHint'))}</div>`+list.map(([name,m],i)=>`<article class="mode-card" style="--mode-color:${colors[i]}"><span class="mode-number">0${i+1}</span><small>${t('baseRewards')}</small><h3>${esc(name)}</h3>${name==='Endless'?`<div class="mode-stat"><span>${lang==='en'?'Coins / cleared wave':'Монеты за волну'}</span><b>${fmt(m.CoinsPerClearedWave)}</b></div><div class="mode-stat"><span>${lang==='en'?'XP / cleared wave':'Опыт за волну'}</span><b>${fmt(m.XpPerClearedWave)}</b></div><p>${lang==='en'?'Additional rewards are rolled at wave milestones.':'На этапах волн разыгрываются дополнительные награды.'}</p>`:[['winCoins',m.WinCoins],['winXp',m.XpEarn],['loseCoins',m.CoinsPerClearedWave],['winPumpkins',m.WinPumpkins]].map(([key,value])=>`<div class="mode-stat"><span>${t(key)}</span><b>${fmt(value||0)}</b></div>`).join('')}</article>`).join('');
+  const result=modeCards(DATA,lang,esc,query,rngLuck);count=result.count;
+  html=`<div class="info-banner">${esc(t('modeHint'))}</div>`+result.html;
  }
  if(!count&&page!=='updates')html=empty();$('catalog').innerHTML=html;$('result-count').textContent=`${count} ${lang==='ru'?'найдено':'entries'}`;
  localizeDisplay(document.body,lang);
@@ -162,7 +163,7 @@ function effectBlocks(unit,s){
  if(s.SplashRadius)effects.push(`Splash radius: ${fmt(s.SplashRadius,1)}`);
  if(s.SlowPercent)effects.push(`Slow: ${fmt(s.SlowPercent)}%${s.SlowDuration?` / ${fmt(s.SlowDuration,1)}s`:''}`);
  if(s.BleedDamagePerSec)effects.push(`Bleed: ${fmt(s.BleedDamagePerSec)} DPS / ${fmt(s.BleedCd,1)}s`);
- if(s.BurnDamagePerSec)effects.push(`Burn: ${fmt(s.BurnDamagePerSec)} DPS`);
+ if(s.BurnDamagePerSec)effects.push(`Burn: ${fmt(s.BurnDamagePerSec,1)} DPS${s.BurnDuration?` / ${fmt(s.BurnDuration,1)}s`:''}`);
  if(s.SpawnerHp&&unit.Id!=='Camera Helicopter')effects.push(`Summon HP: ${fmt(s.SpawnerHp)}`);
  if(s.SpawnCooldown)effects.push(`Summon cooldown: ${fmt(s.SpawnCooldown,1)}s`);
  if(s.SpawnMaxUnits&&unit.Id!=='Camera Helicopter')effects.push(`Summon limit: ${fmt(s.SpawnMaxUnits)}`);
@@ -228,6 +229,7 @@ document.addEventListener('click',event=>{
  else if(button.hasAttribute('data-reset')){query='';rarity='';source='';itemKind='';savedOnly=false;$('search').value='';$('rarity').value='';renderCatalog();}
  else if(button.hasAttribute('data-close-detail'))closeDetails();
 });
+document.addEventListener('change',event=>{if(event.target.id!=='rng-luck')return;const at=scrollY;rngLuck=Number(event.target.value);renderCatalog();const pool=document.querySelector('.rng-pool');if(pool)pool.open=true;window.scrollTo(0,at);});
 $('search').addEventListener('input',()=>{query=$('search').value;renderCatalog();});
 $('rarity').addEventListener('change',()=>{rarity=$('rarity').value;renderCatalog();});
 $('sort').addEventListener('change',()=>{sort=$('sort').value;renderCatalog();});
@@ -247,7 +249,7 @@ hydration();
 updates.load().then(()=>{if(DATA&&page==='updates')renderCatalog();});
 setInterval(()=>{if(!document.hidden)updates.tick();},1000);
 try{
- const responses=await Promise.all([fetch('data.json?v=balance-20261103',{cache:'no-cache'}),fetch('asset-map.json')]);
+ const responses=await Promise.all([fetch('data.json?v=full-index-20261103',{cache:'no-cache'}),fetch('asset-map.json?v=full-index-20261103',{cache:'no-cache'})]);
  if(responses.some(r=>!r.ok))throw new Error('Index data unavailable');
  [DATA,ASSETS]=await Promise.all(responses.map(r=>r.json()));
  bookmarks=bookmarks.filter(x=>DATA.units.some(u=>u.Id===x));
